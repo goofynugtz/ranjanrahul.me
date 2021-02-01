@@ -4,19 +4,25 @@
 }
 
 body{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #151527;
+
 }
 
 .containerMaster{
-    position: relative;
+    
+    /* position: relative; */
     /* height: 200px; */
-    width: 40vw;
+    /* width: 40vw; */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     /* border: 2px solid red; */
     color: white;
-    top: 25vh;
-    left: 30vw;
-    pointer-events: none;
+    /* top: 25vh;
+    left: 30vw; */
+    /* pointer-events: none; */
 }
 
 #rahulRanjan{
@@ -24,7 +30,7 @@ body{
     margin-top: -70px;
     font-family: 'MyFont';
     font-size: 64px;
-    pointer-events: none;
+    /* pointer-events: none; */
 }
 
 .circles{
@@ -46,10 +52,16 @@ body{
     background: linear-gradient(to right top, #9255B5, #F9A676, #FFE3C1)
 }
 
-#downloadCV{
+
+
+a{
+    display: flex;
+    flex-direction: row-reverse;
     margin-top: 30px;
-    margin-left: 30px;
+    margin-left: 25px;
     padding-left: 20px;
+    text-decoration: none;
+    color: #151527;
     width: 150px;
     height: 50px;
     border-radius: 25px;
@@ -60,16 +72,11 @@ body{
     justify-content: center;
     color: #151527;
     font-weight: 600;
-    box-shadow: 1px 1px 10px 1px rgba(00, 00, 00, 0.2);
-}
-
-a{
-    text-decoration: none;
-    color: #151527;
-}
-
-#downloadCV:hover{
     box-shadow: 1px 1px 10px 1px rgba(00, 00, 00, 0.5);
+}
+
+a:hover{
+    box-shadow: 1px 1px 10px 1px rgba(00, 00, 00, 0.3);
 }
 
 #myDescription{
