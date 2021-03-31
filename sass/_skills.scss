@@ -1,0 +1,51 @@
+.my-skills {
+    grid-column: 1 / 4;
+    grid-row: 5 / 8;
+    font-family: 'PoppinsBold';
+    display: grid;
+    grid-template-rows: 100px max-content 100px;
+    grid-template-columns: 200px 1fr 200px;
+}
+
+.heading {
+    grid-column: 2 / 3;
+}
+
+.skills-container {
+    grid-column: 2 / 3;
+    line-height: 50px;
+    /* background-color: blueviolet; */
+    /* display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; */
+}
+
+.skills {
+    border-radius: 500px;
+    padding: 2px 15px;
+    align-self: center;
+    margin: 5px;
+    box-shadow: 0 5px 5px 5px rgba($color: #000000, $alpha: .2);
+    /* width: 300px; */
+    font-size: 20px;
+}
+
+.front-end {
+    background-color: #77BE55;
+}
+
+.back-end {
+    background-color: #37989E;
+}
+
+.languages {
+    background-color: #9C379E;
+}
+
+.extras-1 {
+    background-color: #B6902F;
+}
+
+.extras-2 {
+    background-color: #52379E;
+}

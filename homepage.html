@@ -1,26 +1,70 @@
-<html>
-    <head><title>Title here</title></head>
-    <link rel="stylesheet" href="style.css">
-    <body>
-        <div class="containerMaster">
-            <div id = "introText" class = "whitetext">
-                <h7>Hello, I'm</h7>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sass/main.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="home-tag tags">Home</div>
+        <header class="header">
+            <div class="header__topbar">
+                <div class="header__topbar--brand">Rahul</div>
+                <a href="#" class="header__topbar--home">Home</a>
+                <a href="#" class="header__topbar--about">What I Do</a>
+                <a href="#" class="header__topbar--portfolio">Portfolio</a>
+                <a href="#" class="header__topbar--contact">Contact</a>
+                <div class="header__topbar--social">_ICONSHERE_</div>
             </div>
-            <div id = "rahulRanjan" class = "whitetext">
-                <img src="./resources/name.svg">
-            </div>
-            <div class = "circles"></div>
-            <div class = "myBar">
-                <div class = "gradientBox">
-                    <div id = "myDescription">
-                        <p>I am a CS Freshie expected to finish course in 2024. Currently a beginner coder on HackerRank, CodeForces and CodeChef doing Competitive Programming.</p>
-                    </div>
-                    <a href="/CV.pdf">Download CV</a>
+
+            
+    
+            <div class="header__intro">
+                <span class="header__intro--hello">Hello, I'm </span>
+                <span class="header__intro--name">
+                    <svg id="name" width="294" height="65" viewBox="0 0 294 65" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <use xlink:href="img/name.svg#name"></use>
+                    </svg>
+                </span>
+                <div class="header__intro--text">
+                    <p>
+                        I am a CS Freshie from NIT Durgapur, expected to finish course in 2024. Currently a beginner coder on HackerRank, CodeForces and CodeChef doing Competitive Programming.
+                    </p>
+                    <button class="header__intro--button">Contact Me</button>
                 </div>
             </div>
+
+            <div class="header__intro-bg"></div>
+
+            <div class="header__image"></div>
+        </header>
+
+        <div class="what-i-do-tag tags">What I Do</div>
+        <div class="my-skills">
+            <div class="heading"><h1>Stuff I can work with</h1></div>
+            <div class="skills-container">
+                <span class="front-end skills">Front End</span>
+                <span class="front-end skills">JavaScript</span>
+                <span class="front-end skills">HTML</span>
+                <span class="front-end skills">CSS</span>
+                <span class="front-end skills">SASS</span>
+                <span class="front-end skills">ReactJS </span>
+                <br>
+                <span class="back-end skills">Back End</span>
+                <span class="back-end skills">NodeJS</span>
+                <span class="back-end skills">MongoDB</span>
+                <br>
+                <span class="languages skills">C</span>
+                <span class="languages skills">C++</span>
+                <span class="languages skills">Python</span>
+                <br>
+                <span class="extras-1 skills">Search Engine Optimization</span>
+                <span class="extras-2 skills">Scalable Vector Graphics</span>
+            </div>
         </div>
-        <div class="myImages">
-            <div class="image1"></div>
-        </div>
-    </body>
+    </div>
+</body>
 </html>
