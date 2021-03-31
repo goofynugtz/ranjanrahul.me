@@ -1,0 +1,14 @@
+{
+  "name": "personalweb_v2",
+  "version": "1.0.2",
+  "description": "Personal Website",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css"
+  },
+  "author": "Ranjan Rahul",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^5.0.0"
+  }
+}
