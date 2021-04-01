@@ -1,5 +1,7 @@
 # Portfolio
 
-Under development
+Under development.
 
-Download .zip and run with live server in VSCode.
+# Requirements
+
+Clone or download .zip and run with `live server` in VSCode.
