@@ -1,51 +1,68 @@
-.my-skills {
-    grid-column: 1 / 4;
-    grid-row: 5 / 8;
-    font-family: 'PoppinsBold';
-    display: grid;
-    grid-template-rows: 100px max-content 100px;
-    grid-template-columns: 200px 1fr 200px;
-}
+@media screen and (min-width: 1024px) {
+    .my-skills {
+        grid-column: 1 / 4;
+        grid-row: 2 / 3;
+        font-family: 'PoppinsBold';
+        display: grid;
+        grid-template-rows: min-content max-content;
+        grid-row-gap: 30px;
+        grid-template-columns: 10vw 1fr 10vw;
+    }
 
-.heading {
-    grid-column: 2 / 3;
-}
+    .heading {
+        grid-column: 2 / 3;
+        grid-row: 1/ 2;
+        font-size: 1.2rem;
+    }
 
-.skills-container {
-    grid-column: 2 / 3;
-    line-height: 50px;
-    /* background-color: blueviolet; */
-    /* display: flex;
-    flex-direction: row;
-    flex-wrap: wrap; */
-}
 
-.skills {
-    border-radius: 500px;
-    padding: 2px 15px;
-    align-self: center;
-    margin: 5px;
-    box-shadow: 0 5px 5px 5px rgba($color: #000000, $alpha: .2);
-    /* width: 300px; */
-    font-size: 20px;
-}
+    .skills-container {
+        grid-column: 2 / 3;
+        line-height: 3rem;
+        user-select: none;
+        /* background-color: blueviolet; */
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
 
-.front-end {
-    background-color: #77BE55;
-}
+    .skills {
+        border-radius: 500px;
+        padding: 2px 15px;
+        align-self: center;
+        margin: 5px;
+        box-shadow: 0 5px 5px 5px rgba($color: #000000, $alpha: .2);
+        /* width: 300px; */
+        font-size: 16px;
+        user-select: none;
+    }
 
-.back-end {
-    background-color: #37989E;
-}
+    .front-end {
+        background-color: #77BE55;
+        &--angular {
+            color: transparent;
+        }
+    }
 
-.languages {
-    background-color: #9C379E;
-}
+    .back-end {
+        background-color: #37989E;
+        &--mongodb {
+            color: transparent;
+        }
+    }
 
-.extras-1 {
-    background-color: #B6902F;
-}
+    .languages {
+        background-color: #9C379E;
+    }
 
-.extras-2 {
-    background-color: #52379E;
+    .extras-1 {
+        background-color: #B6902F;
+        &--seo{
+            color: transparent;
+        }
+    }
+
+    .extras-2 {
+        background-color: #52379E;
+    }
 }
