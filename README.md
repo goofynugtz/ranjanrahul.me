@@ -1,7 +1,7 @@
 # Portfolio
 
-Under development.
+Under development.  
 
-# Requirements
-• SASS \n
+# Requirements  
+• SASS  
 • Clone or download .zip and run with `live server` in VSCode.
