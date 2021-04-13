@@ -7,26 +7,6 @@
         grid-row-gap: 100px;
     }
 
-    .tags {
-        position: sticky;
-        writing-mode: vertical-rl;
-        margin-top: auto; //FIXME: DO NOT CHANGE
-        transform: rotate(180deg);
-        padding-right: 1vw;
-        font-size: 1.8vw;
-        opacity: 0.25;
-    }
-    
-    .home-tag {
-        grid-area: 1 / 1 / 2 / 2;
-        top: 0;
-    }
-    
-    .what-i-do-tag {
-        grid-area: 2 / 1 / 3 / 2;
-        top: 12vw;
-    }
-
     .header {
         grid-column: 1 / 4;
         grid-row: 1 / 2;
@@ -131,73 +111,6 @@
             background: linear-gradient(to right top, #9255B5, #F9A676, #FFE3C1);
             z-index: -1;
         }
-    }
-
-    .my-skills {
-        grid-column: 1 / 4;
-        grid-row: 2 / 3;
-        font-family: 'PoppinsBold';
-        display: grid;
-        grid-template-rows: min-content max-content;
-        grid-row-gap: 30px;
-        grid-template-columns: 10vw 1fr 10vw;
-    }
-
-    .heading {
-        grid-column: 2 / 3;
-        grid-row: 1/ 2;
-        font-size: 1.2rem;
-    }
-
-
-    .skills-container {
-        grid-column: 2 / 3;
-        line-height: 3rem;
-        user-select: none;
-        /* background-color: blueviolet; */
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-
-    .skills {
-        border-radius: 500px;
-        padding: 2px 15px;
-        align-self: center;
-        margin: 5px;
-        box-shadow: 0 5px 5px 5px rgba($color: #000000, $alpha: .2);
-        /* width: 300px; */
-        font-size: 16px;
-        user-select: none;
-    }
-
-    .front-end {
-        background-color: #77BE55;
-        &--angular {
-            color: transparent;
-        }
-    }
-
-    .back-end {
-        background-color: #37989E;
-        &--mongodb {
-            color: transparent;
-        }
-    }
-
-    .languages {
-        background-color: #9C379E;
-    }
-
-    .extras-1 {
-        background-color: #B6902F;
-        &--seo{
-            color: transparent;
-        }
-    }
-
-    .extras-2 {
-        background-color: #52379E;
     }
     
 }

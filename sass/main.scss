@@ -1,5 +1,9 @@
-@import "_base.scss";
-@import "_base_mobile.scss";
-@import "_header.scss";
 @import "_animations.scss";
-@import "_skills.scss";
+
+@import "./desktop/base.scss";
+@import "./desktop/header.scss";
+@import "./desktop/skills.scss";
+
+@import "./mobile/base_mobile.scss";
+@import "./mobile/header_mobile.scss";
+@import "./mobile/skills_mobile.scss";
