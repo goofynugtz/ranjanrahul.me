@@ -402,7 +402,6 @@ body::-webkit-scrollbar {
        -moz-user-select: none;
         -ms-user-select: none;
             user-select: none;
-    /* background-color: blueviolet; */
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -420,8 +419,9 @@ body::-webkit-scrollbar {
         -ms-grid-row-align: center;
         align-self: center;
     margin: 5px;
-    -webkit-box-shadow: 0 5px 5px 5px rgba(0, 0, 0, 0.2);
-            box-shadow: 0 5px 5px 5px rgba(0, 0, 0, 0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    -webkit-box-shadow: 0 5px 5px 5px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 5px 5px 5px rgba(0, 0, 0, 0.1);
     /* width: 300px; */
     font-size: 16px;
     -webkit-user-select: none;
@@ -431,9 +431,6 @@ body::-webkit-scrollbar {
   }
   .front-end {
     background-color: #77BE55;
-  }
-  .front-end--angular {
-    color: transparent;
   }
   .back-end {
     background-color: #37989E;
@@ -689,9 +686,9 @@ body::-webkit-scrollbar {
         -ms-grid-row-align: center;
         align-self: center;
     margin: 5px;
-    -webkit-box-shadow: 0 5px 5px 5px rgba(0, 0, 0, 0.2);
-            box-shadow: 0 5px 5px 5px rgba(0, 0, 0, 0.2);
-    /* width: 300px; */
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    -webkit-box-shadow: 0 5px 5px 5px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 5px 5px 5px rgba(0, 0, 0, 0.1);
     font-size: 16px;
     -webkit-user-select: none;
        -moz-user-select: none;
@@ -700,9 +697,6 @@ body::-webkit-scrollbar {
   }
   .front-end {
     background-color: #77BE55;
-  }
-  .front-end--angular {
-    color: transparent;
   }
   .back-end {
     background-color: #37989E;
@@ -992,8 +986,9 @@ body::-webkit-scrollbar {
         -ms-grid-row-align: center;
         align-self: center;
     margin: 5px;
-    -webkit-box-shadow: 0 5px 5px 5px rgba(0, 0, 0, 0.2);
-            box-shadow: 0 5px 5px 5px rgba(0, 0, 0, 0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    -webkit-box-shadow: 0 5px 5px 5px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 5px 5px 5px rgba(0, 0, 0, 0.1);
     /* width: 300px; */
     font-size: 16px;
     -webkit-user-select: none;
@@ -1003,9 +998,6 @@ body::-webkit-scrollbar {
   }
   .front-end {
     background-color: #77BE55;
-  }
-  .front-end--angular {
-    color: transparent;
   }
   .back-end {
     background-color: #37989E;
