@@ -1,11 +1,12 @@
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 431px) and (max-width: 1024px) {
 
     .header {
-        grid-area: 1 / 1 / 2 / 4;
+        grid-column: 1 / 4;
+        grid-row: 1 / 2;
         display: grid;
         grid-template-columns: 10vw 1fr 1fr;
-        grid-template-rows: 60px minmax(300px, 45vh) minmax(300px, 45vh);
-
+        grid-template-rows: 60px 250px 250px;
+    
         &__topbar {
             grid-area: 1 / 1 / 2 / 4;
             display: grid;
@@ -67,51 +68,42 @@
                 grid-column: 8 / 9;
             }
         }
-
-
+    
         &__image{
             grid-area: 2 / 3 / 4 / 4;
-            z-index: -1;
-            background-image: url('../img/profileBackground.jpeg');
-            background-repeat: no-repeat;
-            background-position: center;
+            background-image: url(../../img/profileBackground.jpeg);
             background-size: cover;
-
+            background-position: center;
         }
-
+    
         &__intro {
             grid-area: 2 / 2 / 4 / 3;
             display: grid;
-            grid-template-rows: .5fr .5fr .5fr .5fr;
-            padding-top: 80px;
-            padding-right: 50px;
-
-
+            grid-template-rows: .7fr .3fr 200px 50px;
+    
             &--hello {
                 display: flex;
                 align-self: flex-end;
                 padding-bottom: 10px;
             }
 
-            &--name_small{
+            &--name {
                 display: none;
-                /* background-color: red; */
             }
 
             &--text {
-                padding-top: 25px;
+                padding-top: 7vw;
                 padding-right: 40px;
-                padding-bottom: 40px;
                 grid-row: 3 / 4;
+                grid-column: 1 / 2;
                 color: #151527;
-                /* background-color: blueviolet; */
                 font-family: 'PoppinsBold';
-                font-size: 1.1vw;
+                font-size: 1.5vw;
             }
-
+    
             &--button {
-                /* margin-top: 30px; */
                 grid-row: 4 / 5;
+                margin-top: 25px;
                 width: 150px;
                 height: 50px;
                 appearance: 0;
@@ -121,18 +113,19 @@
                 border-radius: 25px;
                 transition: all .2s;
                 box-shadow: 0 2px 10px 5px rgba(0, 0, 0, 0.2);
-
+    
                 &:active{
                     transform: translateY(2px);
                     box-shadow: 0 1px 5px 4px rgba(0, 0, 0, 0.1);
                 }
             } 
         }
-
+    
         &__intro-bg{
-            grid-area: 3 / 1 / 4 / 3;
+            grid-area: 3 / 1 / 4 / 4;
             background: linear-gradient(to right top, #9255B5, #F9A676, #FFE3C1);
             z-index: -1;
         }
     }
+    
 }

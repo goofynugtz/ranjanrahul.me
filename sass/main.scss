@@ -1,9 +1,13 @@
 @import "_animations.scss";
 
-@import "./desktop/base.scss";
-@import "./desktop/header.scss";
-@import "./desktop/skills.scss";
+@import "./desktop/_base.scss";
+@import "./desktop/_header.scss";
+@import "./desktop/_skills.scss";
 
-@import "./mobile/base_mobile.scss";
-@import "./mobile/header_mobile.scss";
-@import "./mobile/skills_mobile.scss";
+@import "./mobile/_base_mobile.scss";
+@import "./mobile/_header_mobile.scss";
+@import "./mobile/_skills_mobile.scss";
+
+@import "./tablet/_base_tablet.scss";
+@import "./tablet/_header_tablet.scss";
+@import "./tablet/_skills_tablet.scss";
