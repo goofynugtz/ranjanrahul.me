@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=1">
+    
     <link rel="stylesheet" href="sass/main.css">
     <title>Document</title>
 </head>
@@ -14,13 +15,15 @@
             <div class="header__topbar">
                 <div class="header__topbar--brand">Rahul</div>
                 <a href="#" class="header__topbar--home">Home</a>
-                <a href="#" class="header__topbar--about">What I Do</a>
+                <a href="homepage.html#my-skills" class="header__topbar--about">What I Do</a>
                 <a href="#" class="header__topbar--portfolio">Portfolio</a>
                 <a href="#" class="header__topbar--contact">Contact</a>
-                <div class="header__topbar--social">_ICONSHERE_</div>
+                <div class="header__topbar--social">
+                    <span>
+                        _ICONS_HERE_
+                    </span>
+                </div>
             </div>
-
-            
     
             <div class="header__intro">
                 <span class="header__intro--hello">Hello, I'm </span>
@@ -29,12 +32,17 @@
                         <use xlink:href="img/name.svg#name"></use>
                     </svg>
                 </span>
+                <span class="header__intro--name_small">
+                    <svg id="name_small" width="202" height="45" viewBox="0 0 202 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <use xlink:href="img/name_small.svg#name_small"></use>
+                    </svg>
+                </span>
                 <div class="header__intro--text">
                     <p>
-                        I am a CS Freshie from NIT Durgapur, expected to finish course in 2024. Currently a beginner coder on HackerRank, CodeForces and CodeChef doing Competitive Programming.
+                        I am a CS Freshie from NIT Durgapur, expected to finish course in 2024. Currently a beginner coder on HackerRank, CodeForces and CodeChef doing <a href="https://www.stopstalk.com/user/profile/goofyNugtz">Competitive Programming.</a>
                     </p>
-                    <button class="header__intro--button">Contact Me</button>
                 </div>
+                <button class="header__intro--button">Contact Me</button>
             </div>
 
             <div class="header__intro-bg"></div>
@@ -43,26 +51,31 @@
         </header>
 
         <div class="what-i-do-tag tags">What I Do</div>
-        <div class="my-skills">
+        <div class="my-skills" id="my-skills">
             <div class="heading"><h1>Stuff I can work with</h1></div>
             <div class="skills-container">
                 <span class="front-end skills">Front End</span>
-                <span class="front-end skills">JavaScript</span>
-                <span class="front-end skills">HTML</span>
-                <span class="front-end skills">CSS</span>
-                <span class="front-end skills">SASS</span>
-                <span class="front-end skills">ReactJS </span>
+                <span class="front-end skills front-end--html">HTML</span>
+                <span class="front-end skills front-end--css">CSS</span>
+                <span class="front-end skills front-end--sass">SASS</span>
+                <span class="front-end skills front-end--js">JavaScript</span>
+                <span class="front-end skills front-end--reactjs">ReactJS</span>
+                <span class="front-end skills front-end--js">TypeScript</span>
+                <span class="front-end skills front-end--angular">Angular</span>
                 <br>
                 <span class="back-end skills">Back End</span>
-                <span class="back-end skills">NodeJS</span>
-                <span class="back-end skills">MongoDB</span>
+                <span class="back-end skills back-end--nodejs">NodeJS</span>
+                <span class="back-end skills back-end--express">Express</span>
+                <span class="back-end skills back-end--sql">SQL</span>
+                <span class="back-end skills back-end--mongodb">MongoDB</span>
                 <br>
-                <span class="languages skills">C</span>
-                <span class="languages skills">C++</span>
-                <span class="languages skills">Python</span>
+                <span class="languages languages--c skills ">C</span>
+                <span class="languages languages--cpp skills">C++</span>
+                <span class="languages languages--python skills">Python</span>
+                <span class="languages languages--kotlin skills">Kotlin</span>
                 <br>
-                <span class="extras-1 skills">Search Engine Optimization</span>
-                <span class="extras-2 skills">Scalable Vector Graphics</span>
+                <span class="extras-1 skills extras-1--seo">SEO</span>
+                <span class="extras-2 skills extras-2--svg">Vector Graphics</span>
             </div>
         </div>
     </div>
