@@ -196,8 +196,8 @@ body::-webkit-scrollbar {
     display: grid;
     -ms-grid-columns: 10vw 1fr 1fr;
         grid-template-columns: 10vw 1fr 1fr;
-    -ms-grid-rows: 60px minmax(300px, 45vh) minmax(300px, 45vh);
-        grid-template-rows: 60px minmax(300px, 45vh) minmax(300px, 45vh);
+    -ms-grid-rows: 68px minmax(300px, 45vh) minmax(300px, 45vh);
+        grid-template-rows: 68px minmax(300px, 45vh) minmax(300px, 45vh);
   }
   .header__topbar {
     -ms-grid-row: 1;
@@ -386,7 +386,7 @@ body::-webkit-scrollbar {
     -ms-grid-row: 1;
     -ms-grid-row-span: 1;
     grid-row: 1/ 2;
-    font-size: 1.2rem;
+    font-size: 20px;
     padding-top: 50px;
   }
   .skills-container {
@@ -439,6 +439,66 @@ body::-webkit-scrollbar {
   .extras-2 {
     background-color: #52379E;
   }
+}
+
+.blog {
+  margin-top: 5vw;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+}
+
+.blog__heading {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.05);
+  font-size: 9vw;
+  -webkit-transform: translateY(-40%);
+          transform: translateY(-40%);
+  padding: 10px 0px;
+  z-index: -1;
+  font-family: 'PoppinsBold';
+}
+
+.blog__container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+.blog__tile {
+  padding: 40px;
+}
+
+.blog__title {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  font-size: 20px;
+  color: #AB69A7;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.blog__title:hover {
+  color: #FBBF94;
+}
+
+.blog__preview {
+  overflow-y: hidden;
+  font-size: 16px;
+  padding: 10px 0px;
+  height: 60px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.blog .blog__read-more {
+  text-decoration: none;
+  color: royalblue;
+}
+
+a {
+  text-decoration: none;
 }
 
 @media screen and (max-width: 430px) {
@@ -755,8 +815,8 @@ body::-webkit-scrollbar {
     display: grid;
     -ms-grid-columns: 10vw 1fr 1fr;
         grid-template-columns: 10vw 1fr 1fr;
-    -ms-grid-rows: 60px 250px 250px;
-        grid-template-rows: 60px 250px 250px;
+    -ms-grid-rows: 68px 250px 250px;
+        grid-template-rows: 68px 250px 250px;
   }
   .header__topbar {
     -ms-grid-row: 1;
@@ -941,7 +1001,7 @@ body::-webkit-scrollbar {
     -ms-grid-row: 1;
     -ms-grid-row-span: 1;
     grid-row: 1/ 2;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
   .skills-container {
     -ms-grid-column: 2;

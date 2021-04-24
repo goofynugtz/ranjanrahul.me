@@ -1,0 +1,46 @@
+##Learning Resources
+
+For Absolute Noobs
+Neso Academy
+https://www.youtube.com/watch?v=4OGMB4Fhh50&list=PLBlnK6fEyqRhX6r2uhhlubuF5QextdCSM
+
+HackerRank CPP
+https://www.hackerrank.com/domains/cpp?filters%5Bstatus%5D%5B%5D=unsolved&badge_type=cpp
+
+HackerRank Problem Solving
+https://www.hackerrank.com/domains/data-structures?filters%5Bstatus%5D%5B%5D=unsolved&badge_type=problem-solving
+
+DS Algo
+MIT Courseware
+https://www.youtube.com/watch?v=HtSuA80QTyo&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb
+
+Pavel Maverin
+https://www.youtube.com/playlist?list=PLrS21S1jm43igE57Ye_edwds_iL7ZOAG4
+
+https://www.codechef.com/certification/data-structures-and-algorithms/prepare
+
+HackerEarth: All of it
+https://www.hackerearth.com/practice/algorithms/searching/linear-search/tutorial/
+
+Competitive Programming
+
+This is <3:
+https://cp-algorithms.com/
+
+Tutorials on TopCoder
+https://www.topcoder.com/community/competitive-programming/tutorials/
+
+Number Theory - CodeNCode on YouTube
+https://www.youtube.com/watch?v=eRkqvQtm4DU&list=PL2q4fbVm1Ik4liHX78IRslXzUr8z5QxsG
+https://artofproblemsolving.com/community/c90633h1291397
+
+Android Development
+
+DSC
+https://developer.android.com/courses/study-jams?utm_source=studyjam&utm_medium=event&utm_campaign=studyjams
+
+ADB Tutorial
+https://www.youtube.com/watch?v=1T9yjDSG3Ho
+
+For Machine Learning
+https://scikit-learn.org/stable/

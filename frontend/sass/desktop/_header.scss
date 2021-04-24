@@ -4,7 +4,7 @@
         grid-area: 1 / 1 / 2 / 4;
         display: grid;
         grid-template-columns: 10vw 1fr 1fr;
-        grid-template-rows: 60px minmax(300px, 45vh) minmax(300px, 45vh);
+        grid-template-rows: 68px minmax(300px, 45vh) minmax(300px, 45vh);
 
         &__topbar {
             grid-area: 1 / 1 / 2 / 4;

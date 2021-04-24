@@ -1,4 +1,4 @@
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 431px) and (max-width: 1024px) {
 
     .my-skills {
         grid-column: 1 / 4;
@@ -13,8 +13,7 @@
     .heading {
         grid-column: 2 / 3;
         grid-row: 1/ 2;
-        font-size: 1.2rem;
-        padding-top: 50px;
+        font-size: 1.5rem;
     }
 
     .skills-container {
@@ -33,9 +32,11 @@
         margin: 5px;
         border-top: 1px solid rgba(255, 255, 255, .5);
         box-shadow: 0 5px 5px 5px rgba(0, 0, 0, .1);
+        /* width: 300px; */
         font-size: 16px;
         user-select: none;
     }
+
 
     .front-end {
         background-color: #77BE55;
@@ -51,7 +52,6 @@
 
     .extras-1 {
         background-color: #B6902F;
-
     }
 
     .extras-2 {

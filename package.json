@@ -10,5 +10,14 @@
   "license": "ISC",
   "devDependencies": {
     "node-sass": "^5.0.0"
+  },
+  "dependencies": {
+    "dompurify": "^2.2.7",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "helmet": "^2.3.0",
+    "jsdom": "^16.5.3",
+    "marked": "^2.0.3",
+    "mongoose": "^5.12.5"
   }
 }

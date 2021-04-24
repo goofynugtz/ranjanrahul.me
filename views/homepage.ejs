@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=1">
+    
+    <link rel="stylesheet" href="sass/main.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="home-tag tags">Home</div>
+        <header class="header">
+            <div class="header__topbar">
+                <div class="header__topbar--brand">Rahul</div>
+                <a href="#" class="header__topbar--home">Home</a>
+                <a href="#" class="header__topbar--about">What I Do</a>
+                <a href="#" class="header__topbar--portfolio">Portfolio</a>
+                <a href="#" class="header__topbar--contact">Contact</a>
+                <div class="header__topbar--social">
+                    <span>
+                        _ICONS_HERE_
+                    </span>
+                </div>
+            </div>
+    
+            <div class="header__intro">
+                <span class="header__intro--hello">Hello, I'm </span>
+                <span class="header__intro--name">
+                    <svg id="name" width="294" height="65" viewBox="0 0 294 65" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <use xlink:href="img/name.svg#name"></use>
+                    </svg>
+                </span>
+                <span class="header__intro--name_small">
+                    <svg id="name_small" width="202" height="45" viewBox="0 0 202 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <use xlink:href="img/name_small.svg#name_small"></use>
+                    </svg>
+                </span>
+                <div class="header__intro--text">
+                    <p>
+                        I am a CS Freshie from NIT Durgapur, expected to finish course in 2024. Currently a beginner coder on HackerRank, CodeForces and CodeChef doing <a href="https://www.stopstalk.com/user/profile/goofyNugtz">Competitive Programming.</a>
+                    </p>
+                </div>
+                <button class="header__intro--button">Contact Me</button>
+            </div>
+
+            <div class="header__intro-bg"></div>
+
+            <div class="header__image"></div>
+        </header>
+
+        <div class="what-i-do-tag tags">What I Do</div>
+        <div class="my-skills" id="my-skills">
+            <div class="heading"><h1>STUFF I CAN WORK WITH</h1></div>
+            <div class="skills-container">
+                <span class="front-end skills">Front End</span>
+                <span class="front-end skills front-end--html">HTML</span>
+                <span class="front-end skills front-end--css">CSS</span>
+                <span class="front-end skills front-end--sass">SASS</span>
+                <span class="front-end skills front-end--js">JavaScript</span>
+                <span class="front-end skills front-end--reactjs">ReactJS</span>
+                <span class="front-end skills front-end--js">TypeScript</span>
+                <span class="front-end skills front-end--angular">Angular</span>
+                <br>
+                <span class="back-end skills">Back End</span>
+                <span class="back-end skills back-end--nodejs">NodeJS</span>
+                <span class="back-end skills back-end--express">Express</span>
+                <span class="back-end skills back-end--sql">SQL</span>
+                <span class="back-end skills back-end--mongodb">MongoDB</span>
+                <br>
+                <span class="languages languages--c skills ">C</span>
+                <span class="languages languages--cpp skills">C++</span>
+                <span class="languages languages--python skills">Python</span>
+                <span class="languages languages--kotlin skills">Kotlin</span>
+                <br>
+                <span class="extras-1 skills extras-1--seo">SEO</span>
+                <span class="extras-2 skills extras-2--svg">Vector Graphics</span>
+            </div>
+        </div>
+
+        <%- include('_blog_preview') %>
+        
+    </div>
+</body>
+</html>
