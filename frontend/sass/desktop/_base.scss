@@ -5,12 +5,27 @@
 
 @font-face{
     font-family: PoppinsBold;
-    src: url("../fonts/Poppins-SemiBold.ttf")
+    src: url("../fonts/PoppinsSemiBold.ttf")
 }
+
+// @font-face{
+//     font-family: TwCenMTCondensedExtraBold;
+//     src: url("../fonts/TwCenMTCondensedExtraBold.ttf")
+// }
+
+// @font-face{
+//     font-family: ArchivoBlack;
+//     src: url("../fonts/ArchivoBlack.ttf")
+// }
+
+:root {
+    color-scheme: dark;
+  }
 
 html {
     box-sizing: border-box;
     font-size: 62.5%;
+    scroll-behavior: smooth;
     // user-select: none;
 }
 
@@ -21,12 +36,12 @@ body {
     color: white;
     font-family: 'Poppins', 'Segoe UI';
 
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+//     -ms-overflow-style: none;
+//     scrollbar-width: none;
 
-    &::-webkit-scrollbar {
-        display: none;
-    }
+//     &::-webkit-scrollbar {
+//         display: none;
+//     }
 }
 
 *,
@@ -65,3 +80,5 @@ body {
         top: 4vh;
     }
 }
+
+

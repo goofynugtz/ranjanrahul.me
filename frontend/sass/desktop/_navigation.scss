@@ -1,0 +1,41 @@
+.navigation {
+    display: flex;
+    background-color: black;
+    height: 10vh;
+    align-items: center;
+
+    &__brand{
+        width: 20vw;
+        font-size: 1.2vw;
+        padding: 0px 3rem;
+        font-family: 'PoppinsBold';
+    }
+
+    &__links{
+        width: 80vw;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &--links {
+        width: max-content;
+        padding: 20px;
+        font-size: .9vw;
+        color: white;
+
+        &:hover {
+            color: royalblue;
+        }
+
+        &__social {
+            &:hover {
+                text-decoration: none;
+                // TODO: Soon to b replaced
+            }
+        }
+    }
+}
+
+.active {
+    color: royalblue;
+}

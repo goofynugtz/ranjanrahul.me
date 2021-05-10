@@ -12,6 +12,11 @@ const articleSchema = new mongoose.Schema({
     description: {
         type: String
     },
+    slug: {
+        type: String,
+        required: true,
+        unique: true
+    },
     markdown: {
         type: String,
         required: true
@@ -27,6 +32,10 @@ const articleSchema = new mongoose.Schema({
 });
 
 articleSchema.pre('validate', function(next) {
+    if (this.title){
+        this.slug = slugify(this.title, {lower: true, strict: true});   
+    }
+    
     if(this.markdown) {
         this.sanitizedHtml = dompurify.sanitize(marked(this.markdown));
     }

@@ -1,0 +1,11 @@
+<link rel="stylesheet" href="/sass/main.css">
+<title><%= articles.title %> </title>
+<%- include('_navigation') %>
+<section class="blog">
+    <div class="blog__post">
+        <h1 class="blog__post--title"> <%= articles.title %> </h1>
+        <date class="blog__post--date"> <%=  articles.createdAt %> </date><br><br>
+        <p> <%= articles.description %> </p>
+        <p class="blog__post--body"> <%- articles.sanitizedHtml %> </p>
+    </div>
+</section>

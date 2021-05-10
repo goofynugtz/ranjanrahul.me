@@ -4,7 +4,7 @@
         grid-area: 1 / 1 / 2 / 4;
         display: grid;
         grid-template-columns: 10vw 1fr 1fr;
-        grid-template-rows: 68px minmax(300px, 45vh) minmax(300px, 45vh);
+        grid-template-rows: 0px minmax(300px, 45vh) minmax(300px, 45vh);
 
         &__topbar {
             grid-area: 1 / 1 / 2 / 4;
@@ -83,14 +83,36 @@
             grid-area: 2 / 2 / 4 / 3;
             display: grid;
             grid-template-rows: .5fr .5fr .5fr .5fr;
-            padding-top: 80px;
+            // padding-top: 80px;
             padding-right: 50px;
+            font-size: 20px;
 
 
             &--hello {
                 display: flex;
                 align-self: flex-end;
-                padding-bottom: 10px;
+                // padding-bottom: 10px;
+                font-family: 'Poppins';
+                font-weight: bolder;
+                font-size: 10px;
+                letter-spacing: .5rem;
+                // line-height: 7.3rem;
+                // font-family: 'ArchivoBlack';
+                font-size: 20px;
+            }
+
+            &--name {
+                font-family: 'Poppins';
+                font-weight: bolder;
+                // font-weight: bold;
+                // color: transparent;
+                font-size: 60px;
+                letter-spacing: 2rem;
+                line-height: 7.3rem;
+                // overflow: visible;
+                // backdrop-filter: invert(70%);
+                // z-index: -1;
+                // filter: invert(100%);
             }
 
             &--name_small{
@@ -129,7 +151,7 @@
             } 
         }
 
-        &__intro-bg{
+        &__intro-gradient{
             grid-area: 3 / 1 / 4 / 3;
             background: linear-gradient(to right top, #9255B5, #F9A676, #FFE3C1);
             z-index: -1;

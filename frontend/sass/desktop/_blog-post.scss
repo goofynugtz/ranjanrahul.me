@@ -1,0 +1,32 @@
+.blog {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: 10vw .4fr 1fr 10vw;
+
+    &__post {
+        grid-column: 3 / 4;
+        font-size: 1.6rem;
+        border-left: 1px solid gray;
+        padding-left: 3rem;
+        margin-bottom: 10rem;
+
+        &--title {
+            font-size: 4rem;
+            justify-self: center;
+        }
+
+        &--date {
+            color: #FBBF94;
+            font-size: 1rem;
+            letter-spacing: .1rem;
+        }
+
+        &--body {
+            padding: 2rem 0;
+        }
+    }
+
+    
+
+    
+}

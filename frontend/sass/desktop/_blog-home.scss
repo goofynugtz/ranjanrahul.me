@@ -1,7 +1,6 @@
-.blog {
+.blog-home {
     margin-top: 5vw;
     grid-column: 2 / 3;
-    //background-color: red;
 
     &__heading{
         position: absolute;
@@ -14,34 +13,23 @@
     }
 
     &__container{
-        // width: max-content;
-        // margin: 100px auto;
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
 
     &__tile{
-        // min-width: 400px;
-        // height: fit-content;
-        // border-radius: 10px;
-        // background-color: rgba(255, 255, 255, .05);
-        // margin: 30px 0px;
         padding: 40px;
-        // box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, .05);
     }
 
     &__title{
         width: max-content;
         font-size: 20px;
         color: #AB69A7;
-        // padding: 10px 0px;
         transition: all .2s;
 
         &:hover{
             color: #FBBF94;
         }
-
-        
     }
 
     &__preview{
