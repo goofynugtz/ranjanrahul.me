@@ -6,10 +6,9 @@ const Article = require('./blog/models/articles');
 const helmet = require('helmet');
 app.use(helmet.hidePoweredBy());
 
-mongoose.connect('mongodb+srv://goofy:8292757339@cluster0.gvtuu.mongodb.net/personalBlog', {
+mongoose.connect('mongodb+srv://goofyN:4321@clusterzero.gvtuu.mongodb.net/blog', {
     useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true
-}).catch(err => {console.log(err);});
-// console.log("mong triggered! Refresh now");
+});
 
 app.use(express.static(__dirname + '/frontend'));
 //app.use(express.urlencoded());
@@ -18,7 +17,7 @@ app.set('view engine', 'ejs');
 
 app.get('/', async (req, res, next) => {
     const articles = await Article.find().sort({createdAt: 'desc'});
-    console.log(articles);
+    // console.log(articles);
     res.render('homepage', {articles: articles});
 });
 
@@ -35,3 +34,4 @@ app.get('/blog', (req, res, next) => {
 });
 
 app.listen(3000);
+console.log("App active on port:3000")
