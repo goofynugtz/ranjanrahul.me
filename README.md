@@ -1,7 +1,11 @@
 # Portfolio
 
-Under development.  
+Still under development.  
 
-# Requirements  
-• SASS  
-• Clone or download .zip and run with `live server` in VSCode.
+# To run on local server
+• Clone to local repository by 
+```bash
+git clone https://github.com/goofyNugtz/personalWeb.git
+cd personalWeb
+nodemon server.js
+```
