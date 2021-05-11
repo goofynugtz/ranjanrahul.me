@@ -1,24 +1,26 @@
 @media screen and (min-width: 1025px) {
 
     .my-skills {
-        grid-column: 1 / 4;
+        grid-column: 2 / 3;
         grid-row: 2 / 3;
+        max-width: 80rem;
         font-family: 'PoppinsBold';
-        display: grid;
-        grid-template-rows: min-content max-content;
-        grid-row-gap: 30px;
-        grid-template-columns: 10vw 1fr 10vw;
+        margin-left: auto;
+        margin-right: auto;
+        // background-color: #77BE55;
+        // display: grid;
+        // grid-template-rows: min-content max-content;
+        // grid-row-gap: 3rem;
+        // grid-template-columns: 0 1fr 0;
     }
 
     .heading {
-        grid-column: 2 / 3;
-        grid-row: 1/ 2;
-        font-size: 20px;
-        padding-top: 50px;
+        font-size: 2rem;
+        padding-top: 5rem;
+        padding-bottom: 5rem;
     }
 
     .skills-container {
-        grid-column: 2 / 3;
         line-height: 3rem;
         user-select: none;
         display: flex;
@@ -27,13 +29,13 @@
     }
 
     .skills {
-        border-radius: 500px;
-        padding: 2px 15px;
+        border-radius: 50rem;
+        padding: .2rem 1.5rem;
         align-self: center;
-        margin: 5px;
+        margin: .5rem;
         border-top: 1px solid rgba(255, 255, 255, .5);
-        box-shadow: 0 5px 5px 5px rgba(0, 0, 0, .1);
-        font-size: 16px;
+        box-shadow: 0 .5rem .5rem .5rem rgba(0, 0, 0, .1);
+        font-size: 1.6rem;
         user-select: none;
     }
 

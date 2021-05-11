@@ -1,4 +1,6 @@
 <link rel="stylesheet" href="/sass/main.css">
+<link rel="stylesheet" href="/css/all.css">
+
 <title><%= articles.title %> </title>
 <%- include('_navigation') %>
 <section class="blog">
@@ -9,3 +11,4 @@
         <p class="blog__post--body"> <%- articles.sanitizedHtml %> </p>
     </div>
 </section>
+<%- include('_footer') %>

@@ -26,22 +26,15 @@ html {
     box-sizing: border-box;
     font-size: 62.5%;
     scroll-behavior: smooth;
-    // user-select: none;
 }
 
 body {
+    font-smooth: always;
     background-color: #151527;
     margin: 0;
     padding: 0;
     color: white;
     font-family: 'Poppins', 'Segoe UI';
-
-//     -ms-overflow-style: none;
-//     scrollbar-width: none;
-
-//     &::-webkit-scrollbar {
-//         display: none;
-//     }
 }
 
 *,
@@ -49,15 +42,15 @@ body {
 *::after {
     margin: 0;
     padding: 0;
-    /* box-sizing: inherit; */
+    // box-sizing: inherit;
 }
 
 @media screen and (min-width: 1025px) {
     .container {
         display: grid;
-        grid-template-columns: 10vw 1fr 10vw;
-        grid-template-rows: max-content max-content 1000px;
-        grid-row-gap: 100px;
+        grid-template-columns: 20vw 1fr 20vw;
+        grid-template-rows: max-content max-content max-content;
+        grid-row-gap: 10rem;
     }
     
     .tags {

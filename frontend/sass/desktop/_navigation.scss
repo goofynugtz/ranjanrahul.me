@@ -1,41 +1,50 @@
-.navigation {
+.nav {
     display: flex;
     background-color: black;
-    height: 10vh;
+    height: 6.8rem;
     align-items: center;
 
-    &__brand{
-        width: 20vw;
-        font-size: 1.2vw;
+    &--left{
+        width: max-content;
+        font-size: 2rem;
         padding: 0px 3rem;
         font-family: 'PoppinsBold';
     }
 
-    &__links{
-        width: 80vw;
+    &--right{
+        width: 100%;
         display: flex;
+        list-style-type: none;
         justify-content: flex-end;
+        align-items: center;
     }
 
-    &--links {
+    &__e {
+        transition: all .25s;
         width: max-content;
-        padding: 20px;
-        font-size: .9vw;
+        padding: 2rem;
+        font-size: 1.2rem;
         color: white;
 
         &:hover {
             color: royalblue;
         }
+    }
 
-        &__social {
-            &:hover {
-                text-decoration: none;
-                // TODO: Soon to b replaced
-            }
+    &__s {
+        transition: all .25s;
+        align-self: center;
+        font-size: 2.4rem;
+        width: max-content;
+        padding: .5rem;
+        color: white;
+
+        &:hover {
+            color: royalblue;
         }
     }
 }
 
-.active {
-    color: royalblue;
+.r-margin {
+    margin-right: 2.5rem;
 }
