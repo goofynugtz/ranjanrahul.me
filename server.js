@@ -8,8 +8,8 @@ app.use(helmet.hidePoweredBy());
 
 mongoose.connect('mongodb+srv://goofy:8292757339@cluster0.gvtuu.mongodb.net/personalBlog', {
     useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true
-});
-    console.log("mong triggered! Refresh now");
+}).catch(err => {console.log(err);});
+// console.log("mong triggered! Refresh now");
 
 app.use(express.static(__dirname + '/frontend'));
 //app.use(express.urlencoded());
