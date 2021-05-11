@@ -1,0 +1,22 @@
+<section class="blog-home">
+    <div class="blog-home__heading">
+        <h1>Blog</h1>
+    </div>
+    <div class="blog-home__container">
+    <% for (let i = 0; i < 1; i++) {%> 
+        <div class="blog-home__tile">
+            <a href="/blog/<%= articles[i].slug %>"><div class="blog-home__title">
+                <h2><%= articles[i].title %></h2>
+            </div></a>
+            <div class="blog-home__date">
+                <%= articles[i].createdAt %> 
+            </div>
+            <div class="blog-home__preview">
+                <%= articles[i].description %>
+            </div>
+            <a href="/blog/<%= articles[i].slug %>" class="blog-home__read-more" target="_blank">Read More</a>
+            
+        </div>
+    <% } %> 
+    </div>
+</section>

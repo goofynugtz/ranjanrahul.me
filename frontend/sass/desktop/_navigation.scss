@@ -1,0 +1,50 @@
+.nav {
+    display: flex;
+    background-color: black;
+    height: 6.8rem;
+    align-items: center;
+
+    &--left{
+        width: max-content;
+        font-size: 2rem;
+        padding: 0px 3rem;
+        font-family: 'PoppinsBold';
+    }
+
+    &--right{
+        width: 100%;
+        display: flex;
+        list-style-type: none;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    &__e {
+        transition: all .25s;
+        width: max-content;
+        padding: 2rem;
+        font-size: 1.2rem;
+        color: white;
+
+        &:hover {
+            color: royalblue;
+        }
+    }
+
+    &__s {
+        transition: all .25s;
+        align-self: center;
+        font-size: 2.4rem;
+        width: max-content;
+        padding: .5rem;
+        color: white;
+
+        &:hover {
+            color: royalblue;
+        }
+    }
+}
+
+.r-margin {
+    margin-right: 2.5rem;
+}
