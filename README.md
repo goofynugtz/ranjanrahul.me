@@ -1,7 +1,18 @@
 # Portfolio
 
-Under development.  
+Still under development.
 
-# Requirements  
-• SASS  
-• Clone or download .zip and run with `live server` in VSCode.
+# Requirements
+'nodemon' is recommended to be installed globally.
+```bash
+npm install nodemon -g
+```
+
+# To run on local server
+• Clone to local repository by 
+```bash
+git clone https://github.com/goofyNugtz/personalWeb.git
+cd personalWeb
+npm install
+nodemon server.js
+```
