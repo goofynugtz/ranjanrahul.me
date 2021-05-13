@@ -6,7 +6,11 @@ const Article = require('./blog/models/articles');
 const helmet = require('helmet');
 app.use(helmet.hidePoweredBy());
 
-mongoose.connect('mongodb+srv://goofyN:4321@clusterzero.gvtuu.mongodb.net/blog', {
+// mongoose.connect('mongodb+srv://goofyN:4321@clusterzero.gvtuu.mongodb.net/blog', {
+//     useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true
+// });
+
+mongoose.connect('mongodb://localhost:27017/personalBlog?readPreference=primary&appname=MongoDB%20Compass&ssl=false', {
     useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true
 });
 
@@ -33,5 +37,10 @@ app.get('/blog', (req, res, next) => {
     res.render('_blog_index');
 });
 
+app.get('/header', (req, res, next) => {
+    // console.log("triggered");
+    res.render('_header');
+});
+
 app.listen(3000);
-console.log("App active on port:3000")
+console.log("Online on port:3000")

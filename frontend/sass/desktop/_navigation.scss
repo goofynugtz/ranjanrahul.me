@@ -6,8 +6,10 @@
 
     &--left{
         width: max-content;
+        display: flex;
         font-size: 2rem;
-        padding: 0px 3rem;
+        list-style-type: none;
+        padding: 0px 1.5rem;
         font-family: 'PoppinsBold';
     }
 
@@ -27,7 +29,7 @@
         color: white;
 
         &:hover {
-            color: royalblue;
+            color: #0D92FF;
         }
     }
 
@@ -40,11 +42,15 @@
         color: white;
 
         &:hover {
-            color: royalblue;
+            color: #F58F3B;
         }
     }
 }
 
 .r-margin {
     margin-right: 2.5rem;
+}
+
+.l-margin {
+    margin-left: 2.5rem;
 }

@@ -1,160 +1,103 @@
-@media screen and (min-width: 1025px) {
+.header {
+	grid-area: 1 / 1 / 2 / 4;
+	margin-left: auto;
+	margin-right: auto;
+	// height: max-content;
+	// display: grid;
+	// grid-template-rows: calc(100vh-6.8rem);
+	max-width: 80rem;
+	// background-color: #0f111a;
+	// z-index: -1;
+}
 
-    .header {
-        grid-area: 1 / 1 / 2 / 4;
-        display: grid;
-        grid-template-columns: 10vw 1fr 1fr;
-        grid-template-rows: 0px minmax(300px, 45vh) minmax(300px, 45vh);
+.background-dark {
+	position: absolute;
+	top: 0;
+	pointer-events: none;
+	left: 0;
+	height: 75.4rem;
+	background-color: #0f111a;
+	width: 100%;
+	z-index: -1;
+}
 
-        &__topbar {
-            grid-area: 1 / 1 / 2 / 4;
-            display: grid;
-            /* backdrop-filter: blur(5px); */
-            grid-template-columns: 1.5fr minmax(1fr, 200px) repeat(4, .75fr) minmax(1fr, 200px) 1.5fr;
-            justify-items: center;
-            align-items: center;
-            background-color: rgba(0, 0, 0, 1);
-            box-shadow: 0 10px 50px 10px rgba(0, 0, 0, 0.1) ;
-            font-size: 14px;
+.background-light {
+	position: absolute;
+	top: 0;
+	left: 17.5rem;
+	// width: 65rem;
+	width: 45.5%;
+	height: 75.4rem;
+	background-color: transparent;
+	z-index: 1;
+	backdrop-filter: invert(100%);
+	pointer-events: none;
+	// background-clip: text;
+	// -webkit-background-clip: text;
+}
 
-            &--brand {
-                grid-column: 1 / 2;
-                font-size: 20px;
-            }
+.txt {
+	backdrop-filter: invert(100%);
+	background-color: transparent;
+	font-weight: 900;
+	padding: 0 5rem;
+	margin: 2rem 0;
+	width: max-content;
+	color: black;
+	z-index: 1;
+	// user-select: none;
 
-            &--home{
-                grid-column: 3 / 4;
-                text-decoration: none;
-                font-family: 'PoppinsBold';
-                color: royalblue;
-                &:hover{
-                    text-decoration: underline;
-                    text-decoration-thickness: 2px;
-                }
-            }
+	&--hello {
+		font-size: 4rem;
+		letter-spacing: .4rem;
+	}
 
-            &--about {
-                grid-column: 4 / 5;
-                text-decoration: none;
-                color: white;
-                &:hover{
-                    text-decoration: underline;
-                    text-decoration-thickness: 2px;
-                }
-            }
+	&--name {
+		font-family: 'Poppins';
+		font-size: 90px;
+		letter-spacing: 1rem;
+	}
+}
 
-            &--portfolio{
-                grid-column: 5 / 6;
-                text-decoration: none;
-                color: white;
-                &:hover{
-                    text-decoration: underline;
-                    text-decoration-thickness: 2px;
-                }
-            }
+.intro {
+	font-family: 'SFPro';
+	// font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	font-size: 1.8rem;
+	max-width: 45rem;
+}
 
-            &--contact {
-                grid-column: 6 / 7;
-                text-decoration: none;
-                color: white;
-                &:hover{
-                    text-decoration: underline;
-                    text-decoration-thickness: 2px;
-                }
-            }
+.button {
+	// position: absolute;
+	appearance: none;
+	text-rendering: optimizeLegibility;
+	border: 0;
+	width: 16rem;
+	height: 6rem;
+	outline: 0;
+	background-color: #AB69A7;
+	backdrop-filter: invert(100%);
+	color: black;
+	z-index: 5;
+	border-radius: 20rem;
+	font-family: "Poppins";
+	font-weight: 700;
+	transition: all 0.3s;
+	box-shadow: 0 2px 5px 8px rgba(255, 255, 255, 0.2);
 
-            &--social {
-                grid-column: 8 / 9;
-            }
-        }
+	&:active {
+		transform: translateY(2px);
+		box-shadow: 0 1px 5px 4px rgba(255, 255, 255, 0.1);
+	}
+}
 
+.mg-top {
+	margin-top: 15rem;
+}
 
-        &__image{
-            grid-area: 2 / 3 / 4 / 4;
-            z-index: -1;
-            background-image: url('../img/profileBackground.jpeg');
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
+.mg-top-small {
+	margin-top: 5rem;
+}
 
-        }
-
-        &__intro {
-            grid-area: 2 / 2 / 4 / 3;
-            display: grid;
-            grid-template-rows: .5fr .5fr .5fr .5fr;
-            // padding-top: 80px;
-            padding-right: 50px;
-            font-size: 20px;
-
-
-            &--hello {
-                display: flex;
-                align-self: flex-end;
-                // padding-bottom: 10px;
-                font-family: 'Poppins';
-                font-weight: bolder;
-                font-size: 10px;
-                letter-spacing: .5rem;
-                // line-height: 7.3rem;
-                // font-family: 'ArchivoBlack';
-                font-size: 20px;
-            }
-
-            &--name {
-                font-family: 'Poppins';
-                font-weight: bolder;
-                // font-weight: bold;
-                // color: transparent;
-                font-size: 60px;
-                letter-spacing: 2rem;
-                line-height: 7.3rem;
-                // overflow: visible;
-                // backdrop-filter: invert(70%);
-                // z-index: -1;
-                // filter: invert(100%);
-            }
-
-            &--name_small{
-                display: none;
-                /* background-color: red; */
-            }
-
-            &--text {
-                padding-top: 25px;
-                padding-right: 40px;
-                padding-bottom: 40px;
-                grid-row: 3 / 4;
-                color: #151527;
-                /* background-color: blueviolet; */
-                font-family: 'PoppinsBold';
-                font-size: 1.1vw;
-            }
-
-            &--button {
-                /* margin-top: 30px; */
-                grid-row: 4 / 5;
-                width: 150px;
-                height: 50px;
-                appearance: 0;
-                outline: 0;
-                border: 0;
-                font-family: 'PoppinsBold';
-                border-radius: 25px;
-                transition: all .2s;
-                box-shadow: 0 2px 10px 5px rgba(0, 0, 0, 0.2);
-
-                &:active{
-                    transform: translateY(2px);
-                    box-shadow: 0 1px 5px 4px rgba(0, 0, 0, 0.1);
-                }
-            } 
-        }
-
-        &__intro-gradient{
-            grid-area: 3 / 1 / 4 / 3;
-            background: linear-gradient(to right top, #9255B5, #F9A676, #FFE3C1);
-            z-index: -1;
-        }
-    }
+.mg-down {
+	margin-bottom: 10rem;
 }

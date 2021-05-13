@@ -9,24 +9,24 @@
         position: absolute;
         color: rgba(255, 255, 255, .05);
         font-size: 10rem;
-        transform: translateY(-40%);
-        padding: 10px 0px;
+        transform: translate(-15%, -30%);
+        // padding: 1rem 0;
         z-index: -1;
         font-family: 'PoppinsBold';
     }
 
     &__container{
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
     }
 
     &__tile{
-        padding: 40px;
+        padding: 4rem;
     }
 
     &__title{
         width: max-content;
-        font-size: 20px;
+        font-size: 2rem;
         color: #AB69A7;
         transition: all .2s;
 
