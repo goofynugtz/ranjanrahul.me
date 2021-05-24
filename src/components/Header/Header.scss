@@ -1,0 +1,99 @@
+.header {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 80rem;
+}
+
+.background {
+	position: absolute;
+	top: 0;
+	pointer-events: none;
+	left: 0;
+	height: 76.3rem;
+	background-color: var(--background-color-alt);
+	width: 100%;
+	z-index: -1;
+	// box-shadow: 0 5px 5rem 1rem rgba(0, 0, 0, 0.5);
+	transition: all .25s;
+}
+
+.background-overlay {
+	position: absolute;
+	top: 0;
+	left: 17.5rem;
+	width: 46%;
+	height: 76.3rem;
+	background-color: transparent;
+	z-index: 1;
+	backdrop-filter: invert(100%);
+	pointer-events: none;
+	transition: all .5s;
+}
+
+.txt {
+	backdrop-filter: invert(100%);
+	background-color: transparent;
+	font-weight: 900;
+	padding: 0 5rem;
+	margin: 2rem 0;
+	width: max-content;
+	color: var(--font-color-alt);
+    font-family: "Poppins";
+	z-index: 1;
+	/* user-select: none; */
+}
+
+.txt--hello {
+    font-size: 4rem;
+    /* letter-spacing: 0.4rem; */
+}
+
+.txt--name {
+    font-size: 90px;
+    letter-spacing: 1rem;
+}
+
+.intro {
+	font-family: "SFPro";
+	color: var(--font-color);
+	/* text-align: left; */
+	font-size: 1.8rem;
+	max-width: 45rem;
+}
+
+.button {
+	appearance: none;
+	text-rendering: optimizeLegibility;
+	border: 0;
+	width: 16rem;
+	height: 6rem;
+	outline: 0;
+	background-color: var(--accent-color);
+	/* backdrop-filter: invert(100%); */
+	color: black;
+	/* z-index: 5; */
+	border-radius: 20rem;
+	font-family: "Poppins";
+	font-weight: 700;
+	transition: all 0.3s;
+	box-shadow: 0 2px 5px 8px rgba(255, 255, 255, 0.1);
+
+
+}
+
+.button:active {
+    transform: translateY(2px);
+    box-shadow: 0 1px 5px 4px rgba(255, 255, 255, 0.1);
+}
+
+.mg-top {
+	margin-top: 15rem;
+}
+
+.mg-top-small {
+	margin-top: 5rem;
+}
+
+.mg-down {
+	margin-bottom: 10rem;
+}
