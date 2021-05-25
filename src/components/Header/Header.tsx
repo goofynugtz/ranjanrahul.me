@@ -1,6 +1,6 @@
 import './Header.scss';
 
-const header:React.FC = () => {
+const Header:React.FC = () => {
     return (
         <div className="header">
             <div className="background"></div>
@@ -19,4 +19,4 @@ const header:React.FC = () => {
     )
 }
 
-export default header
+export default Header

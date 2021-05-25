@@ -13,104 +13,87 @@ const skill: ({
     {
         name: 'HTML',
         class: 'front-end',
-        icon: < FaHtml5 /> ,
-        efficiency: 10
+        icon: < FaHtml5 /> 
     },
     {
         name: 'CSS',
         class: 'front-end',
-        icon: < FaCss3Alt />,
-        efficiency: 10
+        icon: < FaCss3Alt />
     },
     {
         name: 'SASS',
         class: 'front-end',
-        icon: < FaSass /> ,
-        efficiency: 8
+        icon: < FaSass />
     },
     {
         name: 'JavaScript',
         class: 'front-end',
-        icon: < FaJs />,
-        efficiency: 7
+        icon: < FaJs />
     },
     {
         name: 'React',
         class: 'front-end',
-        icon: < FaReact /> ,
-        efficiency: 5
+        icon: < FaReact />
     },
     {
         name: 'TypeScript',
         class: 'front-end',
-        icon: < SiTypescript />,
-        efficiency: 5
+        icon: < SiTypescript />
     },
     {
         name: 'Angular',
         class: 'front-end',
-        icon: < FaAngular /> ,
-        efficiency: 2
+        icon: < FaAngular /> 
     },
     {
         name: 'Node.JS',
         class: 'back-end',
-        icon: < FaNodeJs />,
-        efficiency: 8
+        icon: < FaNodeJs />
     },
     {
         name: 'Express',
         class: 'back-end',
-        icon: < FaJs />,
-        efficiency: 7
+        icon: < FaJs />
     },
     {
         name: 'MySQL',
         class: 'database',
-        icon: < SiMysql /> ,
-        efficiency: 5
+        icon: < SiMysql />
     },
     {
         name: 'MongoDB',
         class: 'database',
-        icon: < SiMongodb />,
-        efficiency: 9
+        icon: < SiMongodb />
     },
     {
         name: 'C',
         class: 'languages',
-        icon: < SiCplusplus />,
-        efficiency: 4
+        icon: < SiCplusplus />
     },
     {
         name: 'C++',
         class: 'languages',
-        icon: < SiCplusplus />,
-        efficiency: 5
+        icon: < SiCplusplus />
     },
     {
         name: 'Python',
         class: 'languages',
-        icon: <FaPython />,
-        efficiency: 4
+        icon: <FaPython />
     },
     {
         name: 'Kotlin',
         class: 'languages',
-        icon: < SiKotlin /> ,
-        efficiency: 2
+        icon: < SiKotlin />
     },
     {
         name: 'Search Engine Optimization',
         class: 'extras-1',
-        icon: < SiGooglesearchconsole />,
-        efficiency: 1
+        icon: < SiGooglesearchconsole />
     },
     {
         name: 'Vector Graphics',
         class: 'extras-2',
-        icon: < AiOutlineRadarChart /> ,
-        efficiency: 5
+        icon: < AiOutlineRadarChart />
     }
     
 ]
@@ -135,28 +118,3 @@ const Skills: React.FC = () => {
 }
 
 export default Skills
-
-/*          <div className="skills-container">
-                <span className="front-end skills">Front End</span>
-                <span className="front-end skills front-end--html">HTML</span>
-                <span className="front-end skills front-end--css">CSS</span>
-                <span className="front-end skills front-end--sass">SASS</span>
-                <span className="front-end skills front-end--js">JavaScript</span>
-                <span className="front-end skills front-end--reactjs">ReactJS</span>
-                <span className="front-end skills front-end--js">TypeScript</span>
-                <span className="front-end skills front-end--angular">Angular</span>
-                <br />
-                <span className="back-end skills">Back End</span>
-                <span className="back-end skills back-end--nodejs">NodeJS</span>
-                <span className="back-end skills back-end--express">Express</span>
-                <span className="back-end skills back-end--sql">SQL</span>
-                <span className="back-end skills back-end--mongodb">MongoDB</span>
-                <br />
-                <span className="languages languages--c skills ">C</span>
-                <span className="languages languages--cpp skills">C++</span>
-                <span className="languages languages--python skills">Python</span>
-                <span className="languages languages--kotlin skills">Kotlin</span>
-                <br />
-                <span className="extras-1 skills extras-1--seo">SEO</span>
-                <span className="extras-2 skills extras-2--svg">Vector Graphics</span>
-            </div> */

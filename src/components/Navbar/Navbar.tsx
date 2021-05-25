@@ -1,9 +1,6 @@
 // import React from 'react'
 import './Navbar.scss';
-import { FaGithub } from "react-icons/fa";
-import { FaFacebookF } from "react-icons/fa";
-import { FaLinkedinIn } from "react-icons/fa";
-import { FaDev } from "react-icons/fa";
+import { FaGithub, FaFacebookF, FaLinkedinIn, FaDev } from "react-icons/fa";
 import { FiSun, FiMoon } from 'react-icons/fi';
 import { NavLink } from 'react-router-dom';
 import { DarkMode } from 'use-dark-mode';

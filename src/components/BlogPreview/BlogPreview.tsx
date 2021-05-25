@@ -1,6 +1,9 @@
 import React from 'react'
+import './BlogPreview.scss';
 
-const blogPreview: React.FC = () => {
+
+
+const BlogPreview: React.FC = () => {
     return (
         <section className="blog-home">
             <div className="blog-home__heading">
@@ -13,4 +16,4 @@ const blogPreview: React.FC = () => {
     )
 }
 
-export default blogPreview
+export default BlogPreview

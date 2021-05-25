@@ -23,6 +23,7 @@ body {
 	-webkit-touch-callout: none;
 	margin: 0;
 	padding: 0;
+	min-height: 100vh;
     transition: all .2s;
     background-color: var(--background-color);
 }
