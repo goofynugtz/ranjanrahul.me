@@ -1,0 +1,24 @@
+.blog {
+
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+
+
+
+    &__posts {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        &--left {
+            max-width: 20rem;
+            background-color: darkgreen;
+        }
+
+        &--right {
+            max-width: 60rem;
+            background-color: aquamarine;
+        }
+    }
+}

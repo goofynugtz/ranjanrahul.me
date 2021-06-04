@@ -1,0 +1,98 @@
+.blog-home {
+    // margin-top: 5vw;
+    // grid-column: 2 / 3;
+    max-width: 90rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+
+    &--bg-heading{
+        position: absolute;
+        color: var(--transparency);
+        font-size: 7.5rem;
+        // transform: translate(-10%, -20%);
+        // padding: 1rem 0;
+        z-index: -1;
+        font-family: 'PoppinsBold';
+        // border-right: .1rem solid var(--font-color);
+        padding-right: 5rem;
+    }
+
+    &__body{
+        // display: flex;
+        margin-left: auto;
+        max-width: 50rem;
+
+    }
+
+    &--cards{
+        padding: 1rem 4rem;
+        margin: 2rem;
+        // min-width: max-content;
+        // max-height: 20rem;
+        // backdrop-filter: blur(.35rem);
+        // background-color: var(--transparency);
+        border-radius: 1rem;
+        cursor: default;
+        border: .1rem solid var(--transparency);
+
+    }
+
+    &__title{
+        // width: max-content;
+        font-size: 2rem;
+        word-wrap: none;
+        word-break: keep-all;
+        color: var(--accent-color-alt);
+        transition: all .25s;
+
+        &:hover{
+            // color: var(--accent-color);
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    }
+
+    &__date {
+        font-size: 1.2rem;
+        color: #007BFF;
+    }
+
+    &__description{
+        // overflow-y: hidden;
+        word-wrap: normal;
+        font-size: 16px;
+        color: var(--font-color);
+        padding: 2rem 0;
+        // height: 60px;
+        // font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    &__tags {
+        margin: .5rem 0 2rem 0;
+        font-size: 1.25rem;
+
+        &--tag {
+            margin: 0 .25rem;
+            background-color: rgba(46, 104, 180, 0.15);
+            padding: .5rem 1rem;
+            border-radius: 5rem;
+            color: #007BFF;
+
+            &:hover {
+            background-color: rgba(46, 104, 180, 0.25);
+            }
+        }
+    }
+
+    .blog__read-more{
+        text-decoration: none;
+        color: royalblue;
+    }
+}
+
+.vr {
+    height: 10rem;
+    width: .1rem;
+    color: red;
+}

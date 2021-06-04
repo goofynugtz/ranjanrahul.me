@@ -1,0 +1,35 @@
+.footer {
+    display: flex;
+    height: 6.8rem;
+    align-items: center;
+    color: var(--font-color);
+
+    &--brand {
+        font-family: 'PoppinsBold';
+        font-size: 2rem;
+        align-self: center;
+    }
+
+    &--left {
+        display: flex;
+        width: max-content;
+        align-items: center;
+        padding: 0px 3rem;
+        list-style-type: none;
+        justify-content: flex-start;
+    }
+
+    &--right {
+        width: 100%;
+        display: flex;
+        list-style-type: none;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    &__e {
+        width: max-content;
+        padding: 0 2rem;
+        font-size: 1.2rem;
+    }
+}

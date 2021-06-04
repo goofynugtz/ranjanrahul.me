@@ -1,0 +1,121 @@
+/* 
+COLOR PALLETE:
+
+*/
+:root {
+    color-scheme: dark;
+}
+
+* {
+    font-family: 'SFPro';
+}
+
+html {
+	overflow-x: hidden;
+	width: 100vw;
+	box-sizing: border-box;
+	font-size: 62.5%;
+	// scroll-behavior: smooth;
+}
+
+.main {
+	min-height: calc(100vh - 30rem); //Footer Height : 6.8rem. No idea why 30rem is working!
+}
+
+body {
+	-webkit-tap-highlight-color: transparent;
+	-webkit-touch-callout: none;
+	margin: 0;
+	padding: 0;
+	min-height: 100vh;
+    transition: all .2s;
+    background-color: var(--background-color);
+}
+
+.dark-mode {
+    --background-color: #121212;
+    --background-color-alt: #0F111A;
+    --accent-color-alt: #AB69A7;
+    --accent-color: #549658;
+    --font-color: #FFFFFF;
+    --font-color-alt: #000000;
+	--transparency: rgba(255, 255, 255, .2)
+}
+
+.light-mode {
+    --background-color: #F2F2F2;
+    --background-color-alt: #F0EEE5;
+    --accent-color-alt: #549658;
+    --accent-color: #AB69A7;
+    --font-color: #000000;
+    --font-color-alt: #FFFFFF;
+	--transparency: rgba(0, 0, 0, .2)
+
+}
+
+.nav {
+	display: flex;
+	background-color: black;
+	height: 6.8rem;
+	align-items: center;
+	justify-content: space-between;
+
+	&--left {
+		display: flex;
+		list-style-type: none;
+		align-items: center;
+		color: white;
+	}
+
+	&--right {
+		display: flex;
+		list-style-type: none;
+		justify-content: flex-end;
+		align-items: center;
+		color: white;
+	}
+
+	&__brand {
+		width: max-content;
+		padding: 0px 3rem;
+		font-size: 2rem;
+		list-style-type: none;
+		font-family: "PoppinsSemibold";
+	}
+
+	&__e {
+		transition: all 0.25s;
+		margin-right: 4rem;
+		font-size: 1.4rem;
+		color: white;
+		text-decoration: none;
+
+		&:hover {
+			color: #0d92ff;
+			// text-decoration: underline;
+			// text-underline-offset: 2px;
+		}
+	}
+
+	&__s {
+		transition: all 0.25s;
+		align-self: center;
+		font-size: 2rem;
+		width: max-content;
+		padding: 0.5rem;
+		color: white;
+
+		&:hover {
+			color: #f58f3b;
+		}
+	}
+}
+
+.link {
+	color: var(--accent-color);
+}
+
+// h1{
+// 	margin: 0;
+// 	padding: 0;
+// }
