@@ -8,11 +8,11 @@ const navigation = (darkMode: DarkMode) => {
     return (
         <div className={styles.nav}>
             <div className={styles.left}>
-                <div className={styles.brand}>ranjanrahul</div>
-                <li className={styles.s}><FaFacebookF /></li>
-                <li className={styles.s}><FaGithub /></li>
-                <li className={styles.s}><FaLinkedinIn /></li>
-                <li className={styles.s}><FaDev /></li>
+                <div className={styles.brand}><Link href="/">ranjanrahul</Link></div>
+                <li className={styles.s}><Link href="/"><FaFacebookF /></Link></li>
+                <li className={styles.s}><Link href="https://github.com/goofyNugtz"><FaGithub /></Link></li>
+                <li className={styles.s}><Link href="/"><FaLinkedinIn /></Link></li>
+                <li className={styles.s}><Link href="/"><FaDev /></Link></li>
             </div>
             <div className={styles.right}>
                 <li><Link href="/"><a className={styles.e}>Home</a></Link></li>

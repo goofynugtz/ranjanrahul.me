@@ -1,22 +1,30 @@
-// import React, { useEffect, useState } from 'react'
-import styles from './BlogPreview.module.scss';
+import styles from './Blogs.module.scss'
+import { sanityClient, urlFor } from '../../lib/sanity'
 
-import { sanityClient } from '../../../lib/sanity'
+const blogQuery = `*[_type == "post"]{
+    _id,
+    title,
+    slug,
+    author,
+    publishedAt,
+    description,
+    tags,
+}`;
 
 //@ts-ignore
-export default function Home ({ blogs }) {
+export default function Blogs({ blogs }) {
 
-    console.log({blogs});
+    console.log({ blogs });
 
     return (
-        <div className={styles.preview}>
+        <div className={styles.blog}>
             <div className={styles.caption}>
-                <h1>Blogs</h1>
+                All Posts
             </div>
-            <div className={styles.body}>
-            
+            <input placeholder="Search Articles"></input>
+            <hr />
             {//@ts-ignore
-            blogs?.length > 0 && blogs.slice(0,2).map((blog) => {
+            blogs?.length > 0 && blogs.map((blog) => {
             //@ts-ignore
             const title = `${blog.title}`
             const date = `${new Date(blog.publishedAt)}`
@@ -42,11 +50,14 @@ export default function Home ({ blogs }) {
                             )
                         })}
                         </div>
-                        
                     </div>
                 )
             })}
-            </div>
         </div>
     )
+}
+
+export async function getStaticProps() {
+    const blogs = await sanityClient.fetch(blogQuery);
+    return { props: { blogs } };
 }
