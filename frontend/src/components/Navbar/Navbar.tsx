@@ -16,10 +16,10 @@ const navigation = (darkMode: DarkMode) => {
                 <li className="nav__s"><FaDev /></li>
             </div>
             <div className="nav--right">
-                <li><NavLink to="/" href="/" className="nav__e nav__home">Home</NavLink></li>
-                <li><NavLink to="/skills" href="/" className="nav__e nav__skills">What I Do</NavLink></li>
-                <li><NavLink to="/blogs" href="/blog" className="nav__e nav__blog">Blog</NavLink></li>
-                <li><NavLink to="/portfolio" href="/" className="nav__e nav__portfolio">Portfolio</NavLink></li>
+                <li><NavLink to="/" className="nav__e nav__home">Home</NavLink></li>
+                <li><NavLink to="/skills" className="nav__e nav__skills">What I Do</NavLink></li>
+                <li><NavLink to="/blogs" className="nav__e nav__blog">Blog</NavLink></li>
+                <li><NavLink to="/portfolio" className="nav__e nav__portfolio">Portfolio</NavLink></li>
                 <li><SunMoon {...darkMode} /></li>
                 
             </div>

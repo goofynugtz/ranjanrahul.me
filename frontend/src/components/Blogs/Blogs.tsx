@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import ReactMarkdown from 'react-markdown';
 import BlogsDataService from '../../services/blogs';
 import './Blogs.scss';
 
@@ -32,7 +33,8 @@ const Blogs : React.FC = () => {
                 <h1>All Posts</h1>
                 <input placeholder="Search Articles"></input>
             </div>
-            <div className="blog__posts">
+            <hr />
+            
                 {blogs.map((blog) => {
                     //@ts-ignore
                     const title = `${blog.title}`
@@ -42,21 +44,26 @@ const Blogs : React.FC = () => {
                     const date = `${blog.createdAt}`
                     //@ts-ignore
                     const tags = blog.tags
-                    //@ts-ignore
-                    const html = blog.sanitizedHtml
+
+                    // console.log(html);
 
                     return (
-                    <>
+                    <div className="blog__posts">
                         <div className="blog__posts--left">
                             {date}
                         </div>
                         <div className="blog__posts--right">
-                            {html}
+                            <span className="blog__posts__title">
+                                <h3>{title}</h3>
+                            </span>
+                            <span className="blog__posts__description">
+                                {description}
+                            </span>
                         </div>
-                    </>
+                    </div>
                     )
                 })}
-            </div>
+            
         </div>
     )
 }

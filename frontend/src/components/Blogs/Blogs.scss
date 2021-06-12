@@ -1,24 +1,49 @@
 .blog {
 
     max-width: 80rem;
+    min-height: 100vh;
     margin-left: auto;
     margin-right: auto;
-
-
+    color: var(--font-color);
 
     &__posts {
+        cursor: default;
         display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+        flex-direction: row;
+        margin: 1rem 0;
+        padding: 1.5rem 3rem 3rem 3rem;
+        border-radius: 1rem;
+        border: .05rem solid var(--transparency);
+
+        // justify-content: space-between;
+
+        
 
         &--left {
-            max-width: 20rem;
-            background-color: darkgreen;
+            align-self: center;
+            // margin-right: 5rem;
+            color: var(--accent-color-alt);
+
+            
         }
 
         &--right {
-            max-width: 60rem;
-            background-color: aquamarine;
+            margin-left: 4rem;
+            font-size: 1.4rem;
+        }
+
+        &__title {
+            &:hover{
+                text-decoration: underline;
+                cursor: pointer;
+            }
         }
     }
+}
+
+hr {
+    border: 0;
+    width: 100%;
+    height: .05rem;
+    background-color: var(--transparency);
 }

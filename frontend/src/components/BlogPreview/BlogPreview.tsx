@@ -16,7 +16,7 @@ const BlogPreview: React.FC = () => {
         console.log("Hello");
         BlogsDataService.getAll()
         .then((response) => {
-            // console.log(response);
+            console.log(response);
             setBlogs(response.data.blogs);
             ;
         })
@@ -34,8 +34,8 @@ const BlogPreview: React.FC = () => {
             </div>
             {/* <div className="vr"></div> */}
             <div className="blog-home__body">
-
-            {blogs.slice(0,2).map((blog) => {
+            
+            {blogs.map((blog) => {
             //@ts-ignore
             const title = `${blog.title}`
             //@ts-ignore
