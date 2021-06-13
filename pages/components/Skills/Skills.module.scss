@@ -1,0 +1,58 @@
+.myskills {
+    max-width: 80rem;
+    margin:5rem auto 20rem auto;
+    color: var(--font-color);
+}
+
+.heading {
+    font-size: 2rem;
+    padding-top: 10rem;
+}
+
+.container {
+    line-height: 3rem;
+    user-select: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.skills {
+    border-radius: 50rem;
+    padding: .25rem 1rem;
+    // align-self: center;
+    margin: .5rem;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    border-top: 1px solid rgba(255, 255, 255, .5);
+    box-shadow: 0 0 1rem 1rem rgba(0, 0, 0, .1);
+    font-size: 1.6rem;
+    user-select: none;
+
+    & > span {
+        display: flex;
+        margin: 0 .5rem;
+    }
+}
+
+.front-end {
+    background-color: #549658;
+}
+
+.back-end {
+    background-color: #37989E;
+}
+
+.languages {
+    background-color: #9C379E;
+}
+
+.extras-1 {
+    background-color: #B6902F;
+
+}
+
+.extras-2 {
+    background-color: #52379E;
+}
