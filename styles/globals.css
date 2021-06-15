@@ -1,44 +1,9 @@
-@font-face {
-	font-family: Poppins;
-	src: url("../public/fonts/Poppins/poppins-regular.ttf");
-}
-
-@font-face {
-	font-family: PoppinsSemibold;
-	src: url("../public/fonts/Poppins/poppins-semibold.ttf");
-}
-@font-face {
-	font-family: SFPro;
-	src: url("../public/fonts/SFPro/sfpro-text-regular.ttf");
-}
-@font-face {
-	font-family: SFProDisplay;
-	src: url("../public/fonts/SFPro/sfpro-display-regular.ttf");
-}
-@font-face {
-	font-family: SFProSemibold;
-	src: url("../public/fonts/SFPro/sfpro-text-semibold.ttf");
-}
-@font-face {
-	font-family: SFProDisplayBold;
-	src: url("../public/fonts/SFPro/sfpro-display-bold.ttf");
-}
-
-html {
-  overflow-x: hidden;
-	/* width: 100vw; */
-	box-sizing: border-box;
-  scroll-behavior: smooth;
-	font-size: 62.5%;
-}
-
+html,
 body {
   padding: 0;
-  max-width: 153.6rem;
-  margin: 0 auto;
-  font-family: 'SFPro', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  background-color: var(--background-color);
-  color: var(--font-color);
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 a {
@@ -48,28 +13,4 @@ a {
 
 * {
   box-sizing: border-box;
-}
-
-:root {
-  color-scheme: dark;
-}
-
-.dark-mode {
-  --background-color: #0F111A;
-  --background-color-alt: #0F111A;
-  --accent-color-alt: #AB69A7;
-  --accent-color: #549658;
-  --font-color: #FFFFFF;
-  --font-color-alt: #000000;
-  --transparency: rgba(255, 255, 255, .1)
-}
-
-.light-mode {
-  --background-color: #E3E3E3;
-  --background-color-alt: #F0EEE5;
-  --accent-color-alt: #549658;
-  --accent-color: #AB69A7;
-  --font-color: #000000;
-  --font-color-alt: #FFFFFF;
-  --transparency: rgba(0, 0, 0, .2)
 }
