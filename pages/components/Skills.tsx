@@ -1,5 +1,3 @@
-// import './Skills.scss';
-import styles from './Skills.module.scss'
 import { FaHtml5, FaCss3Alt, FaPython, FaSass, FaJs, FaReact, FaAngular, FaNodeJs } from 'react-icons/fa';
 import { SiCplusplus, SiGooglesearchconsole, SiKotlin, SiMongodb, SiMysql, SiTypescript } from 'react-icons/si';
 import { AiOutlineRadarChart } from 'react-icons/ai';
@@ -102,14 +100,13 @@ const skill: ({
 const Skills: React.FC = () => {
 
     return (
-        <div className={styles.myskills}>
-            <div className={styles.heading}><h1>Stuff I Can Work With</h1></div>
-            <div className={styles.container}>
+        <div className='myskills' id='expertise'>
+            <h1>My Expertise</h1>
+            <div className='container'>
             {skill.map((skill, index) => {
-                
                 return (
                     //@ts-ignore
-                    <div key={index} className={styles.[skill.class] + " " + styles.skills}>
+                    <div key={index} className={`${skill.class} + skills`}>
                         <span>{skill.icon}</span>
                         <span>{skill.name}</span>
                     </div>
