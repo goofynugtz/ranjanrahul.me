@@ -2,6 +2,7 @@
 	margin-left: auto;
 	margin-right: auto;
 	max-width: 117.5rem;
+	background-color: red;
 }
 
 .background {
@@ -13,14 +14,14 @@
 	background-color: var(--background-color-alt);
 	width: 100%;
 	z-index: -1;
-	// box-shadow: 0 5px 5rem 1rem rgba(0, 0, 0, 0.5);
+	/* box-shadow: 0 5px 5rem 1rem rgba(0, 0, 0, 0.5); */
 	transition: all .25s;
 }
 
 .overlay {
 	position: absolute;
 	top: 0;
-	// left: 17.5rem;
+	 /* left: 17.5rem; */
 	width: 58.9rem;
 	height: 76.3rem;
 	background-color: transparent;
@@ -45,7 +46,7 @@
 .hello {
 	margin-top: 12.5rem;
     font-size: 4rem;
-	// font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	 /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
     /* letter-spacing: 0.4rem; */
 }
 
@@ -65,8 +66,8 @@
 }
 
 .button {
-	// appearance: none;
-	// text-rendering: optimizeLegibility;
+	/*  appearance: none; */
+	/* /text-rendering: optimizeLegibility; */
 	border: 0;
 	margin: 5rem 15rem;
 	width: 16rem;
@@ -77,7 +78,7 @@
 	/* z-index: 5; */
 	border-radius: 20rem;
 	transition: all 0.3s;
-	// box-shadow: 0 2px 5px 8px rgba(255, 255, 255, 0.1);
+	/* box-shadow: 0 2px 5px 8px rgba(255, 255, 255, 0.1); */
 
 }
 

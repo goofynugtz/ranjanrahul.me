@@ -1,6 +1,6 @@
 .myskills {
-    max-width: 80rem;
-    margin:5rem auto 20rem auto;
+    // max-width: 80rem;
+    // margin:5rem auto 20rem auto;
     color: var(--font-color);
 }
 
@@ -26,7 +26,7 @@
     align-items: center;
     align-content: center;
     border-top: 1px solid rgba(255, 255, 255, .5);
-    box-shadow: 0 0 1rem 1rem rgba(0, 0, 0, .1);
+    box-shadow: 0 0 1.5rem 1rem rgba(0, 0, 0, .1);
     font-size: 1.6rem;
     user-select: none;
 
@@ -42,6 +42,10 @@
 
 .back-end {
     background-color: #37989E;
+}
+
+.database {
+    // background-color: #8a3131;
 }
 
 .languages {

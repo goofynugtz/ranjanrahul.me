@@ -13,11 +13,9 @@ export default function Home({ posts }) {
   
   return (
     <Layout>
-    <div className={styles.container}>
       <Header />
       <Skills />
       <BlogPreview {...{posts}}/>
-    </div>
     </Layout>
   )
 }

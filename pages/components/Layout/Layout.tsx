@@ -11,10 +11,10 @@ export default function Layout({ children }) {
     const darkMode:DarkMode = useDarkMode(true);
 
     return (
-        <div className=''>
+        <>
             <Navbar {...darkMode}/>
-            <main>{children}</main>
+            <main className='main'>{children}</main>
             <Footer />
-        </div>
+        </>
     )
 }

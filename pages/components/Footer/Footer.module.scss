@@ -1,5 +1,7 @@
 .footer {
     display: flex;
+    max-width: 100rem;
+    margin: 0 auto;
     height: 6.8rem;
     align-items: center;
     color: var(--font-color);

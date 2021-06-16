@@ -103,7 +103,7 @@ const Skills: React.FC = () => {
 
     return (
         <div className={styles.myskills}>
-            <div className={styles.heading}><h1>Stuff I Can Work With</h1></div>
+            <div className={styles.heading}><h1>My Expertise</h1></div>
             <div className={styles.container}>
             {skill.map((skill, index) => {
                 

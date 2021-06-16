@@ -1,9 +1,48 @@
-html,
+@font-face {
+	font-family: Poppins;
+	src: url("../public/fonts/Poppins/poppins-regular.ttf");
+}
+
+@font-face {
+	font-family: PoppinsSemibold;
+	src: url("../public/fonts/Poppins/poppins-semibold.ttf");
+}
+@font-face {
+	font-family: SFPro;
+	src: url("../public/fonts/SFPro/sfpro-text-regular.ttf");
+}
+@font-face {
+	font-family: SFProDisplay;
+	src: url("../public/fonts/SFPro/sfpro-display-regular.ttf");
+}
+@font-face {
+	font-family: SFProSemibold;
+	src: url("../public/fonts/SFPro/sfpro-text-semibold.ttf");
+}
+@font-face {
+	font-family: SFProDisplayBold;
+	src: url("../public/fonts/SFPro/sfpro-display-bold.ttf");
+}
+@font-face {
+	font-family: Overpass;
+	src: url("../public/fonts/Overpass/overpass-regular.ttf");
+}
+
+html {
+  overflow-x: hidden;
+	/* width: 100vw; */
+	box-sizing: border-box;
+  scroll-behavior: smooth;
+	font-size: 62.5%;
+}
+
 body {
   padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  transition: all .2s;
+  margin: 0 auto;
+  font-family: 'SFPro', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: var(--background-color);
+  color: var(--font-color);
 }
 
 a {
@@ -14,3 +53,243 @@ a {
 * {
   box-sizing: border-box;
 }
+
+:root {
+  color-scheme: dark;
+}
+
+.dark-mode {
+  --background-color: #0F111A;
+  --background-color-alt: #0F111A;
+  --accent-color-alt: #AB69A7;
+  --accent-color: #549658;
+  --font-color: #FFFFFF;
+  --font-color-alt: #000000;
+  --transparency: rgba(255, 255, 255, .1)
+}
+
+.light-mode {
+  --background-color: #E3E3E3;
+  --background-color-alt: #F0EEE5;
+  --accent-color-alt: #549658;
+  --accent-color: #AB69A7;
+  --font-color: #000000;
+  --font-color-alt: #FFFFFF;
+  --transparency: rgba(0, 0, 0, .2)
+}
+
+/* navstart */
+.nav {
+	display: flex;
+  margin: 0 auto;
+  max-width: 100rem;
+	/* background-color: black; */
+	height: 6.8rem;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.nav .left {
+	display: flex;
+	list-style-type: none;
+	align-items: center;
+	/* color: white; */
+}
+
+.nav .right {
+	display: flex;
+	list-style-type: none;
+	justify-content: flex-end;
+	align-items: center;
+	/* color: white; */
+}
+
+.nav .brand {
+	width: max-content;
+	padding: 0px 3rem;
+	font-size: 2rem;
+	list-style-type: none;
+	font-family: "PoppinsSemibold";
+}
+
+.nav .e {
+	transition: all 0.25s;
+	margin-right: 4rem;
+	font-size: 1.4rem;
+	/* color: white; */
+	text-decoration: none;
+}
+
+.nav .e:hover {
+	color: #0d92ff;
+}
+
+.nav .s {
+	transition: all 0.25s;
+	align-self: center;
+	font-size: 2rem;
+	width: max-content;
+	padding: 0.5rem;
+	/* color: white; */
+}
+
+.nav .s:hover {
+	color: #f58f3b;
+}
+/* navend */
+
+.main {
+  padding: 2.5rem;
+  max-width: 100rem;
+  margin: 0 auto;
+  font-size: 1.6rem;
+}
+
+/* headerstart */
+.header {
+  margin: 0 auto;
+  height: 60rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header .intro {
+  display: flex;
+  max-width: max-content;
+  flex-direction: column;
+  font-size: 1.8rem;
+}
+
+.header .intro span {
+  margin: 1rem 0;
+}
+
+.header h1 {
+  align-items: center;
+  margin: 0;
+  padding: .7rem 1rem 0 1rem;
+  font-family: 'Overpass';
+  color: vaR(--font-color-alt);
+  background-color: var(--font-color);
+}
+
+.header p {
+  max-width: 50rem;
+  margin: 5rem 0;
+  font-size: 1.8rem;
+}
+
+.header button {
+  appearance: 0;
+  border: 0;
+  outline: 0;
+  /* margin-left: 1rem; */
+  font-family: 'SFPro';
+  width: 15rem;
+  height: 5rem;
+  background-color: var(--accent-color);
+  color: var(--font-color);
+  /* border: .2rem solid var(--font-color); */
+  border-radius: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* box-shadow: 0 2px 5px 8px rgba(255, 255, 255, 0.1); */
+  transition: all 0.2s;
+}
+
+.header button:active {
+  transform: translateY(2px);
+  /* box-shadow: 0 1px 5px 4px rgba(255, 255, 255, 0.1); */
+}
+
+.header button .icon {
+  margin-right: .5rem;
+}
+
+.overlay {
+	position: absolute;
+	top: 0;
+	left: 17.5rem;
+	width: 58.9rem;
+	height: 76.3rem;
+	/* background-color: var(--transparency); */
+	z-index: -1;
+	/* backdrop-filter: invert(100%); */
+	pointer-events: none;
+	transition: all .5s;
+}
+/* headerend */
+
+/* blogpreviewstart */
+.preview {
+  max-width: 90rem;
+  margin: 20rem auto 20rem auto;
+}
+
+.caption {
+  position: absolute;
+  color: var(--transparency);
+  transform: translateY(-50%);
+  font-size: 7.5rem;
+  z-index: -1;
+  font-family: 'PoppinsSemibold';
+  padding-right: 5rem;
+}
+
+.caption h1{
+  margin: 0;
+}
+
+.body{
+  margin: 0 auto;
+  max-width: 60rem;
+}
+
+.cards{
+  padding: 1rem 4rem;
+  border-radius: 1rem;
+  cursor: default;
+}
+
+.title{
+  font-size: 2.4rem;
+  font-family: 'SFProDisplayBold';
+  transition: all .25s;
+}
+
+.title:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.date {
+  font-size: 1.2rem;
+  color: #007BFF;
+  margin: 1rem 0;
+}
+
+.description{
+  font-size: 1.6rem;
+  color: var(--font-color);
+}
+
+.tags {
+  display: flex;
+  margin: 2rem -.5rem;
+  font-size: 1.25rem;
+}
+
+.tag {
+    margin: 0 .25rem;
+    background-color: rgba(46, 104, 180, 0.15);
+    padding: .5rem 1rem;
+    border-radius: 5rem;
+    color: #007BFF;
+}
+
+.tag:hover {
+  background-color: rgba(46, 104, 180, 0.25);
+}
+/* blogpreviewend */
