@@ -2,7 +2,7 @@
 title: Error on MongoClient
 description: Mongo Description
 date: 31-04-2021
-
+tags: [database, mongodb]
 ---
 
 ```bash

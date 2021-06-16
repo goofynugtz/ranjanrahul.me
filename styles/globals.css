@@ -50,6 +50,10 @@ a {
   text-decoration: none;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -65,6 +69,7 @@ a {
   --accent-color: #549658;
   --font-color: #FFFFFF;
   --font-color-alt: #000000;
+  --font-color-alt-2: #808080;
   --transparency: rgba(255, 255, 255, .1)
 }
 
@@ -75,6 +80,7 @@ a {
   --accent-color: #AB69A7;
   --font-color: #000000;
   --font-color-alt: #FFFFFF;
+  --font-color-alt-2: #808080;
   --transparency: rgba(0, 0, 0, .2)
 }
 
@@ -148,7 +154,7 @@ a {
 /* headerstart */
 .header {
   margin: 0 auto;
-  height: 60rem;
+  height: 65rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -170,7 +176,7 @@ a {
   margin: 0;
   padding: .7rem 1rem 0 1rem;
   font-family: 'Overpass';
-  color: vaR(--font-color-alt);
+  color: var(--font-color-alt);
   background-color: var(--font-color);
 }
 
@@ -222,6 +228,64 @@ a {
 }
 /* headerend */
 
+/* skillsstart */
+.myskills {
+  color: var(--font-color);
+}
+
+.myskills h1 {
+  font-size: 4.8rem;
+  padding: 4rem 0;
+  /* padding-top: 10rem; */
+}
+
+.container {
+  line-height: 3rem;
+  user-select: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.skills {
+  border-radius: 50rem;
+  padding: .25rem 1rem;
+  margin: .5rem;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  border-top: 1px solid rgba(255, 255, 255, .5);
+  box-shadow: 0 0 1.5rem 1rem rgba(0, 0, 0, .1);
+  font-size: 1.6rem;
+  user-select: none; 
+}
+
+.skills span {
+  display: flex;
+  margin: 0 .5rem;
+}
+
+.front-end {
+  background-color: #549658;
+}
+
+.back-end {
+  background-color: #37989E;
+}
+
+.languages {
+  background-color: #9C379E;
+}
+
+.extras-1 {
+  background-color: #B6902F;
+}
+
+.extras-2 {
+  background-color: #52379E;
+}
+/* skillsend */
+
 /* blogpreviewstart */
 .preview {
   max-width: 90rem;
@@ -272,7 +336,7 @@ a {
 
 .description{
   font-size: 1.6rem;
-  color: var(--font-color);
+  color: gray;
 }
 
 .tags {
@@ -293,3 +357,141 @@ a {
   background-color: rgba(46, 104, 180, 0.25);
 }
 /* blogpreviewend */
+
+/* blogindexstart */
+
+.blog {
+
+}
+
+.blog h1 {
+  display: block;
+  font-size: 4.8rem;
+  margin: 1rem 0;
+  z-index: -1;
+  font-family: 'PoppinsSemibold';
+}
+
+.blog input {
+  appearance: 0;
+  border: 0;
+  outline: 0;
+  width: 30rem;
+  height: 4rem;
+  padding: 0 2rem;
+  background-color: var(--transparency);
+  color: var(--font-color);
+  font-family: 'SFPro';
+  border-radius: .5rem;
+  margin-bottom: 1rem;
+}
+
+.blog .cards {
+  padding: 1rem 0rem;
+  cursor: default;
+}
+
+.blog .cards .title {
+  font-size: 2.4rem;
+  font-family: 'SFProDisplayBold';
+  transition: all .25s;
+}
+
+.blog .cards .title:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.blog .cards .date {
+  font-size: 1.2rem;
+  color: #007BFF;
+  margin: 1rem 0;
+}
+
+.blog .cards .tags {
+  display: flex;
+  margin: 2rem -.5rem;
+  font-size: 1.25rem;
+}
+
+.blog .cards .tags .tag {
+  margin: 0 .25rem;
+  background-color: rgba(46, 104, 180, 0.15);
+  padding: .5rem 1rem;
+  border-radius: 5rem;
+  color: #007BFF;
+}
+
+.blog .cards .tags .tag:hover {
+  background-color: rgba(46, 104, 180, 0.25);
+}
+
+/* blogindexend */
+
+/* blogpoststart */
+.post {
+  display: flex;
+}
+
+.post .sidebar {
+  width: 30rem;
+  border-right: 1px solid gray;
+}
+
+.post article {
+  padding-left: 5rem;
+}
+/* blogpostend */
+
+/* footerstart */
+.footer {
+  display: flex;
+  max-width: 100rem;
+  margin: 0 auto;
+  height: 6.8rem;
+  align-items: center;
+  color: var(--font-color);
+}
+
+.footer .brand {
+  font-family: 'PoppinsSemibold';
+  font-size: 2rem;
+  align-self: center;
+  margin-right: 1rem;
+}
+
+.footer .left {
+  display: flex;
+  width: max-content;
+  align-items: center;
+  padding: 0px 3rem;
+  list-style-type: none;
+  justify-content: flex-start;
+}
+
+.footer .right {
+  width: 100%;
+  display: flex;
+  list-style-type: none;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.footer .e {
+  width: max-content;
+  padding: 0 2rem;
+  font-size: 1.2rem;
+}
+
+.footer .s {
+  transition: all 0.25s;
+  align-self: center;
+  font-size: 2rem;
+  width: max-content;
+  margin-right: 1.5rem;
+}
+
+.footer .s:hover {
+  color: #f58f3b;
+}
+/* footerend */

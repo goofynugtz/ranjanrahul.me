@@ -1,12 +1,7 @@
-// import React, { useEffect, useState } from 'react'
 import Link from 'next/link';
-// import { sanityClient } from '../../../lib/sanity'
 
 //@ts-ignore
 export default function BlogPreview({ posts }) {
-
-    console.log({ posts });
-    //{ posts: [ { slug: 'mongodb-errors', frontmatter: [Object] } ] }
 
     return (
         <div className='preview'>
@@ -16,7 +11,7 @@ export default function BlogPreview({ posts }) {
             <div className='body'>
             
             {//@ts-ignore
-            posts?.length > 0 && posts.map(({ frontmatter: { title, description, date }, slug }) => (
+            posts?.length > 0 && posts.map(({ frontmatter: { title, date, description, tags }, slug }) => (
                 <article key={slug} className='cards'>
                   <header>
                     <h2>
@@ -28,6 +23,17 @@ export default function BlogPreview({ posts }) {
                   </header>
                   <section className='description'>
                     <p>{description}</p>
+                  </section>
+                  <section className='tags'>
+                  {//@ts-ignore
+                    tags.map((tag) => {
+                      return (
+                        <span key={tag} className='tag'>
+                          {tag}
+                        </span>
+                      )
+                    })
+                  }
                   </section>
                 </article>
               ))}

@@ -1,4 +1,3 @@
-import styles from './Blogs.module.scss'
 import fs from 'fs';
 import matter from 'gray-matter';
 import Layout from '../components/Layout/Layout';
@@ -6,42 +5,34 @@ import Layout from '../components/Layout/Layout';
 //@ts-ignore
 export default function Blogs({ posts }) {
 
-    console.log({ posts });
-
     return (
         <Layout>
-        <div className={styles.blog}>
-            <div className={styles.caption}>
-                All Posts
-            </div>
+        <div className='blog'>
+            <h1>All Posts</h1>
             <input placeholder="Search Articles"></input>
-            <hr />
             {//@ts-ignore
-            posts?.length > 0 && posts.map((blog) => {
-            //@ts-ignore
-            const title = `${blog.title}`
-            const date = `${new Date(blog.publishedAt)}`
-            const description = `${blog.description}`
+            posts?.length > 0 && posts.map(({ frontmatter: { title, date, description, tags }, slug }) => {
             
                 return (
-                    <div key={blog._id} className={styles.cards}>
-                        <div className={styles.title}>
+                    <div key={slug} className='cards'>
+                        <div className='title'>
                             {title}
                         </div>
-                        <div className={styles.date}>
+                        <div className='date'>
                             {date}
                         </div>
-                        <div className={styles.description}>
+                        <div className='description'>
                             {description}
                         </div>
-                        <div className={styles.tags}>
-                        {/* {blog.tags.map((tag:String) => {
+                        <div className='tags'>
+                        {//@ts-ignore
+                        tags.map((tag) => {
                             return (
-                                <div className={styles.tag}>
+                                <span key={tag} className='tag'>
                                     {tag}
-                                </div>
+                                </span>
                             )
-                        })} */}
+                        })}
                         </div>
                     </div>
                 )
@@ -60,11 +51,11 @@ export async function getStaticProps() {
   
       const { data } = matter(markdownWithMetadata);
   
-      // const options = { year: 'numeric', month: 'long', day: 'numeric'}
-      // const formattedDate = data.date.toLocaleDateString('en-US', options)
+    //   const options = { year: 'numeric', month: 'long', day: 'numeric'}
+    //   const formattedDate = data.date.toLocaleDateString('en-US', options)
   
       const frontmatter = {
-        ...data
+        ...data,
       };
   
       return {

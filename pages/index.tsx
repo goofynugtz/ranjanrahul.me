@@ -1,15 +1,13 @@
-import styles from '../styles/Home.module.scss'
-
 import fs from 'fs';
 import matter from 'gray-matter';
 
-import Skills from './components/Skills/Skills';
-import Header from './components/Header/Header';
-import BlogPreview from './components/BlogPreview/BlogPreview';
+import Skills from './components/Skills';
+import Header from './components/Header';
+import BlogPreview from './components/BlogPreview';
 import Layout from './components/Layout/Layout';
+
 //@ts-ignore
 export default function Home({ posts }) {
-
   
   return (
     <Layout>

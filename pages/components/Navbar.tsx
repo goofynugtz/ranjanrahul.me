@@ -15,7 +15,7 @@ const navigation = (darkMode: DarkMode) => {
             </div>
             <div className='right'>
                 <li><Link href="/"><a className='e'>Home</a></Link></li>
-                <li><Link href="/skills"><a className='e'>What I Do</a></Link></li>
+                <li><Link href="/#expertise"><a className='e'>What I Do</a></Link></li>
                 <li><Link href="/blogs"><a className='e'>Blog</a></Link></li>
                 <li><Link href="/portfolio"><a className='e'>Portfolio</a></Link></li>
                 <li><SunMoon {...darkMode} /></li>

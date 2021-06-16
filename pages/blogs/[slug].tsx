@@ -10,15 +10,18 @@ const CodeBlock = ({ language, value }) => {
     return <SyntaxHighlighter language={language}>{value}</SyntaxHighlighter>
 }
 //@ts-ignore
-export default function Post({ content, frontmatter }) {
-
-    // console.log(content)
+export default function Post({ content }) {
 
     return (
         <Layout>
-            <article>
-                <ReactMarkdown escapeHtml={false} source={content} renderers={{ code: CodeBlock }}/>
-            </article>
+            <div className='post'>
+                <div className='sidebar'>
+                    Lol
+                </div>
+                <article>
+                    <ReactMarkdown escapeHtml={false} source={content} renderers={{ code: CodeBlock }}/>
+                </article>
+            </div>
         </Layout>
     );
 }
