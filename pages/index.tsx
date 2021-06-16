@@ -1,34 +1,46 @@
-import styles from '../styles/Home.module.scss'
+import fs from 'fs';
+import matter from 'gray-matter';
 
-import Header from './components/Header/Header';
-import Skills from './components/Skills/Skills';
-import BlogPreview from './components/BlogPreview/BlogPreview';
-
-import { sanityClient, urlFor } from '../lib/sanity'
-
-const blogQuery = `*[_type == "post"]{
-  _id,
-  title,
-  slug,
-  author,
-  publishedAt,
-  description,
-  tags,
-}`;
+import Skills from './components/Skills';
+import Header from './components/Header';
+import BlogPreview from './components/BlogPreview';
+import Layout from './components/Layout/Layout';
 
 //@ts-ignore
-export default function Home({ blogs }) {
-
+export default function Home({ posts }) {
+  
   return (
-    <div className={styles.container}>
+    <Layout>
       <Header />
       <Skills />
-      <BlogPreview {...{blogs}}/>
-    </div>
+      <BlogPreview {...{posts}}/>
+    </Layout>
   )
 }
 
 export async function getStaticProps() {
-  const blogs = await sanityClient.fetch(blogQuery);
-  return { props: { blogs } };
+  const files = fs.readdirSync(`${process.cwd()}/content/posts`)
+
+  const posts = files.map((filename) => {
+    const markdownWithMetadata = fs
+      .readFileSync(`content/posts/${filename}`).toString()
+
+    const { data } = matter(markdownWithMetadata);
+
+    // const options = { year: 'numeric', month: 'long', day: 'numeric'}
+    // const formattedDate = data.date.toLocaleDateString('en-US', options)
+
+    const frontmatter = {
+      ...data
+    };
+
+    return {
+      slug: filename.replace('.md', ''),
+      frontmatter
+    };
+  })
+
+  return {
+    props: { posts }
+  };
 }

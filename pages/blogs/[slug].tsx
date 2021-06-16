@@ -1,36 +1,67 @@
-import { sanityClient, urlFor, PortableText } from "../../lib/sanity";
-
-const postQuery = `*[_type == "post" && slug.current == $slug][0]{
-    _id,
-    title,
-    slug,
-    author,
-    body
-}`;
+import fs from 'fs'
+import path from 'path'
+import matter from 'gray-matter'
+import Layout from '../components/Layout/Layout';
+import ReactMarkdown from "react-markdown";
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 
 //@ts-ignore
-export default function OneBlog({ data }) {
-    const { post } = data;
-    console.log(post);
+const CodeBlock = ({ language, value }) => {
+    return <SyntaxHighlighter language={language}>{value}</SyntaxHighlighter>
+}
+//@ts-ignore
+export default function Post({ content }) {
 
-    return <div>lol</div>
+    return (
+        <Layout>
+            <div className='post'>
+                <div className='sidebar'>
+                    Lol
+                </div>
+                <article>
+                    <ReactMarkdown escapeHtml={false} source={content} renderers={{ code: CodeBlock }}/>
+                </article>
+            </div>
+        </Layout>
+    );
 }
 
 export async function getStaticPaths() {
-    const paths = await sanityClient.fetch(
-        `*[_type == "post" && defined(slug.current)]{
-            "params": {
-                "slug": slug.current
-            }
-        }`
-    )
-    return { paths , fallback: true}
+    const files = fs.readdirSync('content/posts')
+
+    const paths = files.map((filename) => ({
+        params: {
+            slug: filename.replace('.md', ''),
+        },
+    }));
+
+    return {
+        paths,
+        fallback: false,
+    };
 }
 
 //@ts-ignore
-export async function getStaticProps({ params }) {
-    const { slug } = params;
-    const post = await sanityClient.fetch(postQuery, {slug})
+export async function getStaticProps({ params: { slug } }) {
+    const markdownWithMetadata = fs
+        .readFileSync(path.join('content/posts', slug + '.md'))
+        .toString();
 
-    return { props: { data: { post } } };
+    const { data, content } = matter(markdownWithMetadata);
+    // console.log(data, '\n', content);
+
+    //WARN: missing date
+    // const options = { year: "numeric", month: "long", day: "numeric" };
+    // const formattedDate = data.date.toLocaleDateString("en-US", options);
+
+    const frontmatter = {
+        ...data,
+    }
+
+    return {
+        props: {
+            content: `# ${data.title}\n${content}`,
+            frontmatter,
+        }
+    }
 }
