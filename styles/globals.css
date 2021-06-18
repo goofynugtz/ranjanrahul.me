@@ -27,6 +27,10 @@
 	font-family: Overpass;
 	src: url("../public/fonts/Overpass/overpass-regular.ttf");
 }
+@font-face {
+	font-family: SFMono;
+	src: url("../public/fonts/SFPro/sfmono-regular.ttf");
+}
 
 html {
   overflow-x: hidden;
@@ -51,11 +55,22 @@ a {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  margin: 0;
+  margin: 1rem 0;
+}
+
+hr {
+  border: 0;
+  width: 100%;
+  height: .5px;
+  background-color: gray;
 }
 
 * {
   box-sizing: border-box;
+}
+
+.token {
+  background: none !important;
 }
 
 :root {
@@ -429,6 +444,18 @@ h1, h2, h3, h4, h5, h6 {
 /* blogindexend */
 
 /* blogpoststart */
+.markdown code {
+  color: blueviolet;
+  border-radius: .2rem;
+  background-color: var(--transparency);
+  padding: .5rem;
+}
+
+.markdown {
+  line-height: 3rem;
+  font-size: 1.6rem;
+}
+
 .post {
   display: flex;
 }

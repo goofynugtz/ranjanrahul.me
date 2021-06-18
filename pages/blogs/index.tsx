@@ -34,6 +34,7 @@ export default function Blogs({ posts }) {
                             )
                         })}
                         </div>
+                        <hr />
                     </div>
                 )
             })}

@@ -10,7 +10,9 @@ Error: queryTxt ETIMEOUT clusterzero.vho6m.mongodb.net
 at QueryReqWrap.onresolve [as oncomplete] (node:dns:209:19)
 ```
 
-Same error is thrown by MongoCompass Client when connecting to the Database.\n\n
+Same error is thrown by MongoCompass Client when connecting to the Database.
+
+```hello world```
 
 It took an embarassingly long time for me to figure this out.\n
 This error can be worked around by changing your DNS address to openDNS. For more info visit [here](https://use.opendns.com/ "OpenDNS")\n

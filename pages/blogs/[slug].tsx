@@ -5,9 +5,32 @@ import Layout from '../components/Layout/Layout';
 import ReactMarkdown from "react-markdown";
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 
+
 //@ts-ignore
 const CodeBlock = ({ language, value }) => {
-    return <SyntaxHighlighter language={language}>{value}</SyntaxHighlighter>
+    return <SyntaxHighlighter language={language} showLineNumbers  customStyle={{
+        backgroundColor: 'rgba(0, 0, 0, .2)',
+        border: 'none',
+        margin: 0,
+        borderRadius: '5px',
+    }}
+    codeTagProps={{
+        style: {
+            color: 'white',
+            background: 'none',
+            padding: 0,
+            textShadow: 'none',
+            fontFamily: "SFMono",
+            fontSize: '.8em',
+            textAlign: 'left',
+            whiteSpace: 'pre',
+            wordSpacing: 'normal',
+            wordBreak:'normal',
+            wordWrap:'normal',
+            lineHeight:1.5
+        }
+    }}
+    >{value}</SyntaxHighlighter>
 }
 //@ts-ignore
 export default function Post({ content }) {
@@ -19,7 +42,7 @@ export default function Post({ content }) {
                     Lol
                 </div>
                 <article>
-                    <ReactMarkdown escapeHtml={false} source={content} renderers={{ code: CodeBlock }}/>
+                    <ReactMarkdown className='markdown' escapeHtml={false} source={content} renderers={{ code: CodeBlock }}/>
                 </article>
             </div>
         </Layout>
