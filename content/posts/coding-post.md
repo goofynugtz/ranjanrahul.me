@@ -26,4 +26,4 @@ printf("Hello");
 ```
 and just another random block
 
-```heelo world```
+```hello world```

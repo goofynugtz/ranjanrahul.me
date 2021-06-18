@@ -3,7 +3,7 @@ import { SiMailDotRu } from 'react-icons/si'
 const Header:React.FC = () => {
     return (
         
-        <div className='header'>
+        <div className='header' id='header'>
             <div className='intro'>
             <span>Hello,</span>
             <h1>I’m Rahul</h1>

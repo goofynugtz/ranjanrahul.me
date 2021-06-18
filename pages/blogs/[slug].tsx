@@ -9,7 +9,7 @@ import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 //@ts-ignore
 const CodeBlock = ({ language, value }) => {
     return <SyntaxHighlighter language={language} showLineNumbers  customStyle={{
-        backgroundColor: 'rgba(0, 0, 0, .2)',
+        backgroundColor: '#181C2B',
         border: 'none',
         margin: 0,
         borderRadius: '5px',
@@ -33,15 +33,21 @@ const CodeBlock = ({ language, value }) => {
     >{value}</SyntaxHighlighter>
 }
 //@ts-ignore
-export default function Post({ content }) {
+export default function Post({ frontmatter, content }) {
+
+    // console.log(frontmatter);
 
     return (
         <Layout>
             <div className='post'>
-                <div className='sidebar'>
-                    Lol
-                </div>
                 <article>
+                    <span className='date'>{frontmatter.date}</span>
+                    <div className='tags'>
+                        {//@ts-ignore
+                        frontmatter.tags.map((tag) => (
+                            <span className='tag'>{tag}</span>
+                        ))}
+                    </div>
                     <ReactMarkdown className='markdown' escapeHtml={false} source={content} renderers={{ code: CodeBlock }}/>
                 </article>
             </div>
