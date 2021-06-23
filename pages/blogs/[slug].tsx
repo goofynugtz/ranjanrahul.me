@@ -45,7 +45,7 @@ export default function Post({ frontmatter, content }) {
                     <div className='tags'>
                         {//@ts-ignore
                         frontmatter.tags.map((tag) => (
-                            <span className='tag'>{tag}</span>
+                            <span key={tag} className='tag'>{tag}</span>
                         ))}
                     </div>
                     <ReactMarkdown className='markdown' escapeHtml={false} source={content} renderers={{ code: CodeBlock }}/>

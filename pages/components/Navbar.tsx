@@ -5,19 +5,19 @@ import { DarkMode } from 'use-dark-mode';
 
 const navigation = (darkMode: DarkMode) => {
     return (
-        <div className='nav'>
-            <div className='left'>
+        <div className='nav' id='top'>
+            <div className='group left'>
                 <div className='brand'>ranjanrahul</div>
-                <li className='s'><FaFacebookF /></li>
-                <li className='s'><FaGithub /></li>
-                <li className='s'><FaLinkedinIn /></li>
-                <li className='s'><FaDev /></li>
+                <li className='social'><FaFacebookF /></li>
+                <li className='social'><FaGithub /></li>
+                <li className='social'><FaLinkedinIn /></li>
+                <li className='social'><FaDev /></li>
             </div>
-            <div className='right'>
-                <li><Link href="/"><a className='e'>Home</a></Link></li>
-                <li><Link href="/#expertise"><a className='e'>What I Do</a></Link></li>
-                <li><Link href="/blogs"><a className='e'>Blog</a></Link></li>
-                <li><Link href="/portfolio"><a className='e'>Portfolio</a></Link></li>
+            <div className='group right'>
+                <li><Link href="/"><a className='navlinks'>Home</a></Link></li>
+                <li><Link href="/#expertise"><a className='navlinks'>What I Do</a></Link></li>
+                <li><Link href="/blogs"><a className='navlinks'>Blog</a></Link></li>
+                <li><Link href="/portfolio"><a className='navlinks'>Portfolio</a></Link></li>
                 <li><SunMoon {...darkMode} /></li>
                 
             </div>
@@ -29,7 +29,7 @@ export default navigation
 
 const SunMoon = (darkMode: DarkMode) => {
     return (
-      <div className='e' onClick={darkMode.toggle}>
+      <div className='navlinks' onClick={darkMode.toggle}>
         <div>{darkMode.value ? <FiSun color={'#ffc107'} /> : <FiMoon />}</div>
       </div>
     );
