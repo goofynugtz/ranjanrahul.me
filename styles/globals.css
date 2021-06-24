@@ -41,7 +41,6 @@
 html {
 	overflow-x: hidden;
 	box-sizing: border-box;
-	scroll-behavior: smooth;
 	font-size: 62.5%;
 }
 
@@ -53,6 +52,17 @@ body {
 		Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 	background-color: var(--background-color);
 	color: var(--font-color);
+}
+
+html, body {
+	overflow-y: scroll;
+	scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+	display: none;
+	width: 0;
+	height: 0;
 }
 
 a {
@@ -84,9 +94,9 @@ hr {
 	background: none !important;
 }
 
-:root {
+/* :root {
 	color-scheme: dark;
-}
+} */
 
 .dark-mode {
 	--background-color: #0f111a;
