@@ -7,7 +7,7 @@ const Footer: React.FC = () => {
             <div className='group'>
                 <span className='brand'>ranjanrahul</span>
                 <li className='footerlinks'><a href="#top">Back to Top</a></li>
-                <li className='footerlinks'><a href="/" >What I Do</a></li>
+                <li className='footerlinks'><a href="/#expertise" >What I Do</a></li>
                 <li className='footerlinks'><a href="/blogs" >Blogs</a></li>
                 <li className='footerlinks'><a href="/" >Portfolio</a></li>
             </div>

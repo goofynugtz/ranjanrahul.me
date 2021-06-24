@@ -7,26 +7,32 @@
 	font-family: PoppinsSemibold;
 	src: url("../public/fonts/Poppins/poppins-semibold.ttf");
 }
+
 @font-face {
 	font-family: SFPro;
 	src: url("../public/fonts/SFPro/sfpro-text-regular.ttf");
 }
+
 @font-face {
 	font-family: SFProDisplay;
 	src: url("../public/fonts/SFPro/sfpro-display-regular.ttf");
 }
+
 @font-face {
 	font-family: SFProSemibold;
 	src: url("../public/fonts/SFPro/sfpro-text-semibold.ttf");
 }
+
 @font-face {
 	font-family: SFProDisplayBold;
 	src: url("../public/fonts/SFPro/sfpro-display-bold.ttf");
 }
+
 @font-face {
 	font-family: Overpass;
 	src: url("../public/fonts/Overpass/overpass-regular.ttf");
 }
+
 @font-face {
 	font-family: SFMono;
 	src: url("../public/fonts/SFPro/sfmono-regular.ttf");
@@ -34,7 +40,6 @@
 
 html {
 	overflow-x: hidden;
-	/* width: 100vw; */
 	box-sizing: border-box;
 	scroll-behavior: smooth;
 	font-size: 62.5%;
@@ -44,7 +49,7 @@ body {
 	padding: 0;
 	transition: all 0.2s;
 	margin: 0 auto;
-	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+	font-family: SFPro, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
 		Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 	background-color: var(--background-color);
 	color: var(--font-color);
@@ -107,13 +112,13 @@ hr {
 	--hover: #0d92ff;
 }
 
+
 /* navstart */
 .nav {
 	display: flex;
 	margin: 0 auto;
 	max-width: 100rem;
 	height: 6.8rem;
-	/* align-items: center; */
 	justify-content: space-between;
 	list-style-type: none;
 	font-size: 1.4rem;
@@ -154,12 +159,14 @@ hr {
 }
 /* navend */
 
+
 .main {
 	padding: 2.5rem;
 	max-width: 100rem;
 	margin: 0 auto;
 	font-size: 1.6rem;
 }
+
 
 /* headerstart */
 .header {
@@ -200,43 +207,27 @@ hr {
 	appearance: 0;
 	border: 0;
 	outline: 0;
-	/* margin-left: 1rem; */
 	font-family: "SFPro";
 	width: 15rem;
 	height: 5rem;
 	background-color: var(--accent-color);
 	color: var(--font-color);
-	/* border: .2rem solid var(--font-color); */
 	border-radius: 5rem;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	/* box-shadow: 0 2px 5px 8px rgba(255, 255, 255, 0.1); */
 	transition: all 0.2s;
 }
 
 .header button:active {
 	transform: translateY(2px);
-	/* box-shadow: 0 1px 5px 4px rgba(255, 255, 255, 0.1); */
 }
 
 .header button .icon {
 	margin-right: 0.5rem;
 }
-
-.overlay {
-	position: absolute;
-	top: 0;
-	left: 17.5rem;
-	width: 58.9rem;
-	height: 76.3rem;
-	/* background-color: var(--transparency); */
-	z-index: -1;
-	/* backdrop-filter: invert(100%); */
-	pointer-events: none;
-	transition: all 0.5s;
-}
 /* headerend */
+
 
 /* skillsstart */
 .myskills {
@@ -246,7 +237,6 @@ hr {
 .myskills h1 {
 	font-size: 4.8rem;
 	padding: 4rem 0;
-	/* padding-top: 10rem; */
 }
 
 .container {
@@ -263,7 +253,6 @@ hr {
 	margin: 0.5rem;
 	display: flex;
 	align-items: center;
-	/* align-content: center; */
 	border-top: 1px solid rgba(255, 255, 255, 0.5);
 	box-shadow: 0 0 1.5rem 1rem rgba(0, 0, 0, 0.1);
 	font-size: 1.6rem;
@@ -295,6 +284,7 @@ hr {
 	background-color: #52379e;
 }
 /* skillsend */
+
 
 /* blogpreviewstart */
 .preview {
@@ -369,11 +359,8 @@ hr {
 }
 /* blogpreviewend */
 
+
 /* blogindexstart */
-
-.blog {
-}
-
 .blog h1 {
 	display: block;
 	font-size: 4.8rem;
@@ -435,11 +422,10 @@ hr {
 .blog .cards .tags .tag:hover {
 	background-color: rgba(46, 104, 180, 0.25);
 }
-
 /* blogindexend */
 
-/* blogpoststart */
 
+/* blogpoststart */
 .markdown h1 {
 	font-size: 4rem;
 	margin-bottom: 3rem;
@@ -458,15 +444,11 @@ hr {
 	font-size: 1.6rem;
 }
 
-.post {
-	/* display: flex; */
-}
-
 .post article {
-	/* width: 95%; */
 	padding: 0 2rem;
 }
 /* blogpostend */
+
 
 /* footerstart */
 .footer {

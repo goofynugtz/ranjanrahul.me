@@ -1,19 +1,27 @@
 import fs from 'fs';
 import matter from 'gray-matter';
 import Link from 'next/link';
+import { useState } from 'react';
+import { Posts } from '../components/BlogPreview';
 import Layout from '../components/Layout/Layout';
 
-//@ts-ignore
-export default function Blogs({ posts }) {
+export default function Blogs({ posts }: Posts) {
+
+  const [search, setSearch] = useState("");
+
+  function handleChange(e: any) {
+    const { value } = e.target;
+    setSearch(value);
+  }
 
   return (
     <Layout>
       <div className='blog'>
         <h1>All Posts</h1>
-        <input placeholder="Search Articles"></input>
-        {//@ts-ignore
-          posts?.length > 0 && posts.map(({ frontmatter: { title, date, description, tags }, slug }) => {
-
+        <input type="text" placeholder="Search Articles" onChange={handleChange}></input>
+        {posts?.length > 0 && posts.filter((posts) => (
+          !search || posts.frontmatter.title.toLowerCase().includes(search.toLowerCase()) || posts.frontmatter.description.toLowerCase().includes(search.toLowerCase()) || posts.frontmatter.tags.includes(search.toLowerCase()) || posts.content.includes(search.toLowerCase())
+          )).map(({ frontmatter: { title, date, description, tags }, slug }) => {
             return (
               <div key={slug} className='cards'>
                 <header>
@@ -28,8 +36,7 @@ export default function Blogs({ posts }) {
                   {description}
                 </section>
                 <section className='tags'>
-                  {//@ts-ignore
-                    tags.map((tag) => {
+                  {tags.map((tag) => {
                       return (
                         <span key={tag} className='tag'>
                           {tag}
@@ -52,10 +59,7 @@ export async function getStaticProps() {
     const markdownWithMetadata = fs
       .readFileSync(`content/posts/${filename}`).toString()
 
-    const { data } = matter(markdownWithMetadata);
-
-    //   const options = { year: 'numeric', month: 'long', day: 'numeric'}
-    //   const formattedDate = data.date.toLocaleDateString('en-US', options)
+    const { data, content } = matter(markdownWithMetadata);
 
     const frontmatter = {
       ...data,
@@ -63,7 +67,8 @@ export async function getStaticProps() {
 
     return {
       slug: filename.replace('.md', ''),
-      frontmatter
+      frontmatter,
+      content
     };
   })
 

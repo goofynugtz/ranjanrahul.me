@@ -1,12 +1,11 @@
-import Link from 'next/link'
-import { useRouter } from 'next/router'
 import useDarkMode, { DarkMode } from 'use-dark-mode';
 
 import Navbar from '../Navbar';
 import Footer from '../Footer';
+import React from 'react';
 
-//@ts-ignore
-export default function Layout({ children }) {
+
+export default function Layout({ children }: any) {
 
     const darkMode:DarkMode = useDarkMode(true);
 

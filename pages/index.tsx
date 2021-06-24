@@ -3,11 +3,11 @@ import matter from 'gray-matter';
 
 import Skills from './components/Skills';
 import Header from './components/Header';
-import BlogPreview from './components/BlogPreview';
+import BlogPreview, { Posts } from './components/BlogPreview';
 import Layout from './components/Layout/Layout';
 
-//@ts-ignore
-export default function Home({ posts }) {
+
+export default function Home({ posts }: Posts) {
   
   return (
     <Layout>
@@ -26,9 +26,6 @@ export async function getStaticProps() {
       .readFileSync(`content/posts/${filename}`).toString()
 
     const { data } = matter(markdownWithMetadata);
-
-    // const options = { year: 'numeric', month: 'long', day: 'numeric'}
-    // const formattedDate = data.date.toLocaleDateString('en-US', options)
 
     const frontmatter = {
       ...data

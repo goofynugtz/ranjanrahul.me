@@ -105,7 +105,6 @@ const Skills: React.FC = () => {
             <div className='container'>
             {skill.map((skill, index) => {
                 return (
-                    //@ts-ignore
                     <div key={index} className={`${skill.class} + skills`}>
                         <span>{skill.icon}</span>
                         <span>{skill.name}</span>
