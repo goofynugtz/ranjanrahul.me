@@ -1,7 +1,6 @@
 import { SiMailDotRu } from 'react-icons/si'
 import { FaGithub, FaFacebookF, FaLinkedinIn, FaDev } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
-import Button from './Button/Button'
 
 const Header:React.FC = () => {
     return (
@@ -21,9 +20,6 @@ const Header:React.FC = () => {
                     <span>Freshman year undergrad from National Institute of Technology, Durgapur.</span>
                 </div>
             </div>
-            {/* <p>I am freshman year undergrad from National Institute of Technology, Durgapur. I'm currently interested in Web Development, Web Designs (UI/UX) and also <a 
-            className='' href="https://www.stopstalk.com/user/profile/goofyNugtz" target="_blank" rel="noreferrer">Competitive Programing</a> but rarely.</p> */}
-            {/* <Button /> */}
             <div className='contact-buttons'>
                 <button>
                     <FaGithub className='icon'/> Github
