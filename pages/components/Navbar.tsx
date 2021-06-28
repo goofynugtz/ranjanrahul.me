@@ -3,7 +3,7 @@ import { FiSun, FiMoon } from 'react-icons/fi';
 import Link from 'next/link';
 import { DarkMode } from 'use-dark-mode';
 
-const navigation = (darkMode: DarkMode) => {
+const Navbar = (darkMode: DarkMode) => {
     return (
         <div className='nav' id='top'>
             <div className='group left'>
@@ -25,7 +25,7 @@ const navigation = (darkMode: DarkMode) => {
     )
 }
 
-export default navigation
+export default Navbar
 
 const SunMoon = (darkMode: DarkMode) => {
     return (

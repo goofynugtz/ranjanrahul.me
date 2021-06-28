@@ -38,6 +38,35 @@
 	src: url("../public/fonts/SFPro/sfmono-regular.ttf");
 }
 
+
+.dark-mode {
+	--background-color: #0f111a;
+	--background-color-alt: #0f111a;
+	--accent-color-alt: #ab69a7;
+	--accent-color: #549658;
+	--font-color-primary: #ffffff;
+	--font-color-primary-alt: #000000;
+	--font-color-secondary: rgba(255,255,255, .5);
+	--transparency: rgba(255, 255, 255, 0.1);
+	--transparency-2: rgba(255, 255, 255, 0.2);
+	--transparency-3: rgba(255, 255, 255, 0.3);
+	--hover: #0d92ff;
+}
+
+.light-mode {
+	--background-color: #e3e3e3;
+	--background-color-alt: #f0eee5;
+	--accent-color-alt: #549658;
+	--accent-color: #ab69a7;
+	--font-color-primary: #000000;
+	--font-color-primary-alt: #ffffff;
+	--font-color-secondary: rgba(0, 0, 0, .6);
+	--transparency: rgba(0, 0, 0, 0.1);
+	--transparency-2: rgba(0, 0, 0, 0.2);
+	--transparency-3: rgba(0, 0, 0, 0.3);
+	--hover: #0d92ff;
+}
+
 html {
 	overflow-x: hidden;
 	box-sizing: border-box;
@@ -45,13 +74,13 @@ html {
 }
 
 body {
-	padding: 0;
+	padding: 0 2rem;
 	transition: all 0.2s;
 	margin: 0 auto;
 	font-family: SFPro, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
 		Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 	background-color: var(--background-color);
-	color: var(--font-color);
+	color: var(--font-color-primary);
 }
 
 html, body {
@@ -97,31 +126,6 @@ hr {
 /* :root {
 	color-scheme: dark;
 } */
-
-.dark-mode {
-	--background-color: #0f111a;
-	--background-color-alt: #0f111a;
-	--accent-color-alt: #ab69a7;
-	--accent-color: #549658;
-	--font-color: #ffffff;
-	--font-color-alt: #000000;
-	--font-color-alt-2: #808080;
-	--transparency: rgba(255, 255, 255, 0.1);
-	--hover: #0d92ff;
-}
-
-.light-mode {
-	--background-color: #e3e3e3;
-	--background-color-alt: #f0eee5;
-	--accent-color-alt: #549658;
-	--accent-color: #ab69a7;
-	--font-color: #000000;
-	--font-color-alt: #ffffff;
-	--font-color-alt-2: #808080;
-	--transparency: rgba(0, 0, 0, 0.2);
-	--hover: #0d92ff;
-}
-
 
 /* navstart */
 .nav {
@@ -203,47 +207,66 @@ hr {
 	margin: 0;
 	padding: 0.7rem 1rem 0 1rem;
 	font-family: "Overpass";
-	color: var(--font-color-alt);
-	background-color: var(--font-color);
+	color: var(--font-color-primary-alt);
+	background-color: var(--font-color-primary);
+	font-size: 6rem;
 }
 
-.header p {
-	max-width: 50rem;
+.header .subtitle {
+	/* max-width: 50rem; */
+	/* color: var(--transparency-3); */
 	margin: 5rem 0;
+	margin-top: 2rem;
 	font-size: 1.8rem;
 }
 
-.header button {
+.header .subtitle .grid-2x2 {
+	color: var(--font-color-secondary);
+	margin-top: 2rem;
+	display: grid;
+	grid-template-columns: 3rem 1fr;
+}
+
+.header .subtitle .grid-2x2 .emoticon {
+	grid-column: 1 / 2;
+}
+
+.header .contact-buttons{
+	display: flex;
+}
+
+.header .contact-buttons button {
 	appearance: 0;
 	border: 0;
 	outline: 0;
 	font-family: "SFPro";
-	width: 15rem;
-	height: 5rem;
-	background-color: var(--accent-color);
-	color: var(--font-color);
-	border-radius: 5rem;
+	width: 10rem;
+	height: 4rem;
+	margin: 0 .5rem;
+	background-color: var(--transparency);
+	color: var(--font-color-primary);
+	border-radius: .5rem;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	transition: all 0.2s;
+	transition: all 0.5s;
 }
 
+.header button:hover {
+	background-color: var(--transparency-2);
+}
 .header button:active {
-	transform: translateY(2px);
+	background-color: var(--transparency-3);
 }
 
 .header button .icon {
 	margin-right: 0.5rem;
+	color: var(--accent-color);
 }
 /* headerend */
 
 
 /* skillsstart */
-.myskills {
-	color: var(--font-color);
-}
-
 .myskills h1 {
 	font-size: 4.8rem;
 	padding: 4rem 0;
@@ -382,12 +405,11 @@ hr {
 .blog input {
 	appearance: 0;
 	border: 0;
-	outline: 0;
-	width: 30rem;
+	width: 35rem;
 	height: 4rem;
 	padding: 0 2rem;
 	background-color: var(--transparency);
-	color: var(--font-color);
+	color: var(--font-color-primary);
 	font-family: "SFPro";
 	border-radius: 0.5rem;
 	margin-bottom: 1rem;
