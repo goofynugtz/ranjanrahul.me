@@ -1,6 +1,6 @@
 ---
 title: Error on MongoClient
-description: Mongo Description
+description: TIMEOUT error on MongoDB
 date: 31-04-2021
 tags: [database, mongodb]
 ---
@@ -10,12 +10,10 @@ Error: queryTxt ETIMEOUT clusterzero.vho6m.mongodb.net
 at QueryReqWrap.onresolve [as oncomplete] (node:dns:209:19)
 ```
 
-Same error is thrown by MongoCompass Client when connecting to the Database.
+Same error is thrown by MongoCompass Client when connecting to the Database.  
 
-```hello world```
-
-It took an embarassingly long time for me to figure this out.\n
-This error can be worked around by changing your DNS address to openDNS. For more info visit [here](https://use.opendns.com/ "OpenDNS")\n
+It took an embarassingly long time for me to figure this out.  
+This error can be worked around by changing your DNS address to openDNS. For more info visit [here](https://use.opendns.com/ "OpenDNS")  
 
 ### For Windows 10:
 1. Open the Control Panel.
@@ -29,5 +27,5 @@ This error can be worked around by changing your DNS address to openDNS. For mor
 9. Click Advanced.
 10. Enter 208.67.222.222 and 208.67.220.220 in the DNS server fields.
 11. Click OK, then click Close.
-\n
+  
 Please check the link above for Linux, or Mac.

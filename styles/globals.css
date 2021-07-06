@@ -68,9 +68,10 @@
 }
 
 html {
-	overflow-x: hidden;
 	box-sizing: border-box;
 	font-size: 62.5%;
+	scroll-behavior: smooth;
+	scrollbar-width: none;
 }
 
 body {
@@ -83,15 +84,8 @@ body {
 	color: var(--font-color-primary);
 }
 
-html, body {
-	overflow-y: scroll;
-	scrollbar-width: none;
-}
-
-body::-webkit-scrollbar {
+body::-webkit-scrollbar{
 	display: none;
-	width: 0;
-	height: 0;
 }
 
 a {
@@ -467,7 +461,7 @@ hr {
 	color: blueviolet;
 	border-radius: 0.2rem;
 	background-color: var(--transparency);
-	padding: 0.5rem;
+	padding: 0.1rem 0.5rem;
 }
 
 .markdown {
