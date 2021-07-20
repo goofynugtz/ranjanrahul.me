@@ -462,6 +462,7 @@ hr {
 	border-radius: 0.2rem;
 	background-color: var(--transparency);
 	padding: 0.1rem 0.5rem;
+	font-family: SFMono;
 }
 
 .markdown {
