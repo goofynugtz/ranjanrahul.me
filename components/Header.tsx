@@ -1,18 +1,18 @@
-import { SiMailDotRu } from 'react-icons/si'
-import { FaGithub, FaFacebookF, FaLinkedinIn, FaDev } from 'react-icons/fa';
+import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 
-const Header:React.FC = () => {
+
+const Header: React.FC = () => {
     return (
-        
+
         <div className='header' id='header'>
             <div className='intro'>
-            <span>Hello,</span>
-            <h1>I’m Rahul</h1>
+                <span>Hello,</span>
+                <h1>I’m Rahul</h1>
             </div>
             <div className='subtitle'>
                 A Developer and Front-End enthusiast
-                <br/>
+                <br />
                 <div className='grid-2x2'>
                     <span className='emoticon'>🚀</span>
                     <span>Exploring opportunities </span>
@@ -22,16 +22,22 @@ const Header:React.FC = () => {
             </div>
             <div className='contact-buttons'>
                 <button>
-                    <FaGithub className='icon'/> Github
+                    <a href='https://github.com/goofyNugtz'>
+                        <FaGithub className='icon' /> <span>Github</span>
+                    </a>
                 </button>
                 <button>
-                    <FaLinkedinIn className='icon'/> LinkedIn
+                    <a>
+                        <FaLinkedinIn className='icon' /> <span>LinkedIn</span>
+                    </a>
                 </button>
                 <button>
-                    <MdEmail className='icon'/> Email
+                    <a>
+                        <MdEmail className='icon' /><span>Email</span>
+                    </a>
                 </button>
             </div>
-            
+
         </div>
     )
 }

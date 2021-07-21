@@ -2,8 +2,8 @@ import fs from 'fs';
 import matter from 'gray-matter';
 import Link from 'next/link';
 import { useState } from 'react';
-import { Posts } from '../components/BlogPreview';
-import Layout from '../components/Layout/Layout';
+import { Posts } from '../../components/BlogPreview';
+import Layout from '../../components/Layout';
 
 export default function Blogs({ posts }: Posts) {
 

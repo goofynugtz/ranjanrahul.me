@@ -39,7 +39,7 @@
 }
 
 
-.dark-mode {
+.dark {
 	--background-color: #0f111a;
 	--background-color-alt: #0f111a;
 	--accent-color-alt: #ab69a7;
@@ -53,7 +53,7 @@
 	--hover: #0d92ff;
 }
 
-.light-mode {
+.light {
 	--background-color: #e3e3e3;
 	--background-color-alt: #f0eee5;
 	--accent-color-alt: #549658;
@@ -229,7 +229,7 @@ hr {
 	display: flex;
 }
 
-.header .contact-buttons button {
+.contact-buttons button {
 	appearance: 0;
 	border: 0;
 	outline: 0;
@@ -240,10 +240,13 @@ hr {
 	background-color: var(--transparency);
 	color: var(--font-color-primary);
 	border-radius: .5rem;
+	transition: all 0.5s;
+}
+
+button a {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	transition: all 0.5s;
 }
 
 .header button:hover {

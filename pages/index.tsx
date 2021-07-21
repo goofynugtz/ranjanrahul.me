@@ -1,10 +1,10 @@
 import fs from 'fs';
 import matter from 'gray-matter';
 
-import Skills from './components/Skills';
-import Header from './components/Header';
-import BlogPreview, { Posts } from './components/BlogPreview';
-import Layout from './components/Layout/Layout';
+import Skills from '../components/Skills';
+import Header from '../components/Header';
+import BlogPreview, { Posts } from '../components/BlogPreview';
+import Layout from '../components/Layout';
 
 
 export default function Home({ posts }: Posts) {
