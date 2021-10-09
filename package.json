@@ -1,5 +1,5 @@
 {
-  "name": "personal-web",
+  "name": "personalweb",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,17 +9,25 @@
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
-    "next": "10.2.3",
+    "next": "11.1.2",
     "next-themes": "^0.0.15",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-icons": "^4.2.0",
     "react-markdown": "5.0.3",
-    "react-syntax-highlighter": "^15.4.3"
+    "react-syntax-highlighter": "^15.4.4"
   },
   "devDependencies": {
-    "@types/react": "17.0.11",
-    "@types/react-syntax-highlighter": "^13.5.0",
-    "typescript": "4.3.2"
+    "@iconify/icons-akar-icons": "^1.1.23",
+    "@iconify/icons-logos": "^1.1.10",
+    "@iconify/icons-simple-icons": "^1.1.45",
+    "@iconify/icons-teenyicons": "^1.1.0",
+    "@iconify/icons-vscode-icons": "^1.1.7",
+    "@iconify/react": "^3.0.1",
+    "@types/react": "17.0.27",
+    "@types/react-syntax-highlighter": "^13.5.2",
+    "eslint": "7.32.0",
+    "eslint-config-next": "11.1.2",
+    "typescript": "4.4.3"
   }
 }
