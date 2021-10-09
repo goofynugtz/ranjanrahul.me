@@ -1,7 +1,8 @@
 import { FaHtml5, FaCss3Alt, FaPython, FaSass, FaJs, FaReact, FaAngular, FaNodeJs } from 'react-icons/fa';
 import { SiCplusplus, SiGooglesearchconsole, SiKotlin, SiMongodb, SiMysql, SiTypescript } from 'react-icons/si';
 import { AiOutlineRadarChart } from 'react-icons/ai';
-
+import { Icon } from '@iconify/react';
+import Html from '@iconify/icons-vscode-icons/file-type-html';
 
 const skill: ({
     name: string;
@@ -12,7 +13,7 @@ const skill: ({
     {
         name: 'HTML',
         class: 'front-end',
-        icon: < FaHtml5 /> 
+        icon: <Icon icon={Html} />
     },
     {
         name: 'CSS',

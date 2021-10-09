@@ -183,6 +183,7 @@ hr {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	padding-bottom: 10rem;
 }
 
 .header .intro {
@@ -261,6 +262,96 @@ button a {
 	color: var(--accent-color);
 }
 /* headerend */
+
+
+/* aboutmestart */
+.aboutme {
+	width:fit-content;
+}
+
+.heading {
+	position: relative;
+	margin: 4rem 0;
+}
+
+.heading::after {
+	position: absolute;
+	content: '';
+	height: 1px;
+	background-color: var(--transparency-2);
+	width: 35rem;
+	margin-left: 25px;
+	top: 50%;
+}
+
+
+.aboutme .techstack {
+	display: grid;
+	width: 60rem;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+
+.aboutme .techstack .tech-grid {
+	display: flex;
+	/* padding: .5rem 0; */
+	align-items: center;
+}
+
+.tech-grid span {
+	display: flex;
+	margin: .5rem;
+}
+
+/* aboutmeend */
+
+/* projectsstart */
+
+.projects {
+	margin-top: 21rem;
+}
+
+.project {
+	display: flex;
+	margin: 5rem 0;
+}
+
+.project .project-thumb {
+	width: 30rem;
+	height: 15rem;
+}
+
+.project .project-desc {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin: 0 5rem;
+}
+
+
+.project:nth-of-type(even) {
+	flex-direction: row-reverse;
+	text-align: right;
+}
+
+.project:nth-of-type(odd) img {
+	border-radius: 1rem 0 0 1rem;
+}
+.project:nth-of-type(even) img {
+	border-radius: 0 1rem 1rem 0;
+}
+
+.project:nth-of-type(even) .feature-tags {
+	justify-content: flex-end;
+}
+.project:nth-of-type(odd) .feature-tags {
+	justify-content: flex-start;
+}
+
+.project:last-child {
+	margin: 0 0 15rem 0 ;
+}
+
+/* projectsend */
 
 
 /* skillsstart */
@@ -377,6 +468,7 @@ button a {
 }
 
 .tag {
+	user-select: none;
 	margin: 0 0.25rem;
 	background-color: rgba(46, 104, 180, 0.15);
 	padding: 0.5rem 1rem;

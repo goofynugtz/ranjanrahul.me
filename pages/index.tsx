@@ -1,10 +1,11 @@
 import fs from 'fs';
 import matter from 'gray-matter';
 
-import Skills from '../components/Skills';
 import Header from '../components/Header';
+import AboutMe from '../components/AboutMe';
 import BlogPreview, { Posts } from '../components/BlogPreview';
 import Layout from '../components/Layout';
+import FeaturedProjects from '../components/Projects';
 
 
 export default function Home({ posts }: Posts) {
@@ -12,8 +13,8 @@ export default function Home({ posts }: Posts) {
   return (
     <Layout>
       <Header />
-      <Skills />
-      <BlogPreview {...{posts}}/>
+      <AboutMe />
+      <FeaturedProjects />
     </Layout>
   )
 }

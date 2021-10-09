@@ -4,7 +4,6 @@ import { MdEmail } from 'react-icons/md';
 
 const Header: React.FC = () => {
     return (
-
         <div className='header' id='header'>
             <div className='intro'>
                 <span>Hello,</span>
