@@ -133,7 +133,7 @@ const AboutMe: React.FC = () => {
         &#9656; I love competitive coding. <br />
         &#9656; I don’t know machine learning. <br />
         <br />
-        A "few" technologies that I&apos;ve worked on till now:
+        A &quot;few&quot; technologies that I&apos;ve worked on till now:
       </p>
       <div className="techstack">
         {skills.map((skill, index) => {
