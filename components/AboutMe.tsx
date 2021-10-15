@@ -1,6 +1,3 @@
-import { FaHtml5, FaCss3Alt, FaPython, FaSass, FaJs, FaReact, FaAngular, FaNodeJs } from 'react-icons/fa';
-import { SiCplusplus, SiGooglesearchconsole, SiKotlin, SiMongodb, SiMysql, SiTypescript } from 'react-icons/si';
-import { AiOutlineRadarChart } from 'react-icons/ai';
 import { Icon } from '@iconify/react';
 import Html from '@iconify/icons-vscode-icons/file-type-html';
 import Css from '@iconify/icons-vscode-icons/file-type-css';
@@ -18,6 +15,9 @@ import Kotlin from '@iconify/icons-vscode-icons/file-type-kotlin';
 import GoogleCloud from '@iconify/icons-logos/google-cloud';
 import d3 from '@iconify/icons-logos/d3';
 import Next from '@iconify/icons-teenyicons/nextjs-outline';
+import GoGopher from '@iconify/icons-vscode-icons/file-type-go-gopher';
+import Docker from '@iconify/icons-vscode-icons/file-type-docker2';
+import TensorFlow from '@iconify/icons-logos/tensorflow';
 
 const skills: ({
   name: string;
@@ -91,6 +91,11 @@ const skills: ({
       icon: <Icon icon={Kotlin} />
     },
     {
+      name: 'Go lang',
+      class: 'languages',
+      icon: <Icon icon={GoGopher} />
+    },
+    {
       name: 'Google Cloud',
       class: 'hosting',
       icon: <Icon icon={GoogleCloud} />
@@ -104,13 +109,23 @@ const skills: ({
       name: 'Next.JS',
       class: 'framework',
       icon: <Icon icon={Next} />
+    },
+    {
+      name: 'Docker',
+      class: 'utility',
+      icon: <Icon icon={Docker} />
+    },
+    {
+      name: 'Tensorflow',
+      class: 'ml',
+      icon: <Icon icon={TensorFlow} />
     }
   ]
 
 const AboutMe: React.FC = () => {
 
   return (
-    <div className="aboutme">
+    <div className="aboutme" id='aboutme'>
       <h1 className="heading">About Me</h1>
       <p>
         Hello! My name is <span className="highlight">Rahul Ranjan</span>. Two trues and one false about me are: <br />
@@ -118,7 +133,7 @@ const AboutMe: React.FC = () => {
         &#9656; I love competitive coding. <br />
         &#9656; I don’t know machine learning. <br />
         <br />
-        A few technologies that I&apos;ve worked on till now:
+        A "few" technologies that I&apos;ve worked on till now:
       </p>
       <div className="techstack">
         {skills.map((skill, index) => {

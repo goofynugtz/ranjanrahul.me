@@ -16,7 +16,7 @@ const Navbar = () => {
             </div>
             <div className='group right'>
                 <div><Link href="/"><a className='navlinks'>Home</a></Link></div>
-                <div><Link href="/#expertise"><a className='navlinks'>What I Do</a></Link></div>
+                <div><Link href="/#aboutme"><a className='navlinks'>About Me</a></Link></div>
                 <div><Link href="/blogs"><a className='navlinks'>Blog</a></Link></div>
                 <div><Link href="/portfolio"><a className='navlinks'>Portfolio</a></Link></div>
                 <div><SunMoon /></div>
