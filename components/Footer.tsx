@@ -26,8 +26,8 @@ const Footer: React.FC = () => {
                 </div>
                 <div className='social'><a href="https://facebook.com" target="_blank" rel="noreferrer"><FaFacebookF /></a></div>
                 <div className='social'><a href="https://github.com/goofyNugtz" target="_blank" rel="noreferrer"><FaGithub /></a></div>
-                <div className='social'><Link href="/"><FaLinkedinIn /></Link></div>
-                <div className='social'><Link href="/"><FaDev /></Link></div>
+                <div className='social'><Link href="/" passHref><FaLinkedinIn /></Link></div>
+                <div className='social'><Link href="/" passHref><FaDev /></Link></div>
             </div>
         </footer>
     )

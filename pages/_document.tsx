@@ -31,7 +31,7 @@ class MyDocument extends Document {
           />
           <link
             rel='preload'
-            href='fonts/Poppins/Poppins-SemiBold.ttf'
+            href='fonts/Poppins/poppins-semibold.ttf'
             as='font'
           />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
