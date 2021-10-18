@@ -1,7 +1,4 @@
-import { useWindowSize } from 'react-use';
-
 import { Icon } from '@iconify/react';
-
 
 import Html from '@iconify/icons-vscode-icons/file-type-html';
 import Css from '@iconify/icons-vscode-icons/file-type-css';
@@ -128,9 +125,6 @@ const skills: ({
 
 const AboutMe: React.FC = () => {
 
-  const {width} = useWindowSize();
-  const gridClass = width < 790 ? "techstack two-column-grid" : "techstack three-column-grid";
-
   return (
     <div className="aboutme" id='aboutme'>
       <h1 className="heading">About Me</h1>
@@ -142,7 +136,7 @@ const AboutMe: React.FC = () => {
         <br />
         A &quot;few&quot; technologies that I&apos;ve worked on till now:
       </p>
-      <div className={gridClass}>
+      <div className='techstack'>
         {skills.map((skill, index) => {
           return (
             <div key={index} className="tech-grid">

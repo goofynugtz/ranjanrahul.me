@@ -61,6 +61,21 @@
 	--transparency-3: rgba(0, 0, 0, 0.5);
 	--hover: #0d92ff;
 }
+@media only screen and (max-width: 965px) {
+	.m\:hide {
+		display: none;
+	}
+}
+@media only screen and (max-width: 768px) {
+	.sm\:hide {
+		display: none;
+	}
+}
+@media only screen and (max-width: 512px) {
+	.xsm\:hide {
+		display: none;
+	}
+}
 
 html {
 	box-sizing: border-box;
@@ -68,6 +83,7 @@ html {
 	scroll-behavior: smooth;
 	scrollbar-width: none;
 }
+
 
 body {
 	padding: 0 2rem;
@@ -142,6 +158,8 @@ hr {
 	margin: 0 2rem;
 	text-decoration: none;
 }
+
+
 
 .nav .social {
 	transition: all 0.25s;
@@ -276,10 +294,23 @@ button a {
 	top: 50%;
 }
 
+@media only screen and (max-width: 768px) {
+	.heading::after {
+		width: 10rem;
+	}
+}
 
-.aboutme .techstack {
+
+.techstack {
 	display: grid;
-	/* grid-template-columns: 1fr 1fr 1fr; */
+	grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media only screen and (max-width: 768px) {
+	.techstack {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
 }
 
 .two-column-grid {

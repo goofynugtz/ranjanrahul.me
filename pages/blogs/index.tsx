@@ -27,32 +27,32 @@ export default function Blogs({ posts }: Posts) {
         <hr />
         {posts?.length > 0 && posts.filter((posts) => (
           !search || posts.frontmatter.title.toLowerCase().includes(search.toLowerCase()) || posts.frontmatter.description.toLowerCase().includes(search.toLowerCase()) || posts.frontmatter.tags.includes(search.toLowerCase()) || posts.content.includes(search.toLowerCase())
-          )).map(({ frontmatter: { title, date, description, tags }, slug }) => {
-            return (
-              <div key={slug} className='cards'>
-                <header>
-                  <h2>
-                    <Link href={'/blogs/[slug]'} as={`/blogs/${slug}`}>
-                      <a className='title'>{title}</a>
-                    </Link>
-                  </h2>
-                  <span className='date'>{date}</span>
-                </header>
-                <section className='description'>
-                  {description}
-                </section>
-                <section className='tags'>
-                  {tags.map((tag) => {
-                      return (
-                        <span key={tag} className='tag' onClick={tagsHandle}>
-                          {tag}
-                        </span>
-                      )
-                    })}
-                </section>
-              </div>
-            )
-          })}
+        )).map(({ frontmatter: { title, date, description, tags }, slug }) => {
+          return (
+            <div key={slug} className='cards'>
+              <header>
+                <h2>
+                  <Link href={'/blogs/[slug]'} as={`/blogs/${slug}`}>
+                    <a className='title'>{title}</a>
+                  </Link>
+                </h2>
+                <span className='date'>{date}</span>
+              </header>
+              <section className='description'>
+                {description}
+              </section>
+              <section className='tags'>
+                {tags.map((tag) => {
+                  return (
+                    <span key={tag} className='tag' onClick={tagsHandle}>
+                      {tag}
+                    </span>
+                  )
+                })}
+              </section>
+            </div>
+          )
+        })}
       </div>
     </Layout>
   )
