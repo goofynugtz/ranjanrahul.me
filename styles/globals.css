@@ -1,11 +1,6 @@
 @font-face {
-	font-family: Poppins;
-	src: url("../public/fonts/Poppins/poppins-regular.ttf");
-}
-
-@font-face {
 	font-family: PoppinsSemibold;
-	src: url("../public/fonts/Poppins/poppins-semibold.ttf");
+	src: url("../public/fonts/Poppins/Poppins-SemiBold.ttf");
 }
 
 @font-face {
@@ -49,7 +44,7 @@
 	--font-color-secondary: rgba(255,255,255, .5);
 	--transparency: rgba(255, 255, 255, 0.05);
 	--transparency-2: rgba(255, 255, 255, 0.2);
-	--transparency-3: rgba(255, 255, 255, 0.3);
+	--transparency-3: rgba(255, 255, 255, 0.5);
 	--hover: #0d92ff;
 }
 
@@ -63,7 +58,7 @@
 	--font-color-secondary: rgba(0, 0, 0, .6);
 	--transparency: rgba(0, 0, 0, 0.05);
 	--transparency-2: rgba(0, 0, 0, 0.2);
-	--transparency-3: rgba(0, 0, 0, 0.3);
+	--transparency-3: rgba(0, 0, 0, 0.5);
 	--hover: #0d92ff;
 }
 
@@ -84,14 +79,10 @@ body {
 	color: var(--font-color-primary);
 }
 
-::-webkit-scrollbar{
-	width: 8px;
+body::-webkit-scrollbar{
+	display: none;
 }
 
-::-webkit-scrollbar-thumb {
-	background: var(--transparency-2);
-	/* border-radius: 1rem; */
-}
 
 a {
 	color: inherit;
@@ -121,10 +112,6 @@ hr {
 .token {
 	background: none !important;
 }
-
-/* :root {
-	color-scheme: dark;
-} */
 
 /* navstart */
 .nav {
@@ -214,7 +201,6 @@ hr {
 
 .header .subtitle {
 	/* max-width: 50rem; */
-	/* color: var(--transparency-3); */
 	margin: 5rem 0;
 	margin-top: 2rem;
 	font-size: 1.8rem;
@@ -271,7 +257,7 @@ button a {
 
 /* aboutmestart */
 .aboutme {
-	width: fit-content;
+	/* width: fit-content; */
 	padding: 10rem 0;
 }
 
@@ -293,6 +279,14 @@ button a {
 
 .aboutme .techstack {
 	display: grid;
+	/* grid-template-columns: 1fr 1fr 1fr; */
+}
+
+.two-column-grid {
+	width: 40rem;
+	grid-template-columns: 1fr 1fr;
+}
+.three-column-grid {
 	width: 60rem;
 	grid-template-columns: 1fr 1fr 1fr;
 }
@@ -324,12 +318,14 @@ button a {
 }
 
 .project .project-thumb {
-	width: 40rem;
-	height: 15rem;
+	position: relative;
+	width: 100%;
+	height: auto;
 }
 
 .project .project-desc {
 	display: flex;
+	width: 100rem;
 	flex-direction: column;
 	justify-content: center;
 	margin: 2rem 5rem;
@@ -605,6 +601,37 @@ button a {
 .footer .group {
 	display: flex;
 	align-items: center;
+}
+
+/* .copyleft {
+	display: flex;
+	flex-direction: row;
+} */
+
+.copyleft {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	margin-right: 2rem;
+	line-height: .5rem;
+}
+
+.copyleft-icon {
+	font-size: 3rem;
+	padding: 2rem;
+}
+
+.copyleft-text {
+	width: max-content;
+}
+
+.light-grey {
+	color: var(--transparency-3);
+}
+
+.blue {
+	color: #0d92ff;
 }
 
 .footer .footerlinks {

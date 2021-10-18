@@ -1,5 +1,7 @@
-import { FaGithub, FaFacebookF, FaLinkedinIn, FaDev } from "react-icons/fa";
+import copyleft from '@iconify/icons-ri/copyleft-fill';
+import { Icon } from '@iconify/react';
 import Link from 'next/link';
+import { FaDev, FaFacebookF, FaGithub, FaLinkedinIn } from "react-icons/fa";
 
 const Footer: React.FC = () => {
     return (
@@ -13,11 +15,19 @@ const Footer: React.FC = () => {
             </div>
 
             <div className='group'>
-                <div><p className='footerlinks'>© Rahul R</p></div>
+                <div className="copyleft">
+                    <div className="copyleft-icon">
+                        <Icon icon={copyleft} />
+                    </div>
+                    <div className="copyleft-text">
+                        <p className="light-grey">All wrongs reserved</p>
+                        <p className="blue">Rahul R</p>
+                    </div>
+                </div>
                 <div className='social'><a href="https://facebook.com" target="_blank" rel="noreferrer"><FaFacebookF /></a></div>
                 <div className='social'><a href="https://github.com/goofyNugtz" target="_blank" rel="noreferrer"><FaGithub /></a></div>
-                <div className='social'><Link href="/" passHref><FaLinkedinIn /></Link></div>
-                <div className='social'><Link href="/" passHref><FaDev /></Link></div>
+                <div className='social'><Link href="/"><FaLinkedinIn /></Link></div>
+                <div className='social'><Link href="/"><FaDev /></Link></div>
             </div>
         </footer>
     )

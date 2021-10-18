@@ -3,8 +3,13 @@ import { FiSun, FiMoon } from 'react-icons/fi';
 import Link from 'next/link';
 import { useState, useEffect } from "react";
 import { useTheme } from 'next-themes';
+import { useWindowSize } from 'react-use';
 
 const Navbar = () => {
+    const {width} = useWindowSize();
+
+    console.log("Width: ", width);
+
     return (
         <div className='nav' id='top'>
             <div className='group left'>
@@ -15,10 +20,10 @@ const Navbar = () => {
                 <div className='social'><FaDev /></div>
             </div>
             <div className='group right'>
-                <div><Link href="/"><a className='navlinks'>Home</a></Link></div>
-                <div><Link href="/#aboutme"><a className='navlinks'>About Me</a></Link></div>
-                <div><Link href="/blogs"><a className='navlinks'>Blog</a></Link></div>
-                <div><Link href="/portfolio"><a className='navlinks'>Portfolio</a></Link></div>
+                <div style={{ display: width < 790 ? 'none' : ''}}><Link href="/"><a className='navlinks'>Home</a></Link></div>
+                <div style={{ display: width < 790 ? 'none' : ''}}><Link href="/#aboutme"><a className='navlinks'>About Me</a></Link></div>
+                <div style={{ display: width < 790 ? 'none' : ''}}><Link href="/blogs"><a className='navlinks'>Blog</a></Link></div>
+                <div style={{ display: width < 790 ? 'none' : ''}}><Link href="/portfolio"><a className='navlinks'>Portfolio</a></Link></div>
                 <div><SunMoon /></div>
             </div>
         </div>
