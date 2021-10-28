@@ -140,8 +140,8 @@ const AboutMe: React.FC = () => {
         {skills.map((skill, index) => {
           return (
             <div key={index} className="tech-grid">
-              <span>{skill.icon}</span>
-              <span>{skill.name}</span>
+              <span className='techstack-icon'>{skill.icon}</span>
+              <span className='techstack-name'>{skill.name}</span>
             </div>
           )
         })}
