@@ -1,4 +1,5 @@
 import { Icon } from '@iconify/react';
+
 import Html from '@iconify/icons-vscode-icons/file-type-html';
 import Css from '@iconify/icons-vscode-icons/file-type-css';
 import Sass from '@iconify/icons-logos/sass';
@@ -135,12 +136,12 @@ const AboutMe: React.FC = () => {
         <br />
         A &quot;few&quot; technologies that I&apos;ve worked on till now:
       </p>
-      <div className="techstack">
+      <div className='techstack'>
         {skills.map((skill, index) => {
           return (
             <div key={index} className="tech-grid">
-              <span>{skill.icon}</span>
-              <span>{skill.name}</span>
+              <span className='techstack-icon'>{skill.icon}</span>
+              <span className='techstack-name'>{skill.name}</span>
             </div>
           )
         })}

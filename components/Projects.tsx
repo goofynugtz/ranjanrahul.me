@@ -32,7 +32,9 @@ const FeaturedProjects: React.FC = () => {
         {featured.map((feature, index) => {
           return (
             <div key={index} className="project">
-              <Image className='project-thumb' alt={feature.class} src={feature.thumbnail} width={500} height={200} />
+              <div className="project-thumb">
+                <Image alt={feature.class} src={feature.thumbnail} layout={'fill'} objectFit={'cover'} />
+              </div>
               <div className="project-desc">
                 <div className='feature-name'>{feature.nameOfProject}</div>
                 <div className='feature-description'>{feature.description}</div>
