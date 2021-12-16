@@ -132,7 +132,7 @@ const AboutMe: React.FC = () => {
         Hello! My name is <span className="highlight">Rahul Ranjan</span>. Two trues and one false about me are: <br />
         &#9656; I am a soccer player. <br />
         &#9656; I love competitive coding. <br />
-        &#9656; I don’t know machine learning. <br />
+        &#9656; I don&rsquo;t know machine learning. <br />
         <br />
         A &quot;few&quot; technologies that I&apos;ve worked on till now:
       </p>

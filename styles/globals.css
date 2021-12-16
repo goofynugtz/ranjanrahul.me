@@ -88,8 +88,8 @@ html {
 
 body {
 	padding: 0 5rem;
-	max-width: 100rem;
-	transition: all 0.2s;
+	max-width: 120rem;
+	transition: all 0.3s;
 	margin: 0 auto;
 	font-family: SFPro, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 	background-color: var(--background-color);
@@ -196,6 +196,19 @@ hr {
 	padding-bottom: 10rem;
 }
 
+.circles {
+	position: absolute;
+	width: 20rem;
+	z-index: -1;
+	transform: translate(-10rem, -5rem);
+}
+
+.circles circle {
+	transition: all .5s;
+	fill-opacity: 0.1;
+	fill: var(--transparency-3);
+}
+
 .header .intro {
 	display: flex;
 	max-width: max-content;
@@ -215,6 +228,8 @@ hr {
 	color: var(--font-color-primary-alt);
 	background-color: var(--font-color-primary);
 	font-size: 6rem;
+	border-radius: .75rem;
+	transition: all .5s;
 }
 
 .header .subtitle {
@@ -229,6 +244,7 @@ hr {
 	margin-top: 2rem;
 	display: grid;
 	grid-template-columns: 3rem 1fr;
+	transition: all .2s;
 }
 
 .header .subtitle .grid-2x2 .emoticon {

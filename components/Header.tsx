@@ -1,13 +1,16 @@
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
-
+import Circles from './assets/CirclesVector';
 
 const Header: React.FC = () => {
   return (
     <div className='header' id='header'>
+      <div className='circles'>
+        <Circles />
+      </div>
       <div className='intro'>
         <span>Hello,</span>
-        <h1>I’m Rahul</h1>
+        <h1>I&rsquo;m Rahul</h1>
       </div>
       <div className='subtitle'>
         A Developer and Front-End enthusiast
