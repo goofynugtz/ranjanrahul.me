@@ -19,6 +19,7 @@ import Next from '@iconify/icons-teenyicons/nextjs-outline';
 import GoGopher from '@iconify/icons-vscode-icons/file-type-go-gopher';
 import Docker from '@iconify/icons-vscode-icons/file-type-docker2';
 import TensorFlow from '@iconify/icons-logos/tensorflow';
+import Django from '@iconify/icons-vscode-icons/file-type-django';
 
 const skills: ({
   name: string;
@@ -55,6 +56,11 @@ const skills: ({
       name: 'TypeScript',
       class: 'front-end',
       icon: <Icon icon={TypeScript} />
+    },
+    {
+      name: 'Django',
+      class: 'back-end',
+      icon: <Icon icon={Django} />
     },
     {
       name: 'Node.JS',
