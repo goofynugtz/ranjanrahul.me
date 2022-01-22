@@ -16,10 +16,11 @@ const Navbar = () => {
         <div className='social xsm:hide'><FaDev /></div>
       </div>
       <div className='group right'>
-        <div><Link href="/"><a className='navlinks sm:hide'>Home</a></Link></div>
-        <div><Link href="/#aboutme"><a className='navlinks sm:hide'>About Me</a></Link></div>
-        <div><Link href="/blogs"><a className='navlinks sm:hide'>Blog</a></Link></div>
-        <div><Link href="/portfolio"><a className='navlinks'>Portfolio</a></Link></div>
+        <Link href="/"><a className='navlinks sm:hide'>/home</a></Link>
+        <Link href="/#aboutme"><a className='navlinks sm:hide'>/aboutme</a></Link>
+        {/* <Link href="/listening"><a className='navlinks sm:hide'>/listening</a></Link> */}
+        <Link href="/blogs"><a className='navlinks sm:hide'>/blog</a></Link>
+        <Link href="/portfolio"><a className='navlinks'>/portfolio</a></Link>
         <div><SunMoon /></div>
       </div>
     </div>

@@ -16,11 +16,11 @@ const featured: ({
       thumbnail: '/thumbnails/indiaAtStats.png'
     },
     {
-      nameOfProject: 'indiaAtStats',
+      nameOfProject: 'REChase Treasure Hunt',
       class: 'idk',
-      description: 'A web app that renders a map of India based on various data like rainfall, population etc.',
-      tags: ['JavaScript', 'D3 Visualization', 'Statistics'],
-      thumbnail: '/thumbnails/indiaAtStats.png'
+      description: 'A multiplayer online quiz made with React running on top of django with Google OAuth.',
+      tags: ['React', 'Django', 'OAuth'],
+      thumbnail: '/thumbnails/rechase.png'
     }
   ]
 

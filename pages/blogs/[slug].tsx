@@ -23,7 +23,7 @@ interface Post {
 
 const CodeBlock = ({ language, value }: CodeProps) => {
   return <SyntaxHighlighter language={language} showLineNumbers customStyle={{
-    backgroundColor: '#181C2B',
+    backgroundColor: '#16161E',
     border: 'none',
     margin: 0,
     borderRadius: '5px',

@@ -1,4 +1,14 @@
 @font-face {
+	font-family: InterRegular;
+	src: url("../public/fonts/Inter/inter-regular.ttf");
+}
+
+@font-face {
+	font-family: InterMedium;
+	src: url("../public/fonts/Inter/inter-medium.ttf");
+}
+
+@font-face {
 	font-family: PoppinsSemibold;
 	src: url("../public/fonts/Poppins/poppins-semibold.ttf");
 }
@@ -35,8 +45,8 @@
 
 
 .dark {
-	--background-color: #0f111a;
-	--background-color-alt: #0f111a;
+	--background-color: #1A1B26;
+	--background-color-alt: #1A1B26;
 	--accent-color-alt: #ab69a7;
 	--accent-color: #549658;
 	--font-color-primary: #ffffff;
@@ -49,7 +59,7 @@
 }
 
 .light {
-	--background-color: #e3e3e3;
+	--background-color: #FAFAFA;
 	--background-color-alt: #f0eee5;
 	--accent-color-alt: #549658;
 	--accent-color: #ab69a7;
@@ -135,10 +145,12 @@ hr {
 	display: flex;
 	margin: 0 auto;
 	/* max-width: 100rem; */
-	height: 6.8rem;
+	background-color: transparent;
+	height: 10rem;
 	justify-content: space-between;
 	list-style-type: none;
 	font-size: 1.4rem;
+	z-index: 2;
 }
 
 .nav .group {
@@ -158,6 +170,8 @@ hr {
 	transition: all 0.25s;
 	margin: 0 0 0 4rem;
 	text-decoration: none;
+	font-family: "SFMono";
+	font-size: 1.6rem;
 }
 
 
@@ -379,6 +393,9 @@ button a {
 }
 
 .project-desc .feature-name {
+	/* color: var(--hover); */
+	font-family: 'InterMedium';
+	font-size: 2.4rem;
 	margin: 2rem 0;
 }
 
@@ -407,59 +424,6 @@ button a {
 }
 
 /* projectsend */
-
-
-/* skillsstart */
-.myskills h1 {
-	font-size: 4.8rem;
-	padding: 4rem 0;
-}
-
-.container {
-	line-height: 3rem;
-	user-select: none;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-}
-
-.skills {
-	border-radius: 50rem;
-	padding: 0.25rem 1rem;
-	margin: 0.5rem;
-	display: flex;
-	align-items: center;
-	border-top: 1px solid rgba(255, 255, 255, 0.5);
-	box-shadow: 0 0 1.5rem 1rem rgba(0, 0, 0, 0.1);
-	font-size: 1.6rem;
-	user-select: none;
-}
-
-.skills span {
-	display: flex;
-	margin: 0 0.5rem;
-}
-
-.front-end {
-	background-color: #549658;
-}
-
-.back-end {
-	background-color: #37989e;
-}
-
-.languages {
-	background-color: #9c379e;
-}
-
-.extras-1 {
-	background-color: #b6902f;
-}
-
-.extras-2 {
-	background-color: #52379e;
-}
-/* skillsend */
 
 
 /* blogpreviewstart */
@@ -495,7 +459,7 @@ button a {
 
 .title {
 	font-size: 2.4rem;
-	font-family: "SFProDisplayBold";
+	font-family: "InterMedium";
 	transition: all 0.25s;
 }
 
@@ -538,6 +502,11 @@ button a {
 
 
 /* blogindexstart */
+
+.blog {
+	min-height: 100vh;
+}
+
 .blog h1 {
 	display: block;
 	font-size: 4.8rem;
@@ -566,7 +535,7 @@ button a {
 
 .blog .cards .title {
 	font-size: 2.4rem;
-	font-family: "SFProDisplayBold";
+	font-family: "InterMedium";
 	transition: all 0.25s;
 }
 
@@ -619,6 +588,10 @@ button a {
 	width: 100%;
 	line-height: 3rem;
 	font-size: 1.6rem;
+}
+
+.post {
+	min-height: 100vh;
 }
 
 .post article {

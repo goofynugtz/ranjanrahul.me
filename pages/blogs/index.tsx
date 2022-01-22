@@ -31,11 +31,11 @@ export default function Blogs({ posts }: Posts) {
           return (
             <div key={slug} className='cards'>
               <header>
-                <h2>
+                <div>
                   <Link href={'/blogs/[slug]'} as={`/blogs/${slug}`}>
                     <a className='title'>{title}</a>
                   </Link>
-                </h2>
+                </div>
                 <span className='date'>{date}</span>
               </header>
               <section className='description'>
