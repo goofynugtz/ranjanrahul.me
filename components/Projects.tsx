@@ -12,7 +12,7 @@ const featured: ({
       nameOfProject: 'indiaAtStats',
       class: 'idk',
       description: 'A web app that renders a map of India based on various data like rainfall, population etc.',
-      tags: ['JavaScript', 'D3 Visualization', 'Statistics'],
+      tags: ['JavaScript', 'd3js', 'Statistics'],
       thumbnail: '/thumbnails/indiaAtStats.png'
     },
     {

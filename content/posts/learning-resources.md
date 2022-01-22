@@ -1,6 +1,6 @@
 ---
 title: Learning Resources
-date: 15-03-2021
+date: March 15, 2021
 description: A collection of all the resources where I started and what more I want to finish.
 tags: [c, cpp, cp, ds, algo]
 ---

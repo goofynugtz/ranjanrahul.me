@@ -1,7 +1,7 @@
 ---
 title: TypeScript with Node.js
 description: Getting started with TypeScript for backend
-date: 04-06-2021
+date: June 04, 2021
 tags: [backend, ts, node]
 ---
 ### Getting started with TypeScript with Node.
