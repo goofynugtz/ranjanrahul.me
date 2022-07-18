@@ -13,14 +13,14 @@ const featured: ({
       class: 'idk',
       description: 'A web app that renders a map of India based on various data like rainfall, population etc.',
       tags: ['JavaScript', 'd3js', 'Statistics'],
-      thumbnail: '/thumbnails/indiaAtStats.png'
+      thumbnail: '/projects/indiaAtStats.png'
     },
     {
       nameOfProject: 'REChase Treasure Hunt',
       class: 'idk',
       description: 'A multiplayer online quiz made with React running on top of django with Google OAuth.',
       tags: ['React', 'Django', 'OAuth'],
-      thumbnail: '/thumbnails/rechase.png'
+      thumbnail: '/projects/rechase.png'
     }
   ]
 

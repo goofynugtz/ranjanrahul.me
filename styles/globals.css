@@ -283,7 +283,7 @@ hr {
 	transition: all 0.5s;
 }
 
-button a {
+button {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -584,6 +584,10 @@ button a {
 	font-family: SFMono;
 }
 
+.markdown img {
+	width: 100%;
+}
+
 .markdown {
 	width: 100%;
 	line-height: 3rem;
@@ -601,7 +605,7 @@ button a {
 /* footerstart */
 .footer {
 	display: flex;
-	margin: 0 auto;
+	/* margin: 0 auto; */
 	max-width: 100rem;
 	height: 6.8rem;
 	justify-content: space-between;

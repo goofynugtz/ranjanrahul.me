@@ -12,15 +12,16 @@ import MongoDB from '@iconify/icons-vscode-icons/file-type-mongo';
 import Clang from '@iconify/icons-logos/c';
 import Python from '@iconify/icons-vscode-icons/file-type-python';
 import Cpp from '@iconify/icons-vscode-icons/file-type-cpp3';
-import Kotlin from '@iconify/icons-vscode-icons/file-type-kotlin';
+// import Kotlin from '@iconify/icons-vscode-icons/file-type-kotlin';
 import GoogleCloud from '@iconify/icons-logos/google-cloud';
 import d3 from '@iconify/icons-logos/d3';
 import Next from '@iconify/icons-teenyicons/nextjs-outline';
-import GoGopher from '@iconify/icons-vscode-icons/file-type-go-gopher';
+// import GoGopher from '@iconify/icons-vscode-icons/file-type-go-gopher';
 import Docker from '@iconify/icons-vscode-icons/file-type-docker2';
-import TensorFlow from '@iconify/icons-logos/tensorflow';
-import Django from '@iconify/icons-vscode-icons/file-type-django';
+// import TensorFlow from '@iconify/icons-logos/tensorflow';
 
+import Django from '@iconify/icons-vscode-icons/file-type-django';
+import PyTorch from '@iconify/icons-logos/pytorch';
 const skills: ({
   name: string;
   class: string;
@@ -93,16 +94,6 @@ const skills: ({
       icon: <Icon icon={Python} />
     },
     {
-      name: 'Kotlin',
-      class: 'languages',
-      icon: <Icon icon={Kotlin} />
-    },
-    {
-      name: 'Go lang',
-      class: 'languages',
-      icon: <Icon icon={GoGopher} />
-    },
-    {
       name: 'Google Cloud',
       class: 'hosting',
       icon: <Icon icon={GoogleCloud} />
@@ -123,9 +114,9 @@ const skills: ({
       icon: <Icon icon={Docker} />
     },
     {
-      name: 'Tensorflow',
+      name: 'PyTorch',
       class: 'ml',
-      icon: <Icon icon={TensorFlow} />
+      icon: <Icon icon={PyTorch} />
     }
   ]
 
@@ -136,7 +127,7 @@ const AboutMe: React.FC = () => {
       <h1 className="heading">About Me</h1>
       <p>
         Hello! My name is <span className="highlight">Rahul Ranjan</span>. Two trues and one false about me are: <br />
-        &#9656; I am a soccer player. <br />
+        &#9656; I am a football player. <br />
         &#9656; I love competitive coding. <br />
         &#9656; I don&rsquo;t know machine learning. <br />
         <br />

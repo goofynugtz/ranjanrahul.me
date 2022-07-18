@@ -10,10 +10,10 @@ const Navbar = () => {
     <div className='nav' id='top'>
       <div className='group left'>
         <div className='brand'>ranjanrahul</div>
-        <div className='social xsm:hide'><a href="https://facebook.com" target="_blank" rel="noreferrer"><FaFacebookF /></a></div>
-        <div className='social xsm:hide'><a href="https://github.com/goofyNugtz" target="_blank" rel="noreferrer"><FaGithub /></a></div>
-        <div className='social xsm:hide'><FaLinkedinIn /></div>
-        <div className='social xsm:hide'><FaDev /></div>
+        <div className='social xsm:hide'><a href="https://www.facebook.com/ranjan.rahul.25/" target="_blank"><FaFacebookF /></a></div>
+        <div className='social xsm:hide'><a href="https://github.com/goofyNugtz" target="_blank"><FaGithub /></a></div>
+        <div className='social xsm:hide'><a href="https://www.linkedin.com/in/ranjanrahul42/" target="_blank"><FaLinkedinIn /></a></div>
+        {/* <div className='social xsm:hide'><FaDev /></div> */}
       </div>
       <div className='group right'>
         <Link href="/"><a className='navlinks sm:hide'>/home</a></Link>

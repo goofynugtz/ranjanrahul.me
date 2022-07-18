@@ -1,6 +1,7 @@
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 import Circles from './assets/CirclesVector';
+import Link from 'next/link';
 
 const Header: React.FC = () => {
   return (
@@ -19,25 +20,25 @@ const Header: React.FC = () => {
           <span className='emoticon'>🚀</span>
           <span>Exploring opportunities </span>
           <span className='emoticon'>🎓</span>
-          <span>Freshman year undergrad from National Institute of Technology, Durgapur.</span>
+          <span>Sophomore year undergrad from National Institute of Technology, Durgapur.</span>
         </div>
       </div>
       <div className='contact-buttons'>
-        <button>
-          <a href='https://github.com/goofyNugtz'>
-            <FaGithub className='icon' /> <span>Github</span>
-          </a>
-        </button>
-        <button>
-          <a>
-            <FaLinkedinIn className='icon' /> <span>LinkedIn</span>
-          </a>
-        </button>
-        <button>
-          <a>
-            <MdEmail className='icon' /><span>Email</span>
-          </a>
-        </button>
+        <a href='https://github.com/goofyNugtz' target="_blank">
+          <button>
+            <FaGithub className='icon' /> <span>Github</span> 
+          </button>
+        </a>
+        <a href='https://www.linkedin.com/in/ranjanrahul42/' target="_blank"> 
+          <button>
+            <FaLinkedinIn className='icon' /> <span>LinkedIn</span> 
+          </button>
+        </a>
+        <a href='mailto:rahulranjan25.RR@gmail.com' target="_blank"> 
+          <button>
+            <MdEmail className='icon' /><span>Email</span> 
+          </button>
+        </a>
       </div>
     </div>
   )
