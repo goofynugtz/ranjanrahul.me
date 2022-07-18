@@ -21,7 +21,8 @@ import Docker from '@iconify/icons-vscode-icons/file-type-docker2';
 // import TensorFlow from '@iconify/icons-logos/tensorflow';
 
 import Django from '@iconify/icons-vscode-icons/file-type-django';
-import PyTorch from '@iconify/icons-logos/pytorch';
+import PyTorch from '@iconify/icons-logos/pytorch-icon';
+
 const skills: ({
   name: string;
   class: string;
