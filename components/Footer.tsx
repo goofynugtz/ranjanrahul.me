@@ -24,9 +24,9 @@ const Footer: React.FC = () => {
             <p className="blue">Rahul R</p>
           </div>
         </div>
-        <div className='social sm:hide'><a href="https://www.facebook.com/ranjan.rahul.25/" target="_blank"><FaFacebookF /></a></div>
-        <div className='social sm:hide'><a href="https://github.com/goofyNugtz" target="_blank"><FaGithub /></a></div>
-        <div className='social sm:hide'><a href="https://www.linkedin.com/in/ranjanrahul42/" target="_blank"><FaLinkedinIn /></a></div>
+        <div className='social sm:hide'><a href="https://www.facebook.com/ranjan.rahul.25/" target="_blank" rel="noreferrer"><FaFacebookF /></a></div>
+        <div className='social sm:hide'><a href="https://github.com/goofyNugtz" target="_blank" rel="noreferrer"><FaGithub /></a></div>
+        <div className='social sm:hide'><a href="https://www.linkedin.com/in/ranjanrahul42/" target="_blank" rel="noreferrer"><FaLinkedinIn /></a></div>
         {/* <div className='social sm:hide'><Link href="/" passHref><FaDev /></Link></div> */}
       </div>
     </footer>

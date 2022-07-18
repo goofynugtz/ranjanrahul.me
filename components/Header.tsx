@@ -24,17 +24,17 @@ const Header: React.FC = () => {
         </div>
       </div>
       <div className='contact-buttons'>
-        <a href='https://github.com/goofyNugtz' target="_blank">
+        <a href='https://github.com/goofyNugtz' target="_blank" rel="noreferrer">
           <button>
             <FaGithub className='icon' /> <span>Github</span> 
           </button>
         </a>
-        <a href='https://www.linkedin.com/in/ranjanrahul42/' target="_blank"> 
+        <a href='https://www.linkedin.com/in/ranjanrahul42/' target="_blank" rel="noreferrer"> 
           <button>
             <FaLinkedinIn className='icon' /> <span>LinkedIn</span> 
           </button>
         </a>
-        <a href='mailto:rahulranjan25.RR@gmail.com' target="_blank"> 
+        <a href='mailto:rahulranjan25.RR@gmail.com' target="_blank" rel="noreferrer"> 
           <button>
             <MdEmail className='icon' /><span>Email</span> 
           </button>
