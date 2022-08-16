@@ -9,7 +9,7 @@ tags: [storytelling]
 Background: Archishman used a massaging neck rest before.  
 ## ...
 
-We, 4 guys, were roaming in the ladies and babies section.  
+We, 5 guys, were roaming in the ladies and babies section.  
 Archishman saw a Neck rest, and wanted to get one.  
 We see some neck pillows which **DO NOT VIBRATE**. ```(one also had kitty on it :) )```
 
