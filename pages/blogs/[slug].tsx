@@ -5,6 +5,7 @@ import Layout from '../../components/Layout';
 import ReactMarkdown from "react-markdown";
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { Key } from 'react';
+import Head from 'next/head';
 
 interface CodeProps {
   language: string,
@@ -51,6 +52,11 @@ export default function Post({ frontmatter, content }: Post) {
 
   return (
     <Layout>
+      <Head>
+        <title>blogs@ranjanrahul</title>
+        <meta name='description' content={frontmatter.description}/>
+        <meta name='og:title' content={frontmatter.title}/>
+      </Head>
       <div className='post'>
         <article>
           <span className='date'>{frontmatter.date}</span>

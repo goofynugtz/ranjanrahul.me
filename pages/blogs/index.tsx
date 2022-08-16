@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { Posts } from '../../components/BlogPreview';
 import Layout from '../../components/Layout';
+import Head from 'next/head';
 
 export default function Blogs({ posts }: Posts) {
 
@@ -21,6 +22,9 @@ export default function Blogs({ posts }: Posts) {
 
   return (
     <Layout>
+      <Head>
+        <title>Blogs &#124; Ranjan Rahul</title>
+      </Head>
       <div className='blog'>
         <h1>All Posts</h1>
         <input type="text" placeholder="Search Articles" onChange={handleChange} value={search}></input>
