@@ -20,7 +20,7 @@ const Navbar = () => {
         <Link href="/#aboutme"><a className='navlinks sm:hide'>/aboutme</a></Link>
         {/* <Link href="/listening"><a className='navlinks sm:hide'>/listening</a></Link> */}
         <Link href="/blogs"><a className='navlinks'>/blog</a></Link>
-        <Link href="https://drive.google.com/file/d/1whcFGlYTHXtly96Wp65z_TjmVARNZgZt/view?usp=sharing"><a className='navlinks sm:hide'>/portfolio</a></Link>
+        <Link href="https://drive.google.com/file/d/1iMSlEzPWvTFUPf9d_gAVogOCq6IQBeeO/view?usp=sharing"><a className='navlinks sm:hide'>/portfolio</a></Link>
         <div><SunMoon /></div>
       </div>
     </div>
