@@ -1,7 +1,7 @@
 import AboutMe from '../../components/AboutMe';
 import Layout from '../../components/Layout';
-import Head from 'next/head';
 import Navbar from '../../components/Navbar';
+import Head from 'next/head';
 
 export default function About() {
   return (

@@ -122,7 +122,6 @@ const skills: ({
   ]
 
 const AboutMe: React.FC = () => {
-
   return (
     <div className="aboutme" id='aboutme'>
       <h1 className="heading">About Me</h1>
