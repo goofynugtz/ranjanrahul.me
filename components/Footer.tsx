@@ -1,7 +1,7 @@
 import copyleft from '@iconify/icons-ri/copyleft-fill';
 import { Icon } from '@iconify/react';
 import Link from 'next/link';
-import { FaDev, FaFacebookF, FaGithub, FaLinkedinIn } from "react-icons/fa";
+import { FaDev, FaFacebookF, FaGithub, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 
 const Footer: React.FC = () => {
   return (
@@ -27,6 +27,7 @@ const Footer: React.FC = () => {
         <div className='social sm:hide'><a href="https://www.facebook.com/ranjan.rahul.25/" target="_blank" rel="noreferrer"><FaFacebookF /></a></div>
         <div className='social sm:hide'><a href="https://github.com/goofyNugtz" target="_blank" rel="noreferrer"><FaGithub /></a></div>
         <div className='social sm:hide'><a href="https://www.linkedin.com/in/ranjanrahul42/" target="_blank" rel="noreferrer"><FaLinkedinIn /></a></div>
+        <div className='social sm:hide'><a href="https://www.instagram.com/goofynugtz/" target="_blank" rel="noreferrer"><FaInstagram /></a></div>
         {/* <div className='social sm:hide'><Link href="/" passHref><FaDev /></Link></div> */}
       </div>
     </footer>

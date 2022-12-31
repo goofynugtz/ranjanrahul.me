@@ -6,6 +6,7 @@ import ReactMarkdown from "react-markdown";
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { Key } from 'react';
 import Head from 'next/head';
+import Navbar from '../../components/Navbar';
 
 interface CodeProps {
   language: string,
@@ -52,6 +53,7 @@ export default function Post({ frontmatter, content }: Post) {
 
   return (
     <Layout>
+      <Navbar />
       <Head>
         <title>blogs@ranjanrahul</title>
         <meta name='description' content={frontmatter.description}/>

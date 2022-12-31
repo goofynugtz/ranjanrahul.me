@@ -15,8 +15,6 @@ export default function Home() {
       </Head>
       <Layout>
         <Header />
-        <AboutMe />
-        <FeaturedProjects />
       </Layout>
     </>
   )
