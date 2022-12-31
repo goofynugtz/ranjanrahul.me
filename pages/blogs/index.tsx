@@ -15,7 +15,6 @@ export default function Blogs({ posts }: Posts) {
     const { value } = e.target;
     setSearch(value);
   }
-
   function tagsHandle(tag: any) {
     const value = tag.target.outerText;
     setSearch(value);
@@ -31,7 +30,6 @@ export default function Blogs({ posts }: Posts) {
         <div className="blogs">
           <h1>All Posts</h1>
           <input type="text" placeholder="Search Articles" onChange={handleChange} value={search}></input>
-          {/* <hr /> */}
           <div className="blog-posts">
             {posts?.length > 0 && posts.filter((posts) => (
               !search || posts.frontmatter.title.toLowerCase().includes(search.toLowerCase()) || posts.frontmatter.description.toLowerCase().includes(search.toLowerCase()) || posts.frontmatter.tags.includes(search.toLowerCase()) || posts.content.includes(search.toLowerCase())
@@ -52,7 +50,7 @@ export default function Blogs({ posts }: Posts) {
                       <section className='tags'>
                         {tags.map((tag) => {
                           return (
-                            <span key={tag} className='tag'>
+                            <span onClick={tagsHandle} key={tag} className='tag'>
                               {tag}
                             </span>
                           )

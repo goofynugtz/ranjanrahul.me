@@ -1,9 +1,6 @@
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
-import Link from 'next/link';
 import VerticalNavbar from '../components/VerticalNavbar';
-import Profile from "../components/assets/profile.jpg";
-import Image from 'next/image';
 import BrandNavbar from './BrandNav';
 
 const Header: React.FC = () => {
@@ -12,7 +9,7 @@ const Header: React.FC = () => {
     <BrandNavbar />
     <div className="header">
       <VerticalNavbar />
-      <div className='header-view' id='header'>
+      <div className='header-view' id='home'>
         <div className='intro'>
           <span>Hello,</span>
           <h1>I&rsquo;m Rahul</h1>

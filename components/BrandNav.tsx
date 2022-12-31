@@ -1,6 +1,5 @@
 import { FaGithub, FaFacebookF, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 import { FiSun, FiMoon } from 'react-icons/fi';
-import Link from 'next/link';
 import { useState, useEffect } from "react";
 import { useTheme } from 'next-themes';
 

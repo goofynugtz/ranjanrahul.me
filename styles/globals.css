@@ -103,9 +103,11 @@ body {
 	max-width: var(--width);
 	transition: all 0.3s;
 	margin: 0 auto;
+	cursor: default;
 	font-family: SFPro, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 	background-color: var(--background-color);
 	color: var(--font-color-primary);
+	overflow-x: hidden;
 }
 
 body::-webkit-scrollbar{
@@ -146,7 +148,6 @@ hr {
 .nav {
 	display: flex;
 	margin: 0 auto;
-	/* max-width: 100rem; */
 	background-color: transparent;
 	height: 10rem;
 	justify-content: space-between;
@@ -205,9 +206,6 @@ hr {
 
 
 .main {
-	/* padding: 0 2rem; */
-	/* max-width: 100rem; */
-	/* margin: 0 auto; */
 	font-size: 1.6rem;
 	min-height: 100vh;
 }
@@ -215,7 +213,6 @@ hr {
 .header {
 	display: flex;
 	flex-direction: row;
-	/* justify-content: space-between; */
 }
 
 .v-nav {
@@ -234,6 +231,16 @@ hr {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+}
+
+@media only screen and (max-width: 768px){
+	.header {
+		display: flex;
+		flex-direction: column;
+	}
+	.v-nav {
+		height: 90vh;
+	}
 }
 
 .circles {
@@ -282,7 +289,7 @@ hr {
 	background-color: var(--font-color-primary);
 	font-size: 6rem;
 	border-radius: .75rem;
-	transition: all .5s;
+	transition: all .5s;	
 }
 
 .header-view .subtitle {
@@ -391,7 +398,6 @@ button {
 
 .aboutme .techstack .tech-grid {
 	display: flex;
-	/* padding: .5rem 0; */
 	align-items: center;
 }
 
@@ -510,7 +516,6 @@ button {
 }
 
 .main .blog-posts .blog-cards:hover {
-  /* box-shadow: 0rem 0rem 100rem rgba(0, 0, 0, 0.2); */
   transform: scale(1.02);
 }
 
@@ -588,11 +593,6 @@ button {
   white-space: nowrap;
 }
 
-.main .blogs .blog-cards .blog-details .blog-title:hover {
-  text-decoration: underline;
-}
-
-
 .tags {
   display: flex;
 }
@@ -610,40 +610,37 @@ button {
 
 
 @media only screen and (max-width: 870px) {
-  .main .blogs {
+  .main .blog-posts {
     grid-template-columns: 1fr 1fr;
   }
-  .main .blogs .blog-cards {
-    /* width: 20rem; */
-  }
-  .main .blogs .blog-cards .blog-thumb {
+  .main .blog-posts .blog-cards .blog-thumb {
     height: 100rem;
   }
-  .main .blogs .blog-cards .blog-title {
+  .main .blog-posts .blog-cards .blog-title {
     font-size: 2rem;
   }
   .main .blog-details .blog-description {
     font-size: 1rem;
   }
-  .main .blogs .blog-cards .blog-bottom {
+  .main .blog-posts .blog-cards .blog-bottom {
     font-size: 1rem;
     padding: 1rem;
 
   }
-  .main .blogs .blog-cards .blog-bottom .author-thumb {
+  .main .blog-posts .blog-cards .blog-bottom .author-thumb {
     min-height: 2rem;
     min-width: 2rem;
   }
 }
 
-@media only screen and (max-width: 480px) {
-  .main .blogs {
+@media only screen and (max-width: 600px) {
+  .main .blog-posts {
     grid-template-columns: 1fr;
   }
-  .main .blogs .blog-cards {
+  .main .blog-posts .blog-cards {
     height: auto;
   }
-  .main .blogs .blog-cards .blog-thumb {
+  .main .blog-posts .blog-cards .blog-thumb {
     height: 0rem;
   }
 }
