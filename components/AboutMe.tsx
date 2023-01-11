@@ -12,14 +12,10 @@ import MongoDB from '@iconify/icons-vscode-icons/file-type-mongo';
 import Clang from '@iconify/icons-logos/c';
 import Python from '@iconify/icons-vscode-icons/file-type-python';
 import Cpp from '@iconify/icons-vscode-icons/file-type-cpp3';
-// import Kotlin from '@iconify/icons-vscode-icons/file-type-kotlin';
 import GoogleCloud from '@iconify/icons-logos/google-cloud';
 import d3 from '@iconify/icons-logos/d3';
 import Next from '@iconify/icons-teenyicons/nextjs-outline';
-// import GoGopher from '@iconify/icons-vscode-icons/file-type-go-gopher';
 import Docker from '@iconify/icons-vscode-icons/file-type-docker2';
-// import TensorFlow from '@iconify/icons-logos/tensorflow';
-
 import Django from '@iconify/icons-vscode-icons/file-type-django';
 import PyTorch from '@iconify/icons-logos/pytorch-icon';
 

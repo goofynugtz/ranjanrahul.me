@@ -311,8 +311,12 @@ hr {
 	grid-column: 1 / 2;
 }
 
-.header-view .contact-buttons{
+.header-view .contact-buttons {
 	display: flex;
+}
+
+.header-view .contact-buttons a {
+	margin: 0 .5rem;
 }
 
 .contact-buttons button {
@@ -322,11 +326,11 @@ hr {
 	font-family: "SFPro";
 	width: 10rem;
 	height: 4rem;
-	margin: 0 .5rem;
 	background-color: var(--transparency-level-1);
 	color: var(--font-color-primary);
 	border-radius: .5rem;
 	transition: all 0.5s;
+	cursor: pointer;
 }
 
 button {
