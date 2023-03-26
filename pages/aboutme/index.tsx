@@ -8,7 +8,7 @@ export default function About() {
     <>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Rahul Ranjan &#x2223; About Me</title>
+        <title>About Me &#x2223; Rahul Ranjan</title>
       </Head>
       <Layout>
         <Navbar />

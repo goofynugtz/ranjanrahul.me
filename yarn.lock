@@ -53,6 +53,13 @@
   dependencies:
     "@iconify/types" "*"
 
+"@iconify/icons-bi@^1.2.15":
+  version "1.2.15"
+  resolved "https://registry.yarnpkg.com/@iconify/icons-bi/-/icons-bi-1.2.15.tgz#964bce264a66b82539c008b401a8e78d6fa9cc2d"
+  integrity sha512-bVQHBFwHgLySijCyFcJugHA2PiwuYCYzZJU53RbX/s4b45o0pncLa2huI2/S1WS+XU4J3hMZmMq/B4ewiMvKMg==
+  dependencies:
+    "@iconify/types" "*"
+
 "@iconify/icons-logos@^1.2.11":
   version "1.2.11"
   resolved "https://registry.yarnpkg.com/@iconify/icons-logos/-/icons-logos-1.2.11.tgz#0e7ccd6fb3b9a50655030f7cdeae44cbffd1969f"

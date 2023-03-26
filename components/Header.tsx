@@ -15,13 +15,13 @@ const Header: React.FC = () => {
           <h1>I&rsquo;m Rahul</h1>
         </div>
         <div className='subtitle'>
-          A Developer and Front-End enthusiast
+          A Front-end && Machine Learning Enthusiast
           <br />
           <div className='grid-2x2'>
-            <span className='emoticon'>🚀</span>
-            <span>Exploring opportunities </span>
             <span className='emoticon'>🎓</span>
             <span>Pre-Final year undergrad from National Institute of Technology, Durgapur.</span>
+            <span className='emoticon'>🚀</span>
+            <span>Exploring opportunities </span>
           </div>
         </div>
         <div className='contact-buttons'>

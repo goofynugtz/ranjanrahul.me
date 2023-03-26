@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@iconify/icons-akar-icons": "^1.2.8",
+    "@iconify/icons-bi": "^1.2.15",
     "@iconify/icons-logos": "^1.2.11",
     "@iconify/icons-ri": "^1.2.3",
     "@iconify/icons-simple-icons": "^1.2.19",
