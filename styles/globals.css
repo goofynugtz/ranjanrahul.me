@@ -553,20 +553,23 @@ button {
   border-radius: var(--corner-radius);
   height: 30rem;
   box-shadow: 0rem 0rem 4rem rgba(0, 0, 0, 0.075);
+	justify-content: flex-end;
 }
 
 .main .blog-posts .blog-cards:hover {
   transform: scale(1.02);
 }
 
-.main .blog-posts .blog-cards .blog-thumb {
-  height: 100rem;
-  background-color: var(--transparency-level-1);
+.main .blog-posts .blog-cards .blog-thumb img {
+  /* background-color: var(--transparency-level-1); */
   border-radius: var(--corner-radius);
+	height: 10rem !important;
 }
 
 .main .blog-posts .blog-cards .blog-details {
+	height: 14rem !important;
   padding: 2rem;
+	z-index: 2;
 }
 
 .main .blog-posts .blog-cards .blog-title {
@@ -601,10 +604,11 @@ button {
   align-items: center;
 }
 
-.main .blog-posts .blog-cards .blog-bottom .author-thumb {
-  background-color: var(--accent-color);
-  min-height: 2.5rem;
+.main .blog-posts .blog-cards .blog-bottom img {
+  min-height: 2.5rem;	
+  height: 2.5rem;	
   min-width: 2.5rem;
+  width: 2.5rem;
   border-radius: 10rem;
   margin: 0 1rem 0 .5rem;
 }
@@ -615,7 +619,8 @@ button {
 }
 
 .main .blog-timestamp {
-	padding-left: 1rem;
+	padding-left: 2rem;
+	padding-right: 1rem;
 	justify-content: flex-end;
 	display: flex;
 	align-items: center;
@@ -641,7 +646,7 @@ button {
   white-space: nowrap;
   background-color: var(--transparency-level-1);
   color: var(--hover);
-  font-size: 1rem;
+  font-size: 1.6rem;
   border-radius: 10rem;
   transition: all 1s;
   padding: 0.5rem 1rem;
@@ -654,8 +659,11 @@ button {
     grid-template-columns: 1fr 1fr;
   }
   .main .blog-posts .blog-cards .blog-thumb {
-    height: 100rem;
+		height: 10rem !important;
   }
+	.main .blog-posts .blog-cards .blog-details {
+	height: 14rem !important;
+	}	
   .main .blog-posts .blog-cards .blog-title {
     font-size: 2rem;
   }
@@ -665,7 +673,6 @@ button {
   .main .blog-posts .blog-cards .blog-bottom {
     font-size: 1rem;
     padding: 1rem;
-
   }
   .main .blog-posts .blog-cards .blog-bottom .author-thumb {
     min-height: 2rem;
@@ -681,8 +688,11 @@ button {
     height: auto;
   }
   .main .blog-posts .blog-cards .blog-thumb {
-    height: 0rem;
+		height: 10rem !important;
   }
+	.main .blog-posts .blog-cards .blog-details {
+	height: 12rem !important;
+	}	
 }
 /* blogindexend */
 

@@ -1,10 +1,11 @@
 ---
-title: Windows in External SSD
+title: Bypassing Windows setup
 description: Installing windows manually to bypass Windows 10 setup exclusion of not allowing to install on USB ports. 
 date: Decemeber 06, 2022
+thumbnail: assets/erik-werlin-ndgy5oZwdUY-unsplash.jpg
 tags: [os, ssd, windows]
 ---
-# How to install Windows Manually
+
 
 Below error is shown while trying to install windows on external SSD through USB(C) to IEEE 1394 port.
 ### Windows 10 setup does not support configuration of or installation to disks through a USB or IEEE 1394 port.

@@ -35,12 +35,14 @@ export default function Blogs({ posts }: Posts) {
           <div className="blog-posts">
             {posts?.length > 0 && posts.filter((posts) => (
               !search || posts.frontmatter.title.toLowerCase().includes(search.toLowerCase()) || posts.frontmatter.description.toLowerCase().includes(search.toLowerCase()) || posts.frontmatter.tags.includes(search.toLowerCase()) || posts.content.includes(search.toLowerCase())
-            )).map(({ frontmatter: { title, date, description, tags }, slug }) => {
+            )).map(({ frontmatter: { title, date, description, thumbnail, tags }, slug }) => {
               return (
                 <Link href={'/blogs/[slug]'} as={`/blogs/${slug}`} key={slug}>
                   <div className='blog-cards'>
                     <div className="blog-thumb">
-
+                    <Image alt='' src={`/${thumbnail}`} layout={'fill'} style={{
+                      objectFit: 'cover'
+                    }} />
                     </div>
                     <div className="blog-details">
                       <header>
@@ -61,11 +63,11 @@ export default function Blogs({ posts }: Posts) {
                     </div>
                     <section className='blog-bottom'>
                       <div className='blog-author'>
-                        <div className="author-thumb">
-                          {/* <Image alt='' src={profileImage} style={{
+                        {/* <div className="author-thumb"> */}
+                          <Image alt='' src={profileImage} style={{
                             objectFit: 'cover'
-                          }} /> */}
-                        </div>
+                          }} />
+                        {/* </div> */}
                         <div className="author-name">
                           Rahul R
                         </div>

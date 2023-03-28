@@ -2,6 +2,7 @@
 title: Random Clicks
 date: August 9, 2022
 description: Photographs I took at college campus.
+thumbnail: assets/debashis-rc-biswas-dyPFnxxUhYk-unsplash.jpg
 tags: [photographs, streets, green]
 ---
 

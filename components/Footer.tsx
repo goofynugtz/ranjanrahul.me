@@ -8,9 +8,9 @@ const Footer: React.FC = () => {
     <footer className='footer'>
       <div className='group'>
         <span className='brand'>ranjanrahul</span>
-        <div className='footerlinks m:hide'><a href="#top">Back to Top</a></div>
+        <div className='footerlinks m:hide'><Link href="#top">Back to Top</Link></div>
         <div className='footerlinks m:hide'><Link href="/#expertise" >What I Do</Link></div>
-        <div className='footerlinks m:hide'><Link href="/blogs"><a>Blogs</a></Link></div>
+        <div className='footerlinks m:hide'><Link href="/blogs">Blogs</Link></div>
         <div className='footerlinks m:hide'><Link href="/" >Portfolio</Link></div>
       </div>
 
@@ -24,10 +24,10 @@ const Footer: React.FC = () => {
             <p className="blue">Rahul R</p>
           </div>
         </div>
-        <div className='social sm:hide'><a href="https://www.facebook.com/ranjan.rahul.25/" target="_blank" rel="noreferrer"><FaFacebookF /></a></div>
-        <div className='social sm:hide'><a href="https://github.com/goofyNugtz" target="_blank" rel="noreferrer"><FaGithub /></a></div>
-        <div className='social sm:hide'><a href="https://www.linkedin.com/in/ranjanrahul42/" target="_blank" rel="noreferrer"><FaLinkedinIn /></a></div>
-        <div className='social sm:hide'><a href="https://www.instagram.com/goofynugtz/" target="_blank" rel="noreferrer"><FaInstagram /></a></div>
+        <div className='social sm:hide'><Link href="https://www.facebook.com/ranjan.rahul.25/" target="_blank" rel="noreferrer"><FaFacebookF /></Link></div>
+        <div className='social sm:hide'><Link href="https://github.com/goofyNugtz" target="_blank" rel="noreferrer"><FaGithub /></Link></div>
+        <div className='social sm:hide'><Link href="https://www.linkedin.com/in/ranjanrahul42/" target="_blank" rel="noreferrer"><FaLinkedinIn /></Link></div>
+        <div className='social sm:hide'><Link href="https://www.instagram.com/goofynugtz/" target="_blank" rel="noreferrer"><FaInstagram /></Link></div>
         {/* <div className='social sm:hide'><Link href="/" passHref><FaDev /></Link></div> */}
       </div>
     </footer>

@@ -2,6 +2,7 @@
 title: 76th Independence Day
 date: August 15, 2022
 description: Nightout with the Boiz.
+thumbnail: assets/jk-gJhev0YgUcE-unsplash.jpg
 tags: [storytelling]
 ---
 

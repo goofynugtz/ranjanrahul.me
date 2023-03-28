@@ -7,11 +7,11 @@ const VerticalNavbar = () => {
       <div className='circles'>
         <Circles />
       </div>
-      <Link href="/#home"><a className='navlinks'>/home</a></Link>
-      <Link href="/aboutme"><a className='navlinks'>/aboutme</a></Link>
-      <Link href="/projects"><a className='navlinks'>/projects</a></Link>
-      <Link href="/blogs"><a className='navlinks'>/blog</a></Link>
-      <Link href="https://drive.google.com/file/d/1iMSlEzPWvTFUPf9d_gAVogOCq6IQBeeO/view?usp=sharing"><a className='navlinks'>/resume</a></Link>
+      <Link href="/#home" className='navlinks'>/home</Link>
+      <Link href="/aboutme" className='navlinks'>/aboutme</Link>
+      <Link href="/projects" className='navlinks'>/projects</Link>
+      <Link href="/blogs" className='navlinks'>/blog</Link>
+      <Link href="https://drive.google.com/file/d/1iMSlEzPWvTFUPf9d_gAVogOCq6IQBeeO/view?usp=sharing">/resume</Link>
     </div>
   )
 }

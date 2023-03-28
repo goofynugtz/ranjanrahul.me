@@ -11,17 +11,17 @@ const Navbar = () => {
     <div className='nav' id='top'>
       <div className='group left'>
         <div className='brand'>ranjanrahul</div>
-        <div className='social xsm:hide'><a href="https://www.facebook.com/ranjan.rahul.25/" target="_blank" rel="noreferrer"><FaFacebookF /></a></div>
-        <div className='social xsm:hide'><a href="https://github.com/goofyNugtz" target="_blank" rel="noreferrer"><FaGithub /></a></div>
-        <div className='social xsm:hide'><a href="https://www.linkedin.com/in/ranjanrahul42/" target="_blank" rel="noreferrer"><FaLinkedinIn /></a></div>
-        <div className='social xsm:hide'><a href="https://www.instagram.com/goofynugtz/" target="_blank" rel="noreferrer"><FaInstagram /></a></div>
+        <div className='social xsm:hide'><Link href="https://www.facebook.com/ranjan.rahul.25/" target="_blank" rel="noreferrer"><FaFacebookF /></Link></div>
+        <div className='social xsm:hide'><Link href="https://github.com/goofyNugtz" target="_blank" rel="noreferrer"><FaGithub /></Link></div>
+        <div className='social xsm:hide'><Link href="https://www.linkedin.com/in/ranjanrahul42/" target="_blank" rel="noreferrer"><FaLinkedinIn /></Link></div>
+        <div className='social xsm:hide'><Link href="https://www.instagram.com/goofynugtz/" target="_blank" rel="noreferrer"><FaInstagram /></Link></div>
       </div>
       <div className='group right'>
-        <Link href="/"><a className={router.pathname == "/" ? 'navlinks sm:hide active': 'navlinks sm:hide'}>/home</a></Link>
-        <Link href="/aboutme"><a className={router.pathname == "/aboutme" ? 'navlinks sm:hide active': 'navlinks sm:hide'}>/aboutme</a></Link>
-        <Link href="/projects"><a className={router.pathname == "/projects" || router.pathname == "/projects/[slug]" ? 'navlinks active' : 'navlinks'}>/projects</a></Link>
-        <Link href="/blogs"><a className={router.pathname == "/blogs" || router.pathname == "/blogs/[slug]" ? 'navlinks active' : 'navlinks'}>/blog</a></Link>
-        <Link href="https://drive.google.com/file/d/1KG7WRJpB21DoLs3BiEYYtggwKTaR1v0v/view?usp=share_link"><a className='navlinks sm:hide'>/resume</a></Link>
+        <Link href="/" className={router.pathname == "/" ? 'navlinks sm:hide active': 'navlinks sm:hide'}>/home</Link>
+        <Link href="/aboutme" className={router.pathname == "/aboutme" ? 'navlinks sm:hide active': 'navlinks sm:hide'}>/aboutme</Link>
+        <Link href="/projects" className={router.pathname == "/projects" || router.pathname == "/projects/[slug]" ? 'navlinks active' : 'navlinks'}>/projects</Link>
+        <Link href="/blogs" className={router.pathname == "/blogs" || router.pathname == "/blogs/[slug]" ? 'navlinks active' : 'navlinks'}>/blog</Link>
+        <Link href="https://drive.google.com/file/d/1KG7WRJpB21DoLs3BiEYYtggwKTaR1v0v/view?usp=share_link" className='navlinks sm:hide'>/resume</Link>
         <div><SunMoon /></div>
       </div>
     </div>

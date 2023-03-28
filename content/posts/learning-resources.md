@@ -2,6 +2,7 @@
 title: Learning Resources
 date: March 15, 2021
 description: A collection of all the resources where I started and what more I want to finish.
+thumbnail: assets/arnold-francisca-f77Bh3inUpE-unsplash.jpg
 tags: [c, cpp, cp, ds, algo]
 ---
 
@@ -27,3 +28,5 @@ tags: [c, cpp, cp, ds, algo]
 
 #### Machine Learning
 - [scikit-learn.org](https://scikit-learn.org/stable/) 
+- [Mitesh M. Khapra - IIT Madras](https://www.youtube.com/watch?v=aPfkYu_qiF4&list=PLyqSpQzTE6M9gCgajvQbc68Hk_JKGBAYT)
+- [Andrej Karpathy](https://www.youtube.com/@AndrejKarpathy)

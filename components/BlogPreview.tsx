@@ -8,6 +8,7 @@ export interface Posts {
       title: string,
       date: string,
       description: string,
+      thumbnail: string,
       tags: Key[]
     },
     content: string

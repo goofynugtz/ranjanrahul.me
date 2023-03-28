@@ -2,6 +2,7 @@ import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 import VerticalNavbar from '../components/VerticalNavbar';
 import BrandNavbar from './BrandNav';
+import Link from 'next/link';
 
 const Header: React.FC = () => {
   return (
@@ -25,21 +26,21 @@ const Header: React.FC = () => {
           </div>
         </div>
         <div className='contact-buttons'>
-          <a href='https://github.com/goofyNugtz' target="_blank" rel="noreferrer">
+          <Link href='https://github.com/goofyNugtz' target="_blank" rel="noreferrer">
             <button>
               <FaGithub className='icon' /> <span>Github</span>
             </button>
-          </a>
-          <a href='https://www.linkedin.com/in/ranjanrahul42/' target="_blank" rel="noreferrer">
+          </Link>
+          <Link href='https://www.linkedin.com/in/ranjanrahul42/' target="_blank" rel="noreferrer">
             <button>
               <FaLinkedinIn className='icon' /> <span>LinkedIn</span>
             </button>
-          </a>
-          <a href='mailto:rahulranjan25.RR@gmail.com' target="_blank" rel="noreferrer">
+          </Link>
+          <Link href='mailto:rahulranjan25.RR@gmail.com' target="_blank" rel="noreferrer">
             <button>
               <MdEmail className='icon' /><span>Email</span>
             </button>
-          </a>
+          </Link>
         </div>
       </div>
         {/* <div className="profile">

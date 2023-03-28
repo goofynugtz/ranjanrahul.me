@@ -4,6 +4,7 @@ import Layout from '../../components/Layout';
 import Navbar from "../../components/Navbar";
 import { Icon } from "@iconify/react";
 import githubIcon from '@iconify/icons-bi/github';
+import Link from 'next/link';
 
 
 export default function FeaturedProjects() {
@@ -17,39 +18,39 @@ export default function FeaturedProjects() {
         <div className="projects">
           <h1 className="heading">Featured Projects</h1>
           <div className="projects-grid">
-            <a href="https://predictions.ranjanrahul.me/" className="p p-1">
+            <Link href="https://predictions.ranjanrahul.me/" className="p p-1">
               <div>
-                <a href="https://github.com/goofynugtz/gpt-text-prediction">
+                <Link href="https://github.com/goofynugtz/gpt-text-prediction">
                   <Icon icon={githubIcon} />
-                </a>
+                </Link>
                 <div className="title">Text Prediction</div>
                 <div className="description">Generative Pretrained Transformer using BigramLanguage model on a frontend. </div>
               </div>
-            </a>
-            <a href="https://indistats.ranjanrahul.me/" className="p p-2">
+            </Link>
+            <Link href="https://indistats.ranjanrahul.me/" className="p p-2">
               <div >
                 <div className="title">IndiaAtStats</div>
-                <a href="https://github.com/goofynugtz/gpt-text-prediction">
+                <Link href="https://github.com/goofynugtz/gpt-text-prediction">
                   <Icon icon={githubIcon} />
-                </a>
+                </Link>
                 <div className="description"></div>
               </div>
-            </a>
-            <a className="p p-3">
+            </Link>
+            <Link href={"https://search.ranjanrahul.me"} className="p p-3">
               <div >
-                <a href="https://github.com/goofynugtz/search-engine">
+                <Link href="https://github.com/goofynugtz/search-engine">
                   <Icon icon={githubIcon} />
-                </a>
+                </Link>
                 <div className="title">Search Engine</div>
                 <div className="description"></div>
               </div>
-            </a>
-            <a className="p p-4">
+            </Link>
+            <Link href={"/projects"} className="p p-4">
               <div >
                 <div className="title"></div>
                 <div className="description"></div>
               </div>
-            </a>
+            </Link>
           </div>
         </div>
       </Layout>
