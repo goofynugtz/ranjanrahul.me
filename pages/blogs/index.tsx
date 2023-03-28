@@ -6,6 +6,8 @@ import { Posts } from '../../components/BlogPreview';
 import Layout from '../../components/Layout';
 import Head from 'next/head';
 import Navbar from '../../components/Navbar';
+import profileImage from '../../public/assets/profile.jpg'
+import Image from 'next/image';
 
 export default function Blogs({ posts }: Posts) {
 
@@ -60,7 +62,9 @@ export default function Blogs({ posts }: Posts) {
                     <section className='blog-bottom'>
                       <div className='blog-author'>
                         <div className="author-thumb">
-
+                          {/* <Image alt='' src={profileImage} style={{
+                            objectFit: 'cover'
+                          }} /> */}
                         </div>
                         <div className="author-name">
                           Rahul R

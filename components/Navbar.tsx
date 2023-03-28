@@ -15,13 +15,13 @@ const Navbar = () => {
         <div className='social xsm:hide'><a href="https://github.com/goofyNugtz" target="_blank" rel="noreferrer"><FaGithub /></a></div>
         <div className='social xsm:hide'><a href="https://www.linkedin.com/in/ranjanrahul42/" target="_blank" rel="noreferrer"><FaLinkedinIn /></a></div>
         <div className='social xsm:hide'><a href="https://www.instagram.com/goofynugtz/" target="_blank" rel="noreferrer"><FaInstagram /></a></div>
-      </div>  
+      </div>
       <div className='group right'>
         <Link href="/"><a className={router.pathname == "/" ? 'navlinks sm:hide active': 'navlinks sm:hide'}>/home</a></Link>
         <Link href="/aboutme"><a className={router.pathname == "/aboutme" ? 'navlinks sm:hide active': 'navlinks sm:hide'}>/aboutme</a></Link>
         <Link href="/projects"><a className={router.pathname == "/projects" || router.pathname == "/projects/[slug]" ? 'navlinks active' : 'navlinks'}>/projects</a></Link>
         <Link href="/blogs"><a className={router.pathname == "/blogs" || router.pathname == "/blogs/[slug]" ? 'navlinks active' : 'navlinks'}>/blog</a></Link>
-        <Link href="https://drive.google.com/file/d/1iMSlEzPWvTFUPf9d_gAVogOCq6IQBeeO/view?usp=sharing"><a className='navlinks sm:hide'>/resume</a></Link>
+        <Link href="https://drive.google.com/file/d/1KG7WRJpB21DoLs3BiEYYtggwKTaR1v0v/view?usp=share_link"><a className='navlinks sm:hide'>/resume</a></Link>
         <div><SunMoon /></div>
       </div>
     </div>
@@ -31,19 +31,15 @@ const Navbar = () => {
 export default Navbar
 
 const SunMoon = () => {
-
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme, resolvedTheme } = useTheme();
-
   useEffect(() => setMounted(true), []);
-
   return (
     <div className='navlinks' onClick={() => {
       console.log('trig')
       setTheme(theme === 'dark' || resolvedTheme === 'dark' ? 'light' : 'dark')
       setMounted(mounted ? false : true)
-    }}
-    >
+    }}>
       <div>{mounted && (theme === 'dark' || resolvedTheme === 'dark') ? <FiSun color={'#ffc107'} /> : <FiMoon />}</div>
     </div>
   );
