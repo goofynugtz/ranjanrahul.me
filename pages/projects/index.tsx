@@ -6,7 +6,6 @@ import { Icon } from "@iconify/react";
 import githubIcon from '@iconify/icons-bi/github';
 import Link from 'next/link';
 
-
 export default function FeaturedProjects() {
   return (
     <>

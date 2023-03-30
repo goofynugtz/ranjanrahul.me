@@ -21,7 +21,7 @@ const Navbar = () => {
         <Link href="/aboutme" className={router.pathname == "/aboutme" ? 'navlinks sm:hide active': 'navlinks sm:hide'}>/aboutme</Link>
         <Link href="/projects" className={router.pathname == "/projects" || router.pathname == "/projects/[slug]" ? 'navlinks active' : 'navlinks'}>/projects</Link>
         <Link href="/blogs" className={router.pathname == "/blogs" || router.pathname == "/blogs/[slug]" ? 'navlinks active' : 'navlinks'}>/blog</Link>
-        <Link href="https://drive.google.com/file/d/1KG7WRJpB21DoLs3BiEYYtggwKTaR1v0v/view?usp=share_link" className='navlinks sm:hide'>/resume</Link>
+        <Link href="https://drive.google.com/file/d/18m4vyIUN6NTPEHL3Ea2n2r43jD-9N2Ww/view?usp=share_link" className='navlinks sm:hide'>/resume</Link>
         <div><SunMoon /></div>
       </div>
     </div>
