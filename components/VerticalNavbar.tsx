@@ -11,7 +11,7 @@ const VerticalNavbar = () => {
       <Link href="/aboutme" className='navlinks'>/aboutme</Link>
       <Link href="/projects" className='navlinks'>/projects</Link>
       <Link href="/blogs" className='navlinks'>/blog</Link>
-      <Link href="https://drive.google.com/file/d/1iMSlEzPWvTFUPf9d_gAVogOCq6IQBeeO/view?usp=sharing">/resume</Link>
+      <Link href="https://drive.google.com/file/d/18m4vyIUN6NTPEHL3Ea2n2r43jD-9N2Ww/view?usp=share_link" className='navlinks'>/resume</Link>
     </div>
   )
 }

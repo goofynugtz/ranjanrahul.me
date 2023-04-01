@@ -10,7 +10,7 @@ const Navbar = () => {
   return (
     <div className='nav' id='top'>
       <div className='group left'>
-        <div className='brand'>ranjanrahul</div>
+        <div className='brand'><Link href="/">ranjanrahul</Link></div>
         <div className='social xsm:hide'><Link href="https://www.facebook.com/ranjan.rahul.25/" target="_blank" rel="noreferrer"><FaFacebookF /></Link></div>
         <div className='social xsm:hide'><Link href="https://github.com/goofyNugtz" target="_blank" rel="noreferrer"><FaGithub /></Link></div>
         <div className='social xsm:hide'><Link href="https://www.linkedin.com/in/ranjanrahul42/" target="_blank" rel="noreferrer"><FaLinkedinIn /></Link></div>
@@ -19,8 +19,8 @@ const Navbar = () => {
       <div className='group right'>
         <Link href="/" className={router.pathname == "/" ? 'navlinks sm:hide active': 'navlinks sm:hide'}>/home</Link>
         <Link href="/aboutme" className={router.pathname == "/aboutme" ? 'navlinks sm:hide active': 'navlinks sm:hide'}>/aboutme</Link>
-        <Link href="/projects" className={router.pathname == "/projects" || router.pathname == "/projects/[slug]" ? 'navlinks active' : 'navlinks'}>/projects</Link>
-        <Link href="/blogs" className={router.pathname == "/blogs" || router.pathname == "/blogs/[slug]" ? 'navlinks active' : 'navlinks'}>/blog</Link>
+        <Link href="/projects" className={router.pathname == "/projects" || router.pathname == "/projects/[slug]" ? 'navlinks sm:hide active' : 'navlinks sm:hide'}>/projects</Link>
+        <Link href="/blogs" className={router.pathname == "/blogs" || router.pathname == "/blogs/[slug]" ? 'navlinks sm:hide active' : 'navlinks sm:hide'}>/blog</Link>
         <Link href="https://drive.google.com/file/d/18m4vyIUN6NTPEHL3Ea2n2r43jD-9N2Ww/view?usp=share_link" className='navlinks sm:hide'>/resume</Link>
         <div><SunMoon /></div>
       </div>

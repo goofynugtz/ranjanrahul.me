@@ -5,7 +5,7 @@ import { FaDev, FaFacebookF, FaGithub, FaLinkedinIn, FaInstagram } from "react-i
 
 const Footer: React.FC = () => {
   return (
-    <footer className='footer'>
+    <div className='footer'>
       <div className='group'>
         <span className='brand'>ranjanrahul</span>
         <div className='footerlinks m:hide'><Link href="#top">Back to Top</Link></div>
@@ -30,7 +30,7 @@ const Footer: React.FC = () => {
         <div className='social sm:hide'><Link href="https://www.instagram.com/goofynugtz/" target="_blank" rel="noreferrer"><FaInstagram /></Link></div>
         {/* <div className='social sm:hide'><Link href="/" passHref><FaDev /></Link></div> */}
       </div>
-    </footer>
+    </div>
   )
 }
 
