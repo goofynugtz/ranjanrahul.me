@@ -122,10 +122,10 @@ const AboutMe: React.FC = () => {
     <div className="aboutme" id='aboutme'>
       <h1 className="heading">About Me</h1>
       <p>
-        Hello! My name is <span className="highlight">Rahul Ranjan</span>. Two trues and one false about me are: <br />
-        &#9656; I am a football player. <br />
-        &#9656; I love competitive coding. <br />
-        &#9656; I don&rsquo;t know machine learning. <br />
+        Hello! My name is Rahul Ranjan. Two trues and one false about me are: <br />
+        &#9656; I love playing football. <br />
+        &#9656; I loooove competitive coding &lt;3. <br />
+        &#9656; I can understand neural networks, slightly :/ <br />
         <br />
         A &quot;few&quot; technologies that I&apos;ve worked on till now:
       </p>
