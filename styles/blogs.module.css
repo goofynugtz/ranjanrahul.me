@@ -1,0 +1,89 @@
+.blogs {
+	margin: 0 5rem;
+}
+
+@media only screen and (max-width: 1024px){
+	.blogs{
+		margin: 0 2rem;
+	}
+}
+
+.blogs h1 {
+	display: block;
+	font-size: 4.8rem;
+	margin: 1rem 0;
+	z-index: -1;
+	font-family: "PoppinsSemibold";
+}
+
+.blogs input {
+	appearance: 0;
+	border: 0;
+	width: 30rem;
+	height: 4rem;
+	padding: 0 2rem;
+	background-color: var(--transparency-level-1);
+	color: var(--font-color-primary);
+	font-family: "SFPro";
+	border-radius: var(--corner-radius);
+	margin-bottom: 1rem;
+}
+
+.posts {
+	margin-top: 0rem;
+	/* display: grid; */
+	/* grid-template-columns: 1fr 1fr 1fr; */
+	/* gap: 2rem; */
+}
+
+.cards {
+  transition: all .25s;
+  display: flex;
+  flex-direction: row;
+  font-size: 1.4rem;
+  border-radius: var(--corner-radius);
+	justify-content: flex-start;
+  margin: 2rem 0;
+}
+
+.date {
+  display: flex;
+  min-width: 20rem;
+  min-height: 5rem;
+  justify-content: flex-start;
+  align-self: center;
+  align-items: center;
+}
+
+.title {
+  font-size: 2rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.description {
+  color: var(--transparency-level-3);
+  transition: all 1s;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.tags {
+  display: flex;
+}
+
+.tag {
+  white-space: nowrap;
+  background-color: var(--transparency-level-1);
+  color: var(--hover);
+  font-size: 1.2rem;
+  border-radius: 10rem;
+  transition: all 1s;
+  padding: 0.5rem 1rem;
+  margin: 1rem 1rem 0 0;
+}
+

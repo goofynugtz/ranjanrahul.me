@@ -1,6 +1,6 @@
 ---
 title: Bypassing Windows setup
-description: Installing windows manually to bypass Windows 10 setup exclusion of not allowing to install on USB ports. 
+description: This is what I got from the internet on a sketchy website, so I'm saving it here. On a non sketchy website.
 date: Decemeber 06, 2022
 thumbnail: assets/erik-werlin-ndgy5oZwdUY-unsplash.jpg
 tags: [os, ssd, windows]
@@ -9,9 +9,9 @@ tags: [os, ssd, windows]
 
 Below error is shown while trying to install windows on external SSD through USB(C) to IEEE 1394 port.
 ### Windows 10 setup does not support configuration of or installation to disks through a USB or IEEE 1394 port.
-How to bypass it ?
+This is what I got from the internet on a sketchy website, so I'm saving it here. On a non sketchy website.
 
-```
+```bash
 list disk
 ```  
 Where, x your disk number 0,1,2,3,... and so on.  

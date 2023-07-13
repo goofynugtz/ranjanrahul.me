@@ -1,9 +1,13 @@
 import Head from 'next/head'
-import Header from '../components/Header';
-import Layout from '../components/Layout';
+import Layout from '../components/layout';
+import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
+import { MdEmail } from 'react-icons/md';
+import Sidebar from '../components/sidebar';
+import Brand from '../components/brand';
+import Link from 'next/link';
+import styles from '../styles/index.module.css'
 
 export default function Home() {
-
   return (
     <>
       <Head>
@@ -11,32 +15,47 @@ export default function Home() {
         <title>Rahul Ranjan</title>
       </Head>
       <Layout>
-        <Header />
+      <Brand />
+    <div className={styles.header}>
+      <Sidebar />
+      <div className={styles.right} id='home'>
+        <div className={styles.introduction}>
+          <span>Hello,</span>
+          <h1>I&rsquo;m Rahul</h1>
+        </div>
+        <div className={styles.subtitle}>
+          A Front-end && Machine Learning Enthusiast
+          <br />
+          <div className={styles.grid}>
+            <span className={styles.emoticon}>🎓</span>
+            <span>Pre-Final year undergrad from National Institute of Technology, Durgapur.</span>
+            <span className={styles.emoticon}>🚀</span>
+            <span>Exploring opportunities </span>
+          </div>
+        </div>
+        <div className={styles.contacts}>
+          <Link href='https://github.com/goofyNugtz' target="_blank" rel="noreferrer">
+            <button>
+              <FaGithub className={styles.icon} /> <span>Github</span>
+            </button>
+          </Link>
+          <Link href='https://www.linkedin.com/in/ranjanrahul42/' target="_blank" rel="noreferrer">
+            <button>
+              <FaLinkedinIn className={styles.icon} /> <span>LinkedIn</span>
+            </button>
+          </Link>
+          <Link href='mailto:rahulranjan25.RR@gmail.com' target="_blank" rel="noreferrer">
+            <button>
+              <MdEmail className={styles.icon} /><span>Email</span>
+            </button>
+          </Link>
+        </div>
+      </div>
+        {/* <div className="profile">
+          <Image src={Profile} width={256} height={256} quality={100} objectFit={'cover'}/>
+        </div> */}
+    </div>
       </Layout>
     </>
   )
 }
-
-/* export async function getStaticProps() {
-  const files = fs.readdirSync(`${process.cwd()}/content/posts`)
-
-  const posts = files.map((filename) => {
-    const markdownWithMetadata = fs
-      .readFileSync(`content/posts/${filename}`).toString()
-
-    const { data } = matter(markdownWithMetadata);
-
-    const frontmatter = {
-      ...data
-    };
-
-    return {
-      slug: filename.replace('.md', ''),
-      frontmatter
-    };
-  })
-
-  return {
-    props: { posts }
-  };
-} */

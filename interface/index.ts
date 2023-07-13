@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import { Key } from 'react';
 
 export interface Posts {
@@ -13,4 +12,9 @@ export interface Posts {
     },
     content: string
   }]
+}
+
+export interface tab {
+  title: string,
+  uri: string,
 }

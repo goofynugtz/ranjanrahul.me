@@ -1,0 +1,64 @@
+.navbar {
+	display: flex;
+	margin: 0 5rem;
+	background-color: transparent;
+	height: 10rem;
+	justify-content: space-between;
+	list-style-type: none;
+	font-size: 1.4rem;
+	z-index: 2;
+}
+
+.group {
+	display: flex;
+	align-items: center;
+}
+
+.branding {
+	font-family: PoppinsSemibold;
+	width: max-content;
+	padding: 0 3rem 0 0;
+	font-size: 2rem;
+	list-style-type: none;
+}
+
+.social {
+  transition: all 0.25s;
+	align-self: center;
+	font-size: 2rem;
+	width: max-content;
+	padding: 0.5rem;
+}
+
+.social:hover {
+	color: var(--hover);
+}
+
+@media only screen and (max-width: 512px) {
+	.xs_hide {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.s_hide {
+		display: none;
+	}
+}
+
+.link {
+	transition: all 0.25s;
+	padding: 2rem;
+	text-decoration: none;
+	font-family: "SFMono";
+	font-size: 1.6rem;
+}
+
+.link:hover {
+	transition: all 0.25s;
+	color: var(--hover);
+}
+
+.active {
+	background-color: var(--transparency-level-1);
+}

@@ -1,0 +1,40 @@
+.sidebar {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-right: 10rem;
+	font-size: 5rem;
+	font-family: SFMono;
+	line-height: 10rem;
+	position: relative;
+}
+
+@media only screen and (max-width: 768px){
+	.sidebar {
+		font-size: 4rem;
+		line-height: 8rem;
+    height: 90vh;
+	}
+}
+
+.glyphs {
+	position: absolute;
+	width: 20rem;
+	z-index: -1;
+	transform: translate(-5rem, -5rem);
+}
+
+.glyphs circle {
+	transition: all .5s;
+	fill-opacity: 0.1;
+	fill: var(--transparency-level-3);
+}
+
+.link {
+	transition: all 0.25s;
+}
+
+.link:hover {
+	transition: all 0.25s;
+	color: var(--hover);
+}

@@ -1,0 +1,106 @@
+.header {
+	display: flex;
+	flex-direction: row;
+	margin: 0 5rem;
+}
+
+@media only screen and (max-width: 768px){
+	.header {
+    /* display: flex; */
+		/* flex-direction: column; */
+		margin: 0 3rem;
+	}
+}
+
+.right {
+	height: 85vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.right h1 {
+	align-items: center;
+	margin: 0;
+	padding: 0.7rem 1rem 0 1rem;
+	font-family: "Overpass";
+	color: var(--font-color-primary-alt);
+	background-color: var(--font-color-primary);
+	font-size: 4rem;
+	border-radius: var(--corner-radius);
+	transition: all .5s;	
+}
+
+.introduction {
+	display: flex;
+	max-width: max-content;
+	flex-direction: column;
+	font-size: 1.8rem;
+}
+
+.introduction span {
+	margin: 1rem 0;
+}
+
+.subtitle {
+	margin: 5rem 0;
+	margin-top: 2rem;
+	font-size: 2rem;
+}
+
+.grid {
+	color: var(--font-color-secondary);
+	margin-top: 2rem;
+	display: grid;
+	grid-template-columns: 3rem 1fr;
+	transition: all .2s;
+}
+
+.emoticon {
+	grid-column: 1 / 2;
+}
+
+.contacts {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: .7rem;
+	width: 30rem;
+}
+
+@media only screen and (max-width: 320px){
+	.contacts {
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+		width: 20rem;
+	}
+}
+
+.contacts button {
+	appearance: 0;
+	border: 0;
+	outline: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+	font-family: SFPro;
+	width: 10rem;
+	height: 4rem;
+	background-color: var(--transparency-level-1);
+	color: var(--font-color-primary);
+	border-radius: var(--corner-radius);
+	transition: all 0.5s;
+	cursor: pointer;
+}
+
+.contacts button:hover {
+	background-color: var(--transparency-level-2);
+}
+
+.contacts button:active {
+	background-color: var(--transparency-level-3);
+}
+
+.icon {
+	margin-right: 0.5rem;
+	color: var(--accent-color);
+}

@@ -1,5 +1,3 @@
-// import React from "react"
-
 const Circles: React.FC = () => {
   return (
     <svg viewBox="0 0 328 504" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -28,7 +26,6 @@ const Circles: React.FC = () => {
       <circle cx="32" cy="296" r="32" />
       <circle cx="120" cy="296" r="32" />
     </svg>
-
   )
 }
 
