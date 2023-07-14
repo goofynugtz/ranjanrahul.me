@@ -44,7 +44,7 @@ export default function About({ skills }: any) {
         <div className={styles.aboutme} id='aboutme'>
           <h1 className={styles.heading}>Work Experience</h1>
           <div className={styles.experiences}>
-            <div className={styles.date}>May '23 - Present</div>
+            <div className={styles.date}>May &apos;23 - Present</div>
             <div>
               <h3>DevOps Intern @ Flipr Innovation Labs</h3>
               <h4>Workspace Monitoring Tool</h4>
