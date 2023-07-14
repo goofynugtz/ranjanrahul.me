@@ -79,7 +79,21 @@
   dependencies:
     "@iconify/types" "*"
 
-"@iconify/icons-logos@^1.2.11":
+"@iconify/icons-devicon@^1.2.13":
+  version "1.2.13"
+  resolved "https://registry.yarnpkg.com/@iconify/icons-devicon/-/icons-devicon-1.2.13.tgz#c3a59dcec0b16d27d34f00b080d291bc32ad0156"
+  integrity sha512-GGNFRc1fCZ3QIUoNlaHlGLBoPLBrhnnCuS2NaGnMm97mQXuSSVBQ/S8fSoOAd/ux0Sz5/ZDGVHi5Aifw0fipaQ==
+  dependencies:
+    "@iconify/types" "*"
+
+"@iconify/icons-eos-icons@^1.2.6":
+  version "1.2.6"
+  resolved "https://registry.yarnpkg.com/@iconify/icons-eos-icons/-/icons-eos-icons-1.2.6.tgz#d3a8be8ba91431225a1c4140a45f78ce37397c79"
+  integrity sha512-8Nk3/q2SN1qwi36w0S/CeAD55yoLfVix+85iwwVgyqz2VkILBAYUjVusfQXKIHW9KD8Vtymwz/512TXQ1GfM8Q==
+  dependencies:
+    "@iconify/types" "*"
+
+"@iconify/icons-logos@^1.2.33":
   version "1.2.33"
   resolved "https://registry.yarnpkg.com/@iconify/icons-logos/-/icons-logos-1.2.33.tgz#4bcf45f151c03d87ece4a9ce6e7524b5681c78a3"
   integrity sha512-8f8LQ6R3qqowSq51Q1bbp6+PeNO51EduxSoVpdHNAqeI3vFdCsHZ9hff6ojIXtHUDygrcB7z8B//EtDSp7wN7Q==
@@ -97,6 +111,13 @@
   version "1.2.59"
   resolved "https://registry.yarnpkg.com/@iconify/icons-simple-icons/-/icons-simple-icons-1.2.59.tgz#fafb5cdfec5504db441ce2740b5791fd73c44337"
   integrity sha512-d7W9C6lxGgT/VkLjbuSTg7e9uUInwcxi0yoD2/1g8wdyL3z4MkqMAWqzgRym7Y2Av1KZC6C46k/zxYAkQKTvog==
+  dependencies:
+    "@iconify/types" "*"
+
+"@iconify/icons-skill-icons@^1.2.1":
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/@iconify/icons-skill-icons/-/icons-skill-icons-1.2.1.tgz#ee2ac0a61ae8d791da6a1ffac6d3f43f8a3d80e0"
+  integrity sha512-863jRF5JMV2vZmOnNpf+oTbjGAZ0BSsUTu2r9Fkk1rWG53iRCWGteuAKIaMbK8EsRiCSzbQUTb55T0HzzXn9oQ==
   dependencies:
     "@iconify/types" "*"
 

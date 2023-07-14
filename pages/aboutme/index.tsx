@@ -2,7 +2,7 @@ import Layout from '../../components/layout';
 import Navbar from '../../components/navbar';
 import Head from 'next/head';
 import { Icon } from '@iconify/react';
-import Html from '@iconify/icons-vscode-icons/file-type-html';
+// import Html from '@iconify/icons-vscode-icons/file-type-html';
 import Css from '@iconify/icons-vscode-icons/file-type-css';
 import Sass from '@iconify/icons-logos/sass';
 import Javascript from '@iconify/icons-logos/javascript';
@@ -14,13 +14,23 @@ import MongoDB from '@iconify/icons-vscode-icons/file-type-mongo';
 import Clang from '@iconify/icons-logos/c';
 import Python from '@iconify/icons-vscode-icons/file-type-python';
 import Cpp from '@iconify/icons-vscode-icons/file-type-cpp3';
+import Redis from '@iconify/icons-devicon/redis';
 import GoogleCloud from '@iconify/icons-logos/google-cloud';
 import d3 from '@iconify/icons-logos/d3';
 import Next from '@iconify/icons-teenyicons/nextjs-outline';
 import Docker from '@iconify/icons-vscode-icons/file-type-docker2';
 import Django from '@iconify/icons-vscode-icons/file-type-django';
+import Kubernetes from '@iconify/icons-logos/kubernetes';
 import PyTorch from '@iconify/icons-logos/pytorch-icon';
-
+import Golang from '@iconify/icons-devicon/go-wordmark';
+import Rust from '@iconify/icons-vscode-icons/file-type-rust';
+import DynamoDB from '@iconify/icons-skill-icons/dynamodb-light';
+import Jenkins from '@iconify/icons-devicon/jenkins';
+import Terraform from '@iconify/icons-logos/terraform-icon';
+import aws from '@iconify/icons-logos/aws';
+import atomElectron from '@iconify/icons-eos-icons/atom-electron';
+import Tauri from '@iconify/icons-devicon/tauri';
+import styles from '../../styles/aboutme.module.css'
 
 export default function About({ skills }: any) {
   return (
@@ -31,8 +41,28 @@ export default function About({ skills }: any) {
       </Head>
       <Layout>
         <Navbar />
-        <div className="aboutme" id='aboutme'>
-          <h1 className="heading">About Me</h1>
+        <div className={styles.aboutme} id='aboutme'>
+          <h1 className={styles.heading}>Work Experience</h1>
+          <div className={styles.experiences}>
+            <div className={styles.date}>May '23 - Present</div>
+            <div>
+              <h3>DevOps Intern @ Flipr Innovation Labs</h3>
+              <h4>Workspace Monitoring Tool</h4>
+              <p>
+                <ul>
+                  <li>Developed a cross platform tool for workspace monitoring with Electron, React & Rust </li>
+                  <li>Set up automated releases of the app for all platforms on GitHub through workflows. </li>
+                </ul>
+              </p>
+              <h4>Licensing Stack as POC</h4>
+              <p>
+                <ul>
+                  <li>Built monolithic backend with django REST for issueing licenses & validation of libraries (over PyPi) using RSA256 algorithm.</li>
+                </ul>
+              </p>
+            </div>
+          </div>
+          <h1 className={styles.heading}>About Me</h1>
           <p>
             Hello! My name is Rahul Ranjan. Two trues and one false about me are: <br />
             &#9656; I love playing football. <br />
@@ -41,12 +71,12 @@ export default function About({ skills }: any) {
             <br />
             A &quot;few&quot; technologies that I&apos;ve worked on till now:
           </p>
-          <div className='techstack'>
+          <div className={styles.stack}>
             {skills.map((skill: any, index: any) => {
               return (
-                <div key={index} className="tech-grid">
-                  <span className='techstack-icon'><Icon icon={skill.icon} /></span>
-                  <span className='techstack-name'>{skill.name}</span>
+                <div key={index} className={styles.grid}>
+                  <span className={styles.icon}><Icon icon={skill.icon} /></span>
+                  <span className={styles.name}>{skill.name}</span>
                 </div>
               )
             })}
@@ -65,10 +95,6 @@ export const getStaticProps = () => {
     efficiency?: number;
   })[] = [
       {
-        name: 'HTML',
-        class: 'front-end',
-        icon: Html
-      }, {
         name: 'CSS',
         class: 'front-end',
         icon: Css
@@ -86,7 +112,7 @@ export const getStaticProps = () => {
         icon: React
       }, {
         name: 'TypeScript',
-        class: 'front-end',
+        class: 'languages',
         icon: TypeScript
       }, {
         name: 'Django',
@@ -105,6 +131,14 @@ export const getStaticProps = () => {
         class: 'database',
         icon: MongoDB
       }, {
+        name: 'DynamoDB',
+        class: 'database',
+        icon: DynamoDB
+      }, {
+        name: 'Redis',
+        class: 'database',
+        icon: Redis
+      }, {
         name: 'C',
         class: 'languages',
         icon: Clang
@@ -117,9 +151,26 @@ export const getStaticProps = () => {
         class: 'languages',
         icon: Python
       }, {
+        name: 'Golang',
+        class: 'languages',
+        icon: Golang
+      }, {
+        name: 'Rust',
+        class: 'languages',
+        icon: Rust
+      },
+      {
         name: 'Google Cloud',
         class: 'hosting',
         icon: GoogleCloud
+      }, {
+        name: 'AWS',
+        class: 'hosting',
+        icon: aws
+      }, {
+        name: 'Kubernetes',
+        class: 'hosting',
+        icon: Kubernetes
       }, {
         name: 'D3 Visualization',
         class: 'framework',
@@ -129,9 +180,25 @@ export const getStaticProps = () => {
         class: 'framework',
         icon: Next
       }, {
+        name: 'Electron',
+        class: 'framework',
+        icon: atomElectron
+      }, {
+        name: 'Tauri',
+        class: 'framework',
+        icon: Tauri
+      }, {
         name: 'Docker',
         class: 'utility',
         icon: Docker
+      }, {
+        name: 'Terraform',
+        class: 'framework',
+        icon: Terraform
+      }, {
+        name: 'Jenkins',
+        class: 'ci/cd',
+        icon: Jenkins
       }, {
         name: 'PyTorch',
         class: 'ml',

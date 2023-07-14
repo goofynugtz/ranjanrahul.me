@@ -202,79 +202,15 @@ hr {
 
 
 /* aboutmestart */
-.aboutme {
-	font-size: 1.8rem;
-	padding: 10rem 0;
-	margin: 0 5rem;
-}
 
-@media only screen and (max-width: 768px){
-	.aboutme {
-		padding: 0;
-		margin: 0 3rem;
-	}
-}
 
-.heading {
-	position: relative;
-	margin: 4rem 0;
-}
 
-.aboutme .heading::after {
-	position: absolute;
-	content: '';
-	height: 1px;
-	background-color: var(--transparency-level-2);
-	width: 15rem;
-	margin-left: 25px;
-	top: 50%;
-}
 
-@media only screen and (max-width: 425px) {
-	.aboutme .heading::after {
-		width: 5rem;
-	}
-}
 
-.techstack {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-	font-size: 2rem;
-}
 
-@media only screen and (max-width: 768px) {
-	.techstack {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		font-size: 1.6rem;
-	}
-}
 
-@media only screen and (max-width: 320px) {
-	.techstack {
-		grid-template-columns: 1fr;
-	}
-}
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
-	.techstack {
-		display: grid;
-		grid-template-columns: 1fr 1fr 1fr;
-	}
-}
 
-.aboutme .techstack .tech-grid {
-	display: flex;
-	align-items: center;
-}
 
-.tech-grid span {
-	display: flex;
-	margin: .5rem;
-}
-
-.techstack-icon {
-	width: 2.5rem;
-}
 
 /* aboutmeend */
 

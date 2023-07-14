@@ -10,10 +10,6 @@ export const tabs: tab[] = [
     uri: "/aboutme",
   },
   {
-    title: "/work",
-    uri: "/work",
-  },
-  {
     title: "/projects",
     uri: "/projects",
   },
