@@ -16,7 +16,7 @@ export default function FeaturedProjects() {
         <Navbar />
         <div className="projects">
           <h1 className="heading">Featured Projects</h1>
-          <p>These are kind of outdated and I'm just lazy to create thumbnails && update them. Please go through my <Link href="https://github.com/goofynugtz" className={styles.a}>Github</Link>.</p>
+          <p>These are kind of outdated and I&apos;m just lazy to create thumbnails && update them. Please go through my <Link href="https://github.com/goofynugtz" className={styles.a}>Github</Link>.</p>
           <div className="projects-grid">
             <Link href="https://predictions.ranjanrahul.me/" className="p p-1">
               <div>
