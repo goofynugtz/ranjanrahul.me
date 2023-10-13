@@ -6,8 +6,8 @@
 
 @media only screen and (max-width: 768px){
 	.header {
-    /* display: flex; */
-		/* flex-direction: column; */
+    display: flex;
+		flex-direction: column;
 		margin: 0 3rem;
 	}
 }

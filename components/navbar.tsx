@@ -25,11 +25,25 @@ const Navbar = () => {
           <Link href="/">ranjanrahul</Link>
         </div>
         <div className={`${styles.social} ${styles.hidden}`}>
-          <Link href="https://www.facebook.com/ranjan.rahul.25/" target="_blank" rel="noreferrer"><FaFacebookF /></Link>
+          <Link href="https://www.facebook.com/ranjan.rahul.25/" target="_blank" rel="noreferrer">
+            <FaFacebookF />
+          </Link>
         </div>
-        <div className={`${styles.social} ${styles.hidden}`}><Link href="https://github.com/goofyNugtz" target="_blank" rel="noreferrer"><FaGithub /></Link></div>
-        <div className={`${styles.social} ${styles.hidden}`}><Link href="https://www.linkedin.com/in/ranjanrahul42/" target="_blank" rel="noreferrer"><FaLinkedinIn /></Link></div>
-        <div className={`${styles.social} ${styles.hidden}`}><Link href="https://www.instagram.com/goofynugtz/" target="_blank" rel="noreferrer"><FaInstagram /></Link></div>
+        <div className={`${styles.social} ${styles.hidden}`}>
+          <Link href="https://github.com/goofyNugtz" target="_blank" rel="noreferrer">
+            <FaGithub />
+          </Link>
+        </div>
+        <div className={`${styles.social} ${styles.hidden}`}>
+          <Link href="https://www.linkedin.com/in/ranjanrahul42/" target="_blank" rel="noreferrer">
+            <FaLinkedinIn />
+          </Link>
+        </div>
+        <div className={`${styles.social} ${styles.hidden}`}>
+          <Link href="https://www.instagram.com/goofynugtz/" target="_blank" rel="noreferrer">
+            <FaInstagram />
+          </Link>
+        </div>
       </div>
       <div className={styles.group}>
         {
@@ -57,7 +71,13 @@ const SunMoon = () => {
       setTheme(theme === 'dark' || resolvedTheme === 'dark' ? 'light' : 'dark')
       setMounted(mounted ? false : true)
     }}>
-      <div>{mounted && (theme === 'dark' || resolvedTheme === 'dark') ? <FiSun color={'#ffc107'} /> : <FiMoon />}</div>
+      <div>{
+        mounted && (theme === 'dark' || resolvedTheme === 'dark') ?
+          <FiSun color={'#ffc107'} />
+          :
+          <FiMoon />
+      }
+      </div>
     </div>
   );
 };

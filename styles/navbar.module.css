@@ -9,6 +9,13 @@
 	z-index: 2;
 }
 
+@media only screen and (max-width: 768px){
+	.navbar {
+		margin: 0 3rem;
+		font-size: 2rem;
+	}
+}
+
 .group {
 	display: flex;
 	align-items: center;
@@ -20,6 +27,12 @@
 	padding: 0 3rem 0 0;
 	font-size: 2rem;
 	list-style-type: none;
+}
+
+@media only screen and (max-width: 768px){
+	.branding {
+		font-size: 1.6rem;
+	}
 }
 
 .social {
@@ -52,6 +65,10 @@
 	text-decoration: none;
 	font-family: "SFMono";
 	font-size: 1.6rem;
+}
+
+.link:nth-last-child(1) {
+	padding-right: 0;
 }
 
 .link:hover {

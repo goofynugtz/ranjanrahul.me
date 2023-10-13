@@ -18,3 +18,15 @@ export interface tab {
   title: string,
   uri: string,
 }
+
+export interface project {
+  title: string,
+  description: string,
+  github: string,
+  thumbnail: {
+    dark: string,
+    light: string,
+  },
+  deployment: string,
+  class?: string,
+}

@@ -7,12 +7,6 @@ import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { Key } from 'react';
 import Head from 'next/head';
 import Navbar from '../../components/navbar';
-interface CodeProps {
-  CodeProps: {
-    language: string,
-    value: any
-  }
-}
 
 interface Post {
   frontmatter: {
@@ -24,34 +18,7 @@ interface Post {
   content: any
 }
 
-// const CodeBlock = ({ language, value }: CodeProps) => {
-//   return <SyntaxHighlighter language={language} showLineNumbers customStyle={{
-//     backgroundColor: '#16161E',
-//     border: 'none',
-//     margin: 0,
-//     borderRadius: '5px',
-//   }}
-//     codeTagProps={{
-//       style: {
-//         color: 'white',
-//         background: 'none',
-//         padding: 0,
-//         textShadow: 'none',
-//         fontFamily: "SFMono",
-//         fontSize: '.8em',
-//         textAlign: 'left',
-//         whiteSpace: 'pre',
-//         wordSpacing: 'normal',
-//         wordBreak: 'normal',
-//         wordWrap: 'normal',
-//         lineHeight: 1.5
-//       }
-//     }}
-//   >{value}</SyntaxHighlighter>
-// }
-
 export default function Post({ frontmatter, content }: Post) {
-
   return (
     <Layout>
       <Navbar />
@@ -128,9 +95,7 @@ export async function getStaticProps({ params: { slug } }: any) {
 
   const { data, content } = matter(markdownWithMetadata);
 
-  const frontmatter = {
-    ...data,
-  }
+  const frontmatter = {...data}
 
   return {
     props: {
