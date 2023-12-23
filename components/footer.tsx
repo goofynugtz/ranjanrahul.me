@@ -10,7 +10,7 @@ const Footer: React.FC = () => {
       <div className={styles.group}>
         <span className={styles.branding}>ranjanrahul</span>
         <div className={`${styles.link} ${styles.m_hide}`}><Link href="#top">Back to Top</Link></div>
-        <div className={`${styles.link} ${styles.m_hide}`}><Link href="/#expertise" >What I Do</Link></div>
+        <div className={`${styles.link} ${styles.m_hide}`}><Link href="/aboutme" >What I Do</Link></div>
         <div className={`${styles.link} ${styles.m_hide}`}><Link href="/blogs">Blogs</Link></div>
         <div className={`${styles.link} ${styles.m_hide}`}><Link href="/" >Portfolio</Link></div>
       </div>
@@ -29,7 +29,7 @@ const Footer: React.FC = () => {
           <Link href="https://www.facebook.com/ranjan.rahul.25/" target="_blank" rel="noreferrer"><FaFacebookF /></Link>
         </div>
         <div className={`${styles.social} ${styles.m_hide}`}>
-          <Link href="https://github.com/goofyNugtz" target="_blank" rel="noreferrer"><FaGithub /></Link>
+          <Link href="https://github.com/goofynugtz" target="_blank" rel="noreferrer"><FaGithub /></Link>
         </div>
         <div className={`${styles.social} ${styles.m_hide}`}>
           <Link href="https://www.linkedin.com/in/ranjanrahul42/" target="_blank" rel="noreferrer"><FaLinkedinIn /></Link>

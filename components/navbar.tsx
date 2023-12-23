@@ -30,7 +30,7 @@ const Navbar = () => {
           </Link>
         </div>
         <div className={`${styles.social} ${styles.hidden}`}>
-          <Link href="https://github.com/goofyNugtz" target="_blank" rel="noreferrer">
+          <Link href="https://github.com/goofynugtz" target="_blank" rel="noreferrer">
             <FaGithub />
           </Link>
         </div>
@@ -61,13 +61,12 @@ const Navbar = () => {
 
 export default Navbar
 
-const SunMoon = () => {
+export const SunMoon = () => {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme, resolvedTheme } = useTheme();
   useEffect(() => setMounted(true), []);
   return (
     <div className={styles.link} onClick={() => {
-      console.log('trig')
       setTheme(theme === 'dark' || resolvedTheme === 'dark' ? 'light' : 'dark')
       setMounted(mounted ? false : true)
     }}>

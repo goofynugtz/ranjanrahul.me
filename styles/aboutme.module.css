@@ -13,6 +13,7 @@
   display: flex;
   min-width: 20rem;
   min-height: 5rem;
+  margin-right: 5rem;
   justify-content: flex-start;
   align-items: center;
 }
@@ -43,7 +44,7 @@
   top: 50%;
 }
 
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 500px) {
   .heading::after {
     width: 5rem;
   }
@@ -63,7 +64,7 @@
   }
 }
 
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 390px) {
   .stack {
     grid-template-columns: 1fr;
   }

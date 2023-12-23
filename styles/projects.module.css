@@ -29,7 +29,7 @@
 	}
 }
 
-@media only screen and (max-width: 425px){
+@media only screen and (max-width: 500px){
 	.grid {
 		display: flex;
     flex-direction: column;
@@ -47,7 +47,7 @@
   transition: all .5s;
 }
 
-@media only screen and (max-width: 425px){
+@media only screen and (max-width: 500px){
 	.project {
 		height: 30rem;
 	}
@@ -74,7 +74,7 @@
 	font-size: 2rem;
 }
 
-@media only screen and (max-width: 425px){
+@media only screen and (max-width: 500px){
 	.project1 {
 		padding-top: 55rem;
 	}
@@ -97,7 +97,7 @@
 	background-position: 100% 0%;
 }
 
-/* @media only screen and (max-width: 425px){
+/* @media only screen and (max-width: 500px){
 	.grid {
 		height: 120rem;
 	}

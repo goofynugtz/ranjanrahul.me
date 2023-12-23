@@ -19,6 +19,6 @@ export const tabs: tab[] = [
   },
   {
     title: "/resume",
-    uri: "https://drive.google.com/file/d/18m4vyIUN6NTPEHL3Ea2n2r43jD-9N2Ww/view?usp=share_link",
+    uri: "https://drive.google.com/file/d/1_h3-0lhmH7fSWDOaXso_s6oVQcLBihMo/view?usp=sharing",
   },
 ]

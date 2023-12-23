@@ -15,46 +15,46 @@ export default function Home() {
         <title>Rahul Ranjan</title>
       </Head>
       <Layout>
-      <Brand />
-    <div className={styles.header}>
-      <Sidebar />
-      <div className={styles.right} id='home'>
-        <div className={styles.introduction}>
-          <span>Hello,</span>
-          <h1>I&rsquo;m Rahul</h1>
-        </div>
-        <div className={styles.subtitle}>
-          A Front-end && Machine Learning Enthusiast
-          <br />
-          <div className={styles.grid}>
-            <span className={styles.emoticon}>🎓</span>
-            <span>Pre-Final year undergrad from National Institute of Technology, Durgapur.</span>
-            <span className={styles.emoticon}>🚀</span>
-            <span>Exploring opportunities </span>
+        <Brand />
+        <div className={styles.header}>
+          <Sidebar />
+          <div className={styles.right} id='home'>
+            <div className={styles.introduction}>
+              <span>Hello,</span>
+              <h1>I&rsquo;m Rahul</h1>
+            </div>
+            <div className={styles.subtitle}>
+              A backend dev && machine / deep learning enthusiast.
+              <br />
+              <div className={styles.grid}>
+                <span className={styles.emoticon}>🎓</span>
+                <span>Final year undergraduate from National Institute of Technology, Durgapur.</span>
+                <span className={styles.emoticon}>🚀</span>
+                <span>Exploring opportunities </span>
+              </div>
+            </div>
+            <div className={styles.contacts}>
+              <Link href='https://github.com/goofynugtz' target="_blank" rel="noreferrer">
+                <button>
+                  <FaGithub className={styles.icon} /> <span>Github</span>
+                </button>
+              </Link>
+              <Link href='https://www.linkedin.com/in/ranjanrahul42/' target="_blank" rel="noreferrer">
+                <button>
+                  <FaLinkedinIn className={styles.icon} /> <span>LinkedIn</span>
+                </button>
+              </Link>
+              <Link href='mailto:rahulranjan25.RR@gmail.com' target="_blank" rel="noreferrer">
+                <button>
+                  <MdEmail className={styles.icon} /><span>Email</span>
+                </button>
+              </Link>
+            </div>
           </div>
-        </div>
-        <div className={styles.contacts}>
-          <Link href='https://github.com/goofyNugtz' target="_blank" rel="noreferrer">
-            <button>
-              <FaGithub className={styles.icon} /> <span>Github</span>
-            </button>
-          </Link>
-          <Link href='https://www.linkedin.com/in/ranjanrahul42/' target="_blank" rel="noreferrer">
-            <button>
-              <FaLinkedinIn className={styles.icon} /> <span>LinkedIn</span>
-            </button>
-          </Link>
-          <Link href='mailto:rahulranjan25.RR@gmail.com' target="_blank" rel="noreferrer">
-            <button>
-              <MdEmail className={styles.icon} /><span>Email</span>
-            </button>
-          </Link>
-        </div>
-      </div>
-        {/* <div className="profile">
+          {/* <div className="profile">
           <Image src={Profile} width={256} height={256} quality={100} objectFit={'cover'}/>
         </div> */}
-    </div>
+        </div>
       </Layout>
     </>
   )

@@ -31,6 +31,7 @@ import aws from '@iconify/icons-logos/aws';
 import atomElectron from '@iconify/icons-eos-icons/atom-electron';
 import Tauri from '@iconify/icons-devicon/tauri';
 import styles from '../../styles/aboutme.module.css'
+import { experience } from '../../content/work/experience';
 
 export default function About({ skills }: any) {
   return (
@@ -43,25 +44,30 @@ export default function About({ skills }: any) {
         <Navbar />
         <div className={styles.aboutme} id='aboutme'>
           <h1 className={styles.heading}>Work Experience</h1>
-          <div className={styles.experiences}>
-            <div className={styles.date}>May &apos;23 - Present</div>
-            <div>
-              <h3>DevOps Intern @ Flipr Innovation Labs</h3>
-              <h4>Workspace Monitoring Tool</h4>
-              <p>
-                <ul>
-                  <li>Developed a cross platform tool for workspace monitoring with Electron, React & Rust </li>
-                  <li>Set up automated releases of the app for all platforms on GitHub through workflows. </li>
-                </ul>
-              </p>
-              <h4>Licensing Stack as POC</h4>
-              <p>
-                <ul>
-                  <li>Built monolithic backend with django REST for issueing licenses & validation of libraries (over PyPi) using RSA256 algorithm.</li>
-                </ul>
-              </p>
-            </div>
-          </div>
+          {
+            experience.map((e, id) => (
+              <div className={styles.experiences} key={id}>
+                <div className={styles.date}>{e.date}</div>
+                <div>
+                  <h3>{`${e.role} @ `}<u><a href={e.website}>{`${e.company}`}</a></u></h3>
+                  {
+                    e.companyproject.map((p) => (
+                      <div key={p.projectname}>
+                      <h4>{p.projectname}</h4>
+                      <p>
+                        <ul>
+                        {p.tasks.map((t, id) => (
+                          <li key={id}>{t}</li>
+                        ))}
+                        </ul>
+                      </p>
+                      </div>
+                    ))
+                  }
+                </div>
+              </div>
+            ))
+          }
           <h1 className={styles.heading}>About Me</h1>
           <p>
             Hello! My name is Rahul Ranjan. Two trues and one false about me are: <br />

@@ -30,3 +30,14 @@ export interface project {
   deployment: string,
   class?: string,
 }
+
+export interface Experience {
+  role: string,
+  company: string,
+  website: string,
+  date: string,
+  companyproject: {
+      projectname: string,
+      tasks: string[]
+    }[]
+}

@@ -1,8 +1,6 @@
 import { FaGithub, FaFacebookF, FaLinkedinIn, FaInstagram } from "react-icons/fa";
-import { FiSun, FiMoon } from 'react-icons/fi';
-import { useState, useEffect } from "react";
-import { useTheme } from 'next-themes';
 import styles from '../styles/navbar.module.css'
+import { SunMoon } from "./navbar";
 
 const BrandBar = () => {
   return (
@@ -15,7 +13,7 @@ const BrandBar = () => {
           </a>
         </div>
         <div className={`${styles.social} ${styles.xs_hide}`}>
-          <a href="https://github.com/goofyNugtz" target="_blank" rel="noreferrer">
+          <a href="https://github.com/goofynugtz" target="_blank" rel="noreferrer">
             <FaGithub />
           </a>
         </div>
@@ -38,23 +36,3 @@ const BrandBar = () => {
 }
 
 export default BrandBar
-
-const SunMoon = () => {
-  const [mounted, setMounted] = useState(false);
-  const { theme, setTheme, resolvedTheme } = useTheme();
-  useEffect(() => setMounted(true), []);
-  return (
-    <div className='navlinks' onClick={() => {
-      console.log('trig')
-      setTheme(theme === 'dark' || resolvedTheme === 'dark' ? 'light' : 'dark')
-      setMounted(mounted ? false : true)
-    }}
-    >
-      <div>{
-        mounted && (theme === 'dark' || resolvedTheme === 'dark') ?
-          <FiSun color={'#ffc107'} />
-          :
-          <FiMoon />}</div>
-    </div>
-  );
-};

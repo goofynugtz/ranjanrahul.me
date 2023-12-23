@@ -67,7 +67,7 @@
 	width: 30rem;
 }
 
-@media only screen and (max-width: 320px){
+@media only screen and (max-width: 390px){
 	.contacts {
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: 1fr 1fr;
