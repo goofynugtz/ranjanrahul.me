@@ -2,14 +2,25 @@ import { Experience } from "../../interface";
 
 export const experience: Experience[] = [
   {
+    role: "Global IT Intern",
+    company: "PepsiCo, Inc.",
+    website: "https://pepsico.com",
+    date: "January '24 - Present",
+    companyproject: []
+  },
+  {
     role: "Full Stack Developer Intern",
     company: "HomeDrop",
     website: "https://homedrop.in",
-    date: "November '23 - Present",
+    date: "Nov. '23 - Dec, '23",
     companyproject: [
       {
         projectname: "Serverless backend API",
-        tasks: [],
+        tasks: [
+          "Optimized invoice generation endpoint and contributed to feature for sending user receipts through WhatsApp API.",
+          "Build service to scrape product data through UPC",
+          "Worked with database triggers to update secondary collection",
+        ],
       },
     ],
   },
