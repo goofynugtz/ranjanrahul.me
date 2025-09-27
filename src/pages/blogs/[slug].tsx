@@ -37,7 +37,7 @@ export default function Post({ frontmatter, content }: Post) {
           </div>
           <ReactMarkdown
             components={{
-              code({ node, inline, className, children, ...props }) {
+              code({ node, className, children, ...props }: any) {
                 const match = /language-(\w+)/.exec(className || '')
                 return (
                   <SyntaxHighlighter language={match ? match[1] : ''} showLineNumbers customStyle={{
@@ -74,7 +74,7 @@ export default function Post({ frontmatter, content }: Post) {
 }
 
 export async function getStaticPaths() {
-  const files = fs.readdirSync('content/posts')
+  const files = fs.readdirSync('src/content/posts')
 
   const paths = files.map((filename) => ({
     params: {
@@ -90,12 +90,12 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params: { slug } }: any) {
   const markdownWithMetadata = fs
-    .readFileSync(path.join('content/posts', slug + '.md'))
+    .readFileSync(path.join('src/content/posts', slug + '.md'))
     .toString();
 
   const { data, content } = matter(markdownWithMetadata);
 
-  const frontmatter = {...data}
+  const frontmatter = { ...data }
 
   return {
     props: {

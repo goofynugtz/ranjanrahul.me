@@ -1,46 +1,46 @@
 @font-face {
 	font-family: InterRegular;
-	src: url("../public/fonts/Inter/inter-regular.ttf");
+	src: url("/fonts/Inter/inter-regular.ttf");
 }
 
 @font-face {
 	font-family: InterMedium;
-	src: url("../public/fonts/Inter/inter-medium.ttf");
+	src: url("/fonts/Inter/inter-medium.ttf");
 }
 
 @font-face {
 	font-family: PoppinsSemibold;
-	src: url("../public/fonts/Poppins/poppins-semibold.ttf");
+	src: url("/fonts/Poppins/poppins-semibold.ttf");
 }
 
 @font-face {
 	font-family: SFPro;
-	src: url("../public/fonts/SFPro/sfpro-text-regular.ttf");
+	src: url("/fonts/SFPro/sfpro-text-regular.ttf");
 }
 
 @font-face {
 	font-family: SFProDisplay;
-	src: url("../public/fonts/SFPro/sfpro-display-regular.ttf");
+	src: url("/fonts/SFPro/sfpro-display-regular.ttf");
 }
 
 @font-face {
 	font-family: SFProSemibold;
-	src: url("../public/fonts/SFPro/sfpro-text-semibold.ttf");
+	src: url("/fonts/SFPro/sfpro-text-semibold.ttf");
 }
 
 @font-face {
 	font-family: SFProDisplayBold;
-	src: url("../public/fonts/SFPro/sfpro-display-bold.ttf");
+	src: url("/fonts/SFPro/sfpro-display-bold.ttf");
 }
 
 @font-face {
 	font-family: Overpass;
-	src: url("../public/fonts/Overpass/overpass-regular.ttf");
+	src: url("/fonts/Overpass/overpass-regular.ttf");
 }
 
 @font-face {
 	font-family: SFMono;
-	src: url("../public/fonts/SFPro/sfmono-regular.ttf");
+	src: url("/fonts/SFPro/sfmono-regular.ttf");
 }
 
 
@@ -58,9 +58,9 @@
 	--hover: #0d92ff;
 	--width: 130rem;
 	--corner-radius: .75rem;
-	--project-1: url("../public/projects/gpt_dark.png");
-	--project-2: url("../public/projects/indiaAtStats.png");
-	--project-3: url("../public/projects/search-enigne-dark.png");
+	--project-1: url("/projects/gpt_dark.png");
+	--project-2: url("/projects/indiaAtStats.png");
+	--project-3: url("/projects/search-enigne-dark.png");
 }
 
 .light {
@@ -77,9 +77,9 @@
 	--hover: #0d92ff;
 	--width: 130rem;
 	--corner-radius: .75rem;
-	--project-1: url("../public/projects/gpt_light.png");
-	--project-2: url("../public/projects/indiaAtStats.png");
-	--project-3: url("../public/projects/search-enigne-light.png");
+	--project-1: url("/projects/gpt_light.png");
+	--project-2: url("/projects/indiaAtStats.png");
+	--project-3: url("/projects/search-enigne-light.png");
 }
 
 @media only screen and (max-width: 965px) {

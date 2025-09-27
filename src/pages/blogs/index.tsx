@@ -71,11 +71,11 @@ export default function Blogs({ posts }: Posts) {
 }
 
 export async function getStaticProps() {
-  const files = fs.readdirSync(`${process.cwd()}/content/posts`)
+  const files = fs.readdirSync(`${process.cwd()}/src/content/posts`)
 
   const posts = files.map((filename) => {
     const markdownWithMetadata = fs
-      .readFileSync(`content/posts/${filename}`).toString()
+      .readFileSync(`src/content/posts/${filename}`).toString()
 
     const { data, content } = matter(markdownWithMetadata);
 
