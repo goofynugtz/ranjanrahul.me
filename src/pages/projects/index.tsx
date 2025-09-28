@@ -1,17 +1,12 @@
 import Head from 'next/head'
 import Layout from '../../components/layout';
 import Navbar from "../../components/navbar";
-import { Icon } from "@iconify/react";
-import githubIcon from '@iconify/icons-bi/github';
 import Link from 'next/link';
 import styles from '../../styles/projects.module.css'
 import { projects } from '../../config/projects';
 import { project } from '../../interface';
-import Image from 'next/image'
-import { useTheme } from 'next-themes';
 
 export default function FeaturedProjects() {
-  const { theme } = useTheme()
   return (
     <>
       <Head>

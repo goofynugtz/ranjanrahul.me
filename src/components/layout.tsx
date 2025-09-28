@@ -3,7 +3,7 @@ import React from 'react';
 import styles from '../styles/layout.module.css'
 import DarkVeil from '../components/assets/dark-veil';
 
-export default function Layout({ children }: any) {
+export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <div style={{ width: '100%', minHeight: '100vh', position: 'relative' }}>

@@ -7,7 +7,6 @@ import Brand from '../components/brand';
 import Link from 'next/link';
 import styles from '../styles/index.module.css'
 // import DotGrid from '../components/assets/dot-grid';
-import DarkVeil from '../components/assets/dark-veil';
 
 export default function Home() {
   return (

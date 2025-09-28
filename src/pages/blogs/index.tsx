@@ -6,18 +6,17 @@ import { Posts } from '../../interface';
 import Layout from '../../components/layout';
 import Head from 'next/head';
 import Navbar from '../../components/navbar';
-import Image from 'next/image';
 import styles from '../../styles/blogs.module.css'
 
 export default function Blogs({ posts }: Posts) {
   const [search, setSearch] = useState("");
 
-  function handleChange(e: any) {
+  function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
     const { value } = e.target;
     setSearch(value);
   }
-  function tagsHandle(tag: any) {
-    const value = tag.target.outerText;
+  function tagsHandle(tag: React.MouseEvent<HTMLSpanElement>) {
+    const value = (tag.target as HTMLSpanElement).textContent || '';
     setSearch(value);
   }
 
@@ -34,7 +33,7 @@ export default function Blogs({ posts }: Posts) {
           <div className={styles.posts}>
             {posts?.length > 0 && posts.filter((posts) => (
               !search || posts.frontmatter.title.toLowerCase().includes(search.toLowerCase()) || posts.frontmatter.description.toLowerCase().includes(search.toLowerCase()) || posts.frontmatter.tags.includes(search.toLowerCase()) || posts.content.includes(search.toLowerCase())
-            )).map(({ frontmatter: { title, date, description, thumbnail, tags }, slug }) => {
+            )).map(({ frontmatter: { title, date, description, tags }, slug }) => {
               return (
                 <div key={slug} className={styles.cards}>
                   <div className={styles.date}>{date}</div>

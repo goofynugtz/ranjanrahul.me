@@ -15,7 +15,7 @@ interface Post {
     description: string,
     tags: Key[]
   },
-  content: any
+  content: string
 }
 
 export default function Post({ frontmatter, content }: Post) {
@@ -37,7 +37,7 @@ export default function Post({ frontmatter, content }: Post) {
           </div>
           <ReactMarkdown
             components={{
-              code({ node, className, children, ...props }: any) {
+              code({ className, children }) {
                 const match = /language-(\w+)/.exec(className || '')
                 return (
                   <SyntaxHighlighter language={match ? match[1] : ''} showLineNumbers customStyle={{
@@ -88,7 +88,7 @@ export async function getStaticPaths() {
   };
 }
 
-export async function getStaticProps({ params: { slug } }: any) {
+export async function getStaticProps({ params: { slug } }: { params: { slug: string } }) {
   const markdownWithMetadata = fs
     .readFileSync(path.join('src/content/posts', slug + '.md'))
     .toString();

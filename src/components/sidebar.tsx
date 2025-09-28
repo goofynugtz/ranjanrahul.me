@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Circles from './assets/circles-vector';
 import styles from '../styles/sidebar.module.css'
 import { tabs } from '../config/navbar';
 import MagnetLines from './assets/magnet-lines';

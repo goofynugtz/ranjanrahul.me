@@ -1,7 +1,7 @@
 import Layout from '../../components/layout';
 import Navbar from '../../components/navbar';
 import Head from 'next/head';
-import { Icon } from '@iconify/react';
+import { Icon, IconifyIcon } from '@iconify/react';
 // import Html from '@iconify/icons-vscode-icons/file-type-html';
 import Css from '@iconify/icons-vscode-icons/file-type-css';
 import Sass from '@iconify/icons-logos/sass';
@@ -39,7 +39,14 @@ import Kafka from '@iconify/icons-devicon/apachekafka';
 import styles from '../../styles/aboutme.module.css'
 import { experiences } from '../../content/work/experience';
 
-export default function About({ skills }: any) {
+interface Skill {
+  name: string;
+  class: string;
+  icon: string | IconifyIcon
+  efficiency?: number;
+}
+
+export default function About({ skills }: { skills: Skill[] }) {
   return (
     <>
       <Head>
@@ -82,7 +89,7 @@ export default function About({ skills }: any) {
             A &quot;few&quot; technologies that I&apos;ve worked on till now:
           </p>
           <div className={styles.stack}>
-            {skills.map((skill: any, index: any) => {
+            {skills.map((skill: Skill, index: number) => {
               return (
                 <div key={index} className={styles.grid}>
                   <span className={styles.icon}><Icon icon={skill.icon} /></span>
@@ -98,12 +105,7 @@ export default function About({ skills }: any) {
 }
 
 export const getStaticProps = () => {
-  const skills: ({
-    name: string;
-    class: string;
-    icon?: any;
-    efficiency?: number;
-  })[] = [
+  const skills: Skill[] = [
       {
         name: 'CSS',
         class: 'front-end',
