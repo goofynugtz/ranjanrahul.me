@@ -1,0 +1,33 @@
+.darkveil-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    z-index: -1;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+/* Dark mode - original effect */
+:global(.dark) .darkveil-canvas {
+    opacity: 0.8;
+    mix-blend-mode: normal;
+}
+
+/* Light mode - white background with light purple tint */
+:global(.light) .darkveil-canvas {
+    opacity: 0.15;
+    mix-blend-mode: multiply;
+    background: linear-gradient(45deg,
+            rgba(255, 255, 255, 0.95) 0%,
+            rgba(61, 14, 160, 0.05) 50%,
+            rgba(255, 255, 255, 0.95) 100%);
+}
+
+/* Default light mode when no class is set */
+.darkveil-canvas {
+    opacity: 0.15;
+    mix-blend-mode: multiply;
+}

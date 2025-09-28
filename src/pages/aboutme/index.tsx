@@ -30,8 +30,14 @@ import Terraform from '@iconify/icons-logos/terraform-icon';
 import aws from '@iconify/icons-logos/aws';
 import atomElectron from '@iconify/icons-eos-icons/atom-electron';
 import Tauri from '@iconify/icons-devicon/tauri';
+import Ansible from '@iconify/icons-vscode-icons/file-type-ansible';
+import Prometheus from '@iconify/icons-vscode-icons/file-type-prometheus';
+import Serverless from '@iconify/icons-logos/serverless';
+import GitHub from '@iconify/icons-logos/github-icon';
+import Elastic from '@iconify/icons-logos/elasticsearch';
+import Kafka from '@iconify/icons-devicon/apachekafka';
 import styles from '../../styles/aboutme.module.css'
-import { experience } from '../../content/work/experience';
+import { experiences } from '../../content/work/experience';
 
 export default function About({ skills }: any) {
   return (
@@ -45,22 +51,20 @@ export default function About({ skills }: any) {
         <div className={styles.aboutme} id='aboutme'>
           <h1 className={styles.heading}>Work Experience</h1>
           {
-            experience.map((e, id) => (
+            experiences.map((experience, id) => (
               <div className={styles.experiences} key={id}>
-                <div className={styles.date}>{e.date}</div>
+                <div className={styles.date}>{experience.date}</div>
                 <div>
-                  <h3>{`${e.role} @ `}<u><a href={e.website}>{`${e.company}`}</a></u></h3>
+                  <h2>{`${experience.role} @ `}<u><a href={experience.website}>{`${experience.company}`}</a></u></h2>
                   {
-                    e.companyproject.map((p) => (
-                      <div key={p.projectname}>
-                      <h4>{p.projectname}</h4>
-                      <p>
+                    experience.companyproject.map((p) => (
+                      <div key={p.projectname} style={{marginBottom: `2rem`}}>
+                        <strong>{p.projectname}</strong>
                         <ul>
-                        {p.tasks.map((t, id) => (
-                          <li key={id}>{t}</li>
-                        ))}
+                          {p.tasks.map((t, id) => (
+                            <li className={styles.lighter} key={id}>{t}</li>
+                          ))}
                         </ul>
-                      </p>
                       </div>
                     ))
                   }
@@ -178,6 +182,10 @@ export const getStaticProps = () => {
         class: 'hosting',
         icon: Kubernetes
       }, {
+        name: 'Elastic',
+        class: 'hosting',
+        icon: Elastic
+      }, {
         name: 'D3 Visualization',
         class: 'framework',
         icon: d3
@@ -206,10 +214,30 @@ export const getStaticProps = () => {
         class: 'ci/cd',
         icon: Jenkins
       }, {
+        name: 'Actions',
+        class: 'ci/cd',
+        icon: GitHub
+      }, {
         name: 'PyTorch',
         class: 'ml',
         icon: PyTorch
-      }
+      }, {
+        name: 'Serverless',
+        class: 'hosting',
+        icon: Serverless
+      }, {
+        name: 'Ansible',
+        class: 'ci/cd',
+        icon: Ansible
+      }, {
+        name: 'Prometheus',
+        class: 'ci/cd',
+        icon: Prometheus
+      }, {
+        name: 'Kafka',
+        class: 'ci/cd',
+        icon: Kafka
+      },
     ]
 
   return { props: { skills } }

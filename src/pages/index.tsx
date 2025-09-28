@@ -6,6 +6,8 @@ import Sidebar from '../components/sidebar';
 import Brand from '../components/brand';
 import Link from 'next/link';
 import styles from '../styles/index.module.css'
+// import DotGrid from '../components/assets/dot-grid';
+import DarkVeil from '../components/assets/dark-veil';
 
 export default function Home() {
   return (
@@ -24,13 +26,15 @@ export default function Home() {
               <h1>I&rsquo;m Rahul</h1>
             </div>
             <div className={styles.subtitle}>
-              A backend dev && machine / deep learning enthusiast.
+              A software developer && machine / deep learning enthusiast.
               <br />
               <div className={styles.grid}>
                 <span className={styles.emoticon}>🎓</span>
-                <span>Final year undergraduate from National Institute of Technology, Durgapur.</span>
+                <span>Computer Science undergraduate from National Institute of Technology, Durgapur</span>
                 <span className={styles.emoticon}>🚀</span>
-                <span>Exploring opportunities </span>
+                <span>Software Developer at <Link href='https://pepsico.com' target="_blank" rel="noreferrer">PepsiCo</Link></span>
+                <span className={styles.emoticon}>🎮</span>
+                <span><Link href='https://steamcommunity.com/profiles/76561199097109204/' target="_blank" rel="noreferrer">Goofy</Link> @ Counter Strike 2</span> 
               </div>
             </div>
             <div className={styles.contacts}>
