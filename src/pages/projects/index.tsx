@@ -4,13 +4,13 @@ import Link from 'next/link';
 import styles from '../../styles/projects.module.css'
 import { projects } from '../../config/projects';
 import { project } from '../../interface';
-import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
+import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 
 const useMedia = (queries: string[], values: number[], defaultValue: number): number => {
-  const get = () => {
+  const get = useCallback(() => {
     if (typeof window === 'undefined') return defaultValue;
     return values[queries.findIndex(q => matchMedia(q).matches)] ?? defaultValue;
-  };
+  }, [queries, values, defaultValue]);
 
   const [value, setValue] = useState<number>(defaultValue);
 
@@ -21,7 +21,7 @@ const useMedia = (queries: string[], values: number[], defaultValue: number): nu
     const handler = () => setValue(get);
     queries.forEach(q => matchMedia(q).addEventListener('change', handler));
     return () => queries.forEach(q => matchMedia(q).removeEventListener('change', handler));
-  }, [queries]);
+  }, [queries, get]);
 
   return value;
 };
@@ -59,10 +59,10 @@ export default function FeaturedProjects() {
     const columnWidth = width / columns;
     const gap = 20;
 
-    return projects.map((project, index) => {
+    return projects.map((project: project, index) => {
       const col = colHeights.indexOf(Math.min(...colHeights));
       const x = (columnWidth + gap) * col;
-      const baseHeight = 200 + (project.description.length * 2); // Dynamic height based on content
+      const baseHeight = 200 + (project.description.length * 2);
       const y = colHeights[col];
 
       colHeights[col] += baseHeight + gap;
