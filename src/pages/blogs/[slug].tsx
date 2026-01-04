@@ -1,7 +1,6 @@
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
-import Layout from '../../components/layout';
 import ReactMarkdown from "react-markdown";
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { Key } from 'react';
@@ -20,7 +19,7 @@ interface Post {
 
 export default function Post({ frontmatter, content }: Post) {
   return (
-    <Layout>
+    <>
       <Navbar />
       <Head>
         <title>blogs@ranjanrahul</title>
@@ -69,7 +68,7 @@ export default function Post({ frontmatter, content }: Post) {
           >{content}</ReactMarkdown>
         </div>
       </div>
-    </Layout>
+    </>
   );
 }
 

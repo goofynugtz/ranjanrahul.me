@@ -97,31 +97,176 @@
 	background-position: 100% 0%;
 }
 
-/* @media only screen and (max-width: 500px){
-	.grid {
-		height: 120rem;
-	}
+/* Masonry Layout Styles */
+.masonryContainer {
+  position: relative;
+  width: 100%;
+  min-height: 600px;
+}
 
-	.projects1 {
-		grid-column: 1/2;
-		grid-row: 1/2;
-	}
+.masonryProject {
+  border-radius: var(--corner-radius);
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-size: cover;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  overflow: hidden;
+}
 
-	.projects1 .title {
-		font-size: 2rem;
-	}
-	.projects1 .description {
-		font-size: 1.4rem;
-	}
-	
-	.projects2 {
-		grid-column: 1/2;
-		grid-row: 2/3;
-		min-height: 25rem;
-	}
-	.projects3 {
-		grid-column: 1/2;
-		grid-row: 3/4;
-		min-height: 25rem;
-	}
-} */
+.masonryProject:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.masonryProject .title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.masonryProject .description {
+  font-size: 1.4rem;
+  line-height: 1.5;
+}
+
+/* Apply background images to masonry projects */
+.masonryProject.project1 {
+  background-image: var(--project-1);
+  background-position: 85% 0%;
+}
+
+.masonryProject.project2 {
+  background-image: var(--project-2);
+  background-position: 100% 20%;
+  background-repeat: no-repeat;
+}
+
+.masonryProject.project3 {
+  background-image: var(--project-3);
+  background-position: 100% 0%;
+}
+
+.masonryProject.project4 {
+  background-image: var(--project-4);
+  background-position: 100% 0%;
+}
+
+.masonryProject.project5 {
+  background-image: var(--project-5);
+  background-position: 10% 80%;
+}
+
+@media only screen and (max-width: 768px) {
+  .masonryProject .title {
+    font-size: 2rem;
+  }
+  
+  .masonryProject .description {
+    font-size: 1.2rem;
+  }
+}
+
+/* Overlay Effect */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.9);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--corner-radius);
+  backdrop-filter: blur(10px);
+}
+
+/* Dark mode overlay */
+[data-theme="dark"] .overlay {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Light mode overlay */
+[data-theme="light"] .overlay {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.masonryProject:hover .overlay {
+  opacity: 1;
+}
+
+.overlayContent {
+  text-align: center;
+  padding: 2rem;
+  color: var(--text-color);
+}
+
+.overlayTitle {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: inherit;
+}
+
+.overlayDescription {
+  font-size: 1.4rem;
+  line-height: 1.5;
+  color: inherit;
+}
+
+/* Hide original content on hover */
+.masonryProject:hover .title,
+.masonryProject:hover .description {
+  opacity: 0;
+}
+
+.masonryProject .title,
+.masonryProject .description {
+  transition: opacity 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+@media only screen and (max-width: 768px) {
+  .overlayTitle {
+    font-size: 2rem;
+  }
+  
+  .overlayDescription {
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .masonryContainer {
+    min-height: 800px;
+  }
+  
+  .masonryProject {
+    padding: 2rem;
+  }
+  
+  .masonryProject .title {
+    font-size: 1.8rem;
+  }
+  
+  .masonryProject .description {
+    font-size: 1.1rem;
+  }
+
+  .overlayTitle {
+    font-size: 1.8rem;
+  }
+  
+  .overlayDescription {
+    font-size: 1.1rem;
+  }
+
+  .overlayContent {
+    padding: 1.5rem;
+  }
+}

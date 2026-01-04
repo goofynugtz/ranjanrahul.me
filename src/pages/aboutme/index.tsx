@@ -1,4 +1,3 @@
-import Layout from '../../components/layout';
 import Navbar from '../../components/navbar';
 import Head from 'next/head';
 import { Icon, IconifyIcon } from '@iconify/react';
@@ -53,7 +52,7 @@ export default function About({ skills }: { skills: Skill[] }) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>About Me &#x2223; Rahul Ranjan</title>
       </Head>
-      <Layout>
+      <>
         <Navbar />
         <div className={styles.aboutme} id='aboutme'>
           <h1 className={styles.heading}>Work Experience</h1>
@@ -99,7 +98,7 @@ export default function About({ skills }: { skills: Skill[] }) {
             })}
           </div>
         </div>
-      </Layout>
+      </>
     </>
   )
 }

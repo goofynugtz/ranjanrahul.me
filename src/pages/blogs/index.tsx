@@ -3,7 +3,6 @@ import matter from 'gray-matter';
 import Link from 'next/link';
 import { useState } from 'react';
 import { Posts } from '../../interface';
-import Layout from '../../components/layout';
 import Head from 'next/head';
 import Navbar from '../../components/navbar';
 import styles from '../../styles/blogs.module.css'
@@ -25,7 +24,7 @@ export default function Blogs({ posts }: Posts) {
       <Head>
         <title>Blogs &#124; Ranjan Rahul</title>
       </Head>
-      <Layout>
+      <>
         <Navbar />
         <div className={styles.blogs}>
           <h1>All Posts</h1>
@@ -64,7 +63,7 @@ export default function Blogs({ posts }: Posts) {
             )}
           </div>
         </div>
-      </Layout>
+      </>
     </>
   )
 }

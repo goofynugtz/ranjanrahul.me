@@ -37,4 +37,26 @@ export const projects: project[] = [
     },
     class: styles.project3,
   },
+  {
+    title: "Open Positions Alert",
+    description: "",
+    github: "https://github.com/goofynugtz/hirealert",
+    deployment: "https://search.ranjanrahul.me",
+    thumbnail: {
+      dark: "/projects/hire-alert_light.png",
+      light: "/projects/hire-alert_dark.png",
+    },
+    class: styles.project4,
+  },
+  {
+    title: "Zero Player Pac-man",
+    description: "",
+    github: "https://github.com/goofynugtz/hirealert",
+    deployment: "https://search.ranjanrahul.me",
+    thumbnail: {
+      dark: "/projects/pacman_light.png",
+      light: "/projects/pacman_dark.png",
+    },
+    class: styles.project5,
+  }
 ]
