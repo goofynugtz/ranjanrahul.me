@@ -2,11 +2,20 @@ import { Experience } from "../../interface";
 
 export const experiences: Experience[] = [
   {
-    role: "Strategy and Transformation Assistant Analyst",
+    role: "Software Engineering Assistant Analyst",
     company: "PepsiCo, Inc.",
     website: "https://pepsico.com",
     date: "Aug '24 - Present",
     companyproject: [
+      {
+        projectname: "B2B Java Microservices",
+        tasks: [
+          "Delivered key enhancements across the B2B Rewards ecosystem, improving stability, fixing critical production/SIT defects, and enabling smoother user flows for Mexico markets.",
+          "Built an internal automation using ADO Pipelines to generate real-time RAG status dashboards, improving sprint visibility for user stories and accelerating cross-pod decision-making, improve cross-domain functional accuracy by reducing implementation gaps and sprint rework.",
+          "Enhanced Data consistency and user experience by resolving fixes for pagination, filtering, and state-management issues in UI, significantly improving data consistency and reducing support escalations.",
+          "Designed a resilient real-time database sync POC using Debezium, Kafka, Prometheus, and Grafana to support future decoupled microservice architectures."
+        ],
+      },
       {
         projectname: "ServiceNow Analyst",
         tasks: [

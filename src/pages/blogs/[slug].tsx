@@ -6,6 +6,7 @@ import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { Key } from 'react';
 import Head from 'next/head';
 import Navbar from '../../components/navbar';
+import styles from '../../styles/post.module.css';
 
 interface Post {
   frontmatter: {
@@ -26,23 +27,35 @@ export default function Post({ frontmatter, content }: Post) {
         <meta name='description' content={frontmatter.description} />
         <meta name='og:title' content={frontmatter.title} />
       </Head>
-      <div className='post'>
-        <div>
-          <span className='date'>{frontmatter.date}</span>
-          <div className='tags'>
+      <div className={styles.post}>
+        <div className={styles.postHeader}>
+          <span className={styles.date}>{frontmatter.date}</span>
+          <div className={styles.tags}>
             {frontmatter.tags.map((tag) => (
-              <span key={tag} className='tag'>{tag}</span>
+              <span key={tag} className={styles.tag}>{tag}</span>
             ))}
           </div>
+        </div>
+        <div className={styles.markdown}>
           <ReactMarkdown
             components={{
+              h1: ({ children }) => <h1 className={styles.h1}>{children}</h1>,
+              h2: ({ children }) => <h2 className={styles.h2}>{children}</h2>,
+              h3: ({ children }) => <h3 className={styles.h3}>{children}</h3>,
+              h4: ({ children }) => <h4 className={styles.h4}>{children}</h4>,
+              p: ({ children }) => <p className={styles.p}>{children}</p>,
+              ul: ({ children }) => <ul className={styles.ul}>{children}</ul>,
+              ol: ({ children }) => <ol className={styles.ol}>{children}</ol>,
+              li: ({ children }) => <li className={styles.li}>{children}</li>,
+              a: ({ href, children }) => <a href={href} className={styles.a} target="_blank" rel="noopener noreferrer">{children}</a>,
+              hr: () => <hr className={styles.hr} />,
               code({ className, children }) {
                 const match = /language-(\w+)/.exec(className || '')
-                return (
-                  <SyntaxHighlighter language={match ? match[1] : ''} showLineNumbers customStyle={{
+                return match ? (
+                  <SyntaxHighlighter language={match[1]} showLineNumbers customStyle={{
                     backgroundColor: '#16161E',
                     border: 'none',
-                    margin: 0,
+                    margin: '2rem 0',
                     borderRadius: '5px',
                   }}
                     codeTagProps={{
@@ -62,6 +75,8 @@ export default function Post({ frontmatter, content }: Post) {
                       }
                     }}
                   >{String(children).replace(/\n$/, '')}</SyntaxHighlighter>
+                ) : (
+                  <code className={styles.inlineCode}>{children}</code>
                 )
               }
             }}
