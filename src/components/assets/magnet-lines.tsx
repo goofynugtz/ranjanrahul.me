@@ -30,37 +30,55 @@ const MagnetLines: React.FC<MagnetLinesProps> = ({
     const container = containerRef.current;
     if (!container) return;
 
-    const items = container.querySelectorAll<HTMLSpanElement>('span');
+    const items = Array.from(container.querySelectorAll<HTMLSpanElement>('span'));
 
-    const onPointerMove = (pointer: { x: number; y: number }) => {
-      items.forEach(item => {
-        const rect = item.getBoundingClientRect();
-        const centerX = rect.x + rect.width / 2;
-        const centerY = rect.y + rect.height / 2;
+    // Rotation around each span's own center leaves its center point fixed,
+    // so centers only need recomputing on layout changes, not every pointer move.
+    let centers: { el: HTMLSpanElement; x: number; y: number }[] = [];
+    const measure = () => {
+      centers = items.map(el => {
+        const rect = el.getBoundingClientRect();
+        return { el, x: rect.x + rect.width / 2, y: rect.y + rect.height / 2 };
+      });
+    };
+    measure();
 
+    const applyRotation = (pointer: { x: number; y: number }) => {
+      centers.forEach(({ el, x: centerX, y: centerY }) => {
         const b = pointer.x - centerX;
         const a = pointer.y - centerY;
         const c = Math.sqrt(a * a + b * b) || 1;
         const r = ((Math.acos(b / c) * 180) / Math.PI) * (pointer.y > centerY ? 1 : -1);
 
-        item.style.setProperty('--rotate', `${r}deg`);
+        el.style.setProperty('--rotate', `${r}deg`);
       });
     };
 
+    let rafId: number | null = null;
+    let lastPointer = { x: 0, y: 0 };
+
     const handlePointerMove = (e: PointerEvent) => {
-      onPointerMove({ x: e.x, y: e.y });
+      lastPointer = { x: e.x, y: e.y };
+      if (rafId === null) {
+        rafId = requestAnimationFrame(() => {
+          applyRotation(lastPointer);
+          rafId = null;
+        });
+      }
     };
 
     window.addEventListener('pointermove', handlePointerMove);
+    window.addEventListener('resize', measure);
 
-    if (items.length) {
-      const middleIndex = Math.floor(items.length / 2);
-      const rect = items[middleIndex].getBoundingClientRect();
-      onPointerMove({ x: rect.x, y: rect.y });
+    if (centers.length) {
+      const middleIndex = Math.floor(centers.length / 2);
+      applyRotation(centers[middleIndex]);
     }
 
     return () => {
       window.removeEventListener('pointermove', handlePointerMove);
+      window.removeEventListener('resize', measure);
+      if (rafId !== null) cancelAnimationFrame(rafId);
     };
   }, []);
 

@@ -3,270 +3,246 @@
 }
 
 .projects {
-	margin: 0 5rem;
+  margin: 0 5rem;
 }
 
-@media only screen and (max-width: 768px){
-	.projects {
-		margin: 0 3rem;
-	}
+@media only screen and (max-width: 768px) {
+  .projects {
+    margin: 0 3rem;
+  }
 }
 
-.grid {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	grid-template-rows: 1fr 1fr 1fr 1fr;
-	height: 70rem;
-	gap: 2rem;
-}
-
-@media only screen and (max-width: 768px){
-	.grid {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		grid-template-rows: 2fr 1fr 1fr;
-    gap: 3rem;
-	}
-}
-
-@media only screen and (max-width: 500px){
-	.grid {
-		display: flex;
-    flex-direction: column;
-		height: max-content;
-	}
-}
-
-.project {
-  border-radius: var(--corner-radius);
-	padding: 3rem;
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-end;
-  background-size: cover;
-  transition: all .5s;
-}
-
-@media only screen and (max-width: 500px){
-	.project {
-		height: 30rem;
-	}
-}
-
-.title {
-	font-size: 3rem;
-}
-
-.description {
-	font-size: 1.6rem;
-}
-
-.project1 {
-  grid-column: 1/2;
-  grid-row: 1/5;
-  background-image: var(--project-1);
-  background-position: 85% 0%;
-}
-.project1 .title {
-	font-size: 4rem;
-}
-.project1 .description {
-	font-size: 2rem;
-}
-
-@media only screen and (max-width: 500px){
-	.project1 {
-		padding-top: 55rem;
-	}
-}
-
-.project2 {
-	grid-column: 2/3;
-	grid-row: 1/3;
-	background-image: var(--project-2);
-	background-position: 100% 20%;
-	background-repeat: no-repeat;
-	display: flex;
-	flex-direction: column-reverse;
-}
-
-.project3 {
-	grid-column: 2/3;
-	grid-row: 3/5;
-	background-image: var(--project-3);
-	background-position: 100% 0%;
-}
-
-/* Masonry Layout Styles */
-.masonryContainer {
+.heading {
   position: relative;
-  width: 100%;
-  min-height: 600px;
+  margin: 4rem 0;
+  font-size: 3rem;
 }
 
-.masonryProject {
+.heading::after {
+  position: absolute;
+  content: "";
+  height: 1px;
+  background-color: var(--transparency-level-2);
+  width: 15rem;
+  margin-left: 25px;
+  top: 50%;
+}
+
+@media only screen and (max-width: 500px) {
+  .heading::after {
+    width: 5rem;
+  }
+}
+
+/* Bento grid: pattern repeats every 3 cards (featured + 2 stacked) */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 18rem;
+  grid-auto-flow: row dense;
+  gap: 2rem;
+}
+
+.card:nth-child(3n+1) {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.card:nth-child(3n+2),
+.card:nth-child(3n) {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+@media only screen and (max-width: 1199px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .card {
+    height: 22rem;
+  }
+}
+
+.card {
+  position: relative;
   border-radius: var(--corner-radius);
   padding: 3rem;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  background-size: cover;
-  transition: all 0.3s ease;
-  cursor: pointer;
+  transition: transform 0.3s ease;
   overflow: hidden;
 }
 
-.masonryProject:hover {
+.spacer {
+  flex-grow: 1;
+  transition: flex-grow 0.3s ease;
+}
+
+.card:hover .spacer {
+  flex-grow: 0;
+}
+
+.card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
-.masonryProject .title {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+/* Both layers render (and load) at all times; only opacity toggles on
+   theme change, so the swap is a smooth crossfade instead of a flicker. */
+.thumbnailLight,
+.thumbnailDark {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: opacity 0.3s ease;
 }
 
-.masonryProject .description {
+.thumbnailDark {
+  opacity: 0;
+}
+
+:global(.dark) .thumbnailLight {
+  opacity: 0;
+}
+
+:global(.dark) .thumbnailDark {
+  opacity: 1;
+}
+
+.titleRow {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  align-self: flex-start;
+  max-width: 100%;
+}
+
+.title {
+  font-size: 2.5rem;
+  padding: 0.3em 0.7em;
+  background: var(--font-color-primary-alt);
+  color: var(--font-color-primary);
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.card:hover .title {
+  background: transparent;
+}
+
+.links {
+  display: flex;
+  gap: 1rem;
+  font-size: 1.6rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover .links {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.iconLink {
+  color: var(--font-color-primary);
+  display: flex;
+  transition: color 0.2s ease;
+}
+
+.iconLink:hover {
+  color: var(--accent-color);
+}
+
+.description {
+  position: relative;
+  z-index: 1;
+  align-self: flex-start;
+  max-width: 100%;
+  padding: 0.3em 0.7em;
+  background: var(--font-color-primary-alt);
+  color: var(--font-color-primary);
+  border-radius: 4px;
   font-size: 1.4rem;
   line-height: 1.5;
+  margin-top: 1rem;
+  max-height: 10rem;
+  opacity: 1;
+  overflow: hidden;
+  transition: max-height 0.3s ease, opacity 0.3s ease, margin-top 0.3s ease, padding 0.3s ease;
 }
 
-/* Apply background images to masonry projects */
-.masonryProject.project1 {
-  background-image: var(--project-1);
-  background-position: 85% 0%;
+.card:hover .description {
+  max-height: 0;
+  opacity: 0;
+  margin-top: 0;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
-.masonryProject.project2 {
-  background-image: var(--project-2);
-  background-position: 100% 20%;
-  background-repeat: no-repeat;
+.longDescription {
+  position: relative;
+  z-index: 1;
+  align-self: flex-start;
+  max-width: 100%;
+  color: var(--font-color-primary);
+  font-size: 1.4rem;
+  line-height: 1.5;
+  margin-top: 1rem;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
 }
 
-.masonryProject.project3 {
-  background-image: var(--project-3);
-  background-position: 100% 0%;
-}
-
-.masonryProject.project4 {
-  background-image: var(--project-4);
-  background-position: 100% 0%;
-}
-
-.masonryProject.project5 {
-  background-image: var(--project-5);
-  background-position: 10% 80%;
+.card:hover .longDescription {
+  max-height: 20rem;
+  opacity: 1;
 }
 
 @media only screen and (max-width: 768px) {
-  .masonryProject .title {
+  .title {
     font-size: 2rem;
   }
-  
-  .masonryProject .description {
+
+  .links {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .description,
+  .longDescription {
     font-size: 1.2rem;
   }
 }
 
-/* Overlay Effect */
+/* Hover overlay backdrop */
 .overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   background: rgba(255, 255, 255, 0.9);
   opacity: 0;
   transition: opacity 0.3s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   border-radius: var(--corner-radius);
   backdrop-filter: blur(10px);
 }
 
-/* Dark mode overlay */
-[data-theme="dark"] .overlay {
+:global(.dark) .overlay {
   background: rgba(255, 255, 255, 0.15);
 }
 
-/* Light mode overlay */
-[data-theme="light"] .overlay {
-  background: rgba(0, 0, 0, 0.8);
-}
-
-.masonryProject:hover .overlay {
+.card:hover .overlay {
   opacity: 1;
-}
-
-.overlayContent {
-  text-align: center;
-  padding: 2rem;
-  color: var(--text-color);
-}
-
-.overlayTitle {
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-  color: inherit;
-}
-
-.overlayDescription {
-  font-size: 1.4rem;
-  line-height: 1.5;
-  color: inherit;
-}
-
-/* Hide original content on hover */
-.masonryProject:hover .title,
-.masonryProject:hover .description {
-  opacity: 0;
-}
-
-.masonryProject .title,
-.masonryProject .description {
-  transition: opacity 0.3s ease;
-  position: relative;
-  z-index: 1;
-}
-
-@media only screen and (max-width: 768px) {
-  .overlayTitle {
-    font-size: 2rem;
-  }
-  
-  .overlayDescription {
-    font-size: 1.2rem;
-  }
-}
-
-@media only screen and (max-width: 500px) {
-  .masonryContainer {
-    min-height: 800px;
-  }
-  
-  .masonryProject {
-    padding: 2rem;
-  }
-  
-  .masonryProject .title {
-    font-size: 1.8rem;
-  }
-  
-  .masonryProject .description {
-    font-size: 1.1rem;
-  }
-
-  .overlayTitle {
-    font-size: 1.8rem;
-  }
-  
-  .overlayDescription {
-    font-size: 1.1rem;
-  }
-
-  .overlayContent {
-    padding: 1.5rem;
-  }
 }

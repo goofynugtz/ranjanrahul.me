@@ -64,13 +64,8 @@
 	--hover: #0d92ff;
 	--width: 130rem;
 	--corner-radius: .75rem;
-	--project-1: url("/projects/gpt_dark.png");
-	--project-2: url("/projects/indiaAtStats.png");
-	--project-3: url("/projects/search-enigne-dark.png");
-	--project-4: url("/projects/hire-alert_dark.png");
-	--project-5: url("/projects/pacman_dark.png");
 	--background: oklch(0.145 0 0);
-	--foreground: oklch(0.985 0 0);
+	--foreground: rgb(250, 250, 250);
 	--card: oklch(0.205 0 0);
 	--card-foreground: oklch(0.985 0 0);
 	--popover: oklch(0.205 0 0);
@@ -116,11 +111,6 @@
 	--hover: #0d92ff;
 	--width: 130rem;
 	--corner-radius: .75rem;
-	--project-1: url("/projects/gpt_light.png");
-	--project-2: url("/projects/indiaAtStats.png");
-	--project-3: url("/projects/search-enigne-light.png");
-	--project-4: url("/projects/hire-alert_light.png");
-	--project-5: url("/projects/pacman_light.png");
 }
 
 @media only screen and (max-width: 965px) {

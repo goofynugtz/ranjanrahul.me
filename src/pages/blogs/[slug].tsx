@@ -3,7 +3,6 @@ import path from 'path'
 import matter from 'gray-matter'
 import ReactMarkdown from "react-markdown";
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
-import { Key } from 'react';
 import Head from 'next/head';
 import Navbar from '../../components/navbar';
 import styles from '../../styles/post.module.css';
@@ -13,7 +12,7 @@ interface Post {
     title: string,
     date: string,
     description: string,
-    tags: Key[]
+    tags: string[]
   },
   content: string
 }

@@ -1,14 +1,12 @@
-import { Key } from 'react';
-
 export interface Posts {
   posts: [{
-    slug: Key,
+    slug: string,
     frontmatter: {
       title: string,
       date: string,
       description: string,
       thumbnail: string,
-      tags: Key[]
+      tags: string[]
     },
     content: string
   }]
@@ -22,6 +20,7 @@ export interface tab {
 export interface project {
   title: string,
   description: string,
+  longDescription: string,
   github: string,
   thumbnail: {
     dark: string,

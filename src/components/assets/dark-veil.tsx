@@ -102,7 +102,7 @@ export default function DarkVeil({
     const parent = canvas.parentElement as HTMLElement;
 
     const renderer = new Renderer({
-      dpr: Math.min(window.devicePixelRatio, 2),
+      dpr: Math.min(window.devicePixelRatio, 1),
       canvas
     });
 
@@ -137,8 +137,14 @@ export default function DarkVeil({
 
     const start = performance.now();
     let frame = 0;
+    let lastRender = 0;
+    const frameInterval = 1000 / 30; // ambient background: 30fps is plenty
 
-    const loop = () => {
+    const loop = (now: number) => {
+      frame = requestAnimationFrame(loop);
+      if (document.hidden || now - lastRender < frameInterval) return;
+      lastRender = now;
+
       const isDark = theme === 'dark' || resolvedTheme === 'dark';
 
       // Adapt values based on theme
@@ -146,17 +152,16 @@ export default function DarkVeil({
       const themeNoiseIntensity = isDark ? noiseIntensity : noiseIntensity * 0.1;
       const themeScanlineIntensity = isDark ? scanlineIntensity : scanlineIntensity * 0.2;
 
-      program.uniforms.uTime.value = ((performance.now() - start) / 1000) * speed;
+      program.uniforms.uTime.value = ((now - start) / 1000) * speed;
       program.uniforms.uHueShift.value = themeHueShift;
       program.uniforms.uNoise.value = themeNoiseIntensity;
       program.uniforms.uScan.value = themeScanlineIntensity;
       program.uniforms.uScanFreq.value = scanlineFrequency;
       program.uniforms.uWarp.value = warpAmount;
       renderer.render({ scene: mesh });
-      frame = requestAnimationFrame(loop);
     };
 
-    loop();
+    frame = requestAnimationFrame(loop);
 
     return () => {
       cancelAnimationFrame(frame);

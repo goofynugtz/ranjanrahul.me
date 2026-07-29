@@ -1,121 +1,61 @@
 import Head from 'next/head'
 import Navbar from "../../components/navbar";
 import Link from 'next/link';
+import { FaGithub } from 'react-icons/fa';
+import { FiExternalLink } from 'react-icons/fi';
 import styles from '../../styles/projects.module.css'
 import { projects } from '../../config/projects';
-import { project } from '../../interface';
-import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
-
-const useMedia = (queries: string[], values: number[], defaultValue: number): number => {
-  const get = useCallback(() => {
-    if (typeof window === 'undefined') return defaultValue;
-    return values[queries.findIndex(q => matchMedia(q).matches)] ?? defaultValue;
-  }, [queries, values, defaultValue]);
-
-  const [value, setValue] = useState<number>(defaultValue);
-
-  useEffect(() => {
-    if (typeof window === 'undefined') return;
-    setValue(get);
-
-    const handler = () => setValue(get);
-    queries.forEach(q => matchMedia(q).addEventListener('change', handler));
-    return () => queries.forEach(q => matchMedia(q).removeEventListener('change', handler));
-  }, [queries, get]);
-
-  return value;
-};
-
-const useMeasure = <T extends HTMLElement>() => {
-  const ref = useRef<T | null>(null);
-  const [size, setSize] = useState({ width: 0, height: 0 });
-
-  useLayoutEffect(() => {
-    if (!ref.current) return;
-    const ro = new ResizeObserver(([entry]) => {
-      const { width, height } = entry.contentRect;
-      setSize({ width, height });
-    });
-    ro.observe(ref.current);
-    return () => ro.disconnect();
-  }, []);
-
-  return [ref, size] as const;
-};
 
 export default function FeaturedProjects() {
-  const columns = useMedia(
-    ['(min-width:1200px)', '(min-width:768px)', '(min-width:480px)'],
-    [3, 2, 1],
-    1
-  );
-
-  const [containerRef, { width }] = useMeasure<HTMLDivElement>();
-
-  const masonryGrid = useMemo(() => {
-    if (!width) return [];
-
-    const colHeights = new Array(columns).fill(0);
-    const columnWidth = width / columns;
-    const gap = 20;
-
-    return projects.map((project: project, index) => {
-      const col = colHeights.indexOf(Math.min(...colHeights));
-      const x = (columnWidth + gap) * col;
-      const baseHeight = 200 + (project.description.length * 2);
-      const y = colHeights[col];
-
-      colHeights[col] += baseHeight + gap;
-
-      return {
-        ...project,
-        x,
-        y,
-        width: columnWidth,
-        height: baseHeight,
-        index
-      };
-    });
-  }, [columns, width]);
-
   return (
     <>
       <Head>
         <title>Featured &#124; Ranjan Rahul</title>
       </Head>
-      <>
-        <Navbar />
-        <div className={styles.projects}>
-          <h1 className={styles.heading}>Featured Projects</h1>
-          <p>These are kind of outdated and I&apos;m just lazy to create thumbnails && update them. Please go through my <Link href="https://github.com/goofynugtz" className={styles.a}>Github</Link>.</p>
-          <div ref={containerRef} className={styles.masonryContainer}>
-            {masonryGrid.map((project, index) => (
-              <Link
-                href={project.deployment}
-                className={`${styles.masonryProject} ${project.class}`}
-                key={index}
-                style={{
-                  position: 'absolute',
-                  left: project.x,
-                  top: project.y,
-                  width: project.width,
-                  height: project.height,
-                  transition: 'all 0.3s ease'
-                }}
-              >
-                <div className={styles.overlay}>
-                  <div className={styles.overlayContent}>
-                    <div className={styles.overlayTitle}>{project.title}</div>
-                    <div className={styles.overlayDescription}>{project.description}</div>
-                  </div>
-                </div>
+      <Navbar />
+      <div className={styles.projects}>
+        <h1 className={styles.heading}>Featured Projects</h1>
+        
+        <div className={styles.grid}>
+          {projects.map((project) => (
+            <div key={project.title} className={styles.card}>
+              <div className={styles.spacer} />
+              <div className={styles.thumbnailLight} style={{ backgroundImage: `url(${project.thumbnail.light})` }} />
+              <div className={styles.thumbnailDark} style={{ backgroundImage: `url(${project.thumbnail.dark})` }} />
+              <div className={styles.overlay} />
+              <div className={styles.titleRow}>
                 <div className={styles.title}>{project.title}</div>
+                <div className={styles.links}>
+                  <Link
+                    href={project.deployment}
+                    target="_blank"
+                    rel="noreferrer"
+                    className={styles.iconLink}
+                    aria-label={`Live demo of ${project.title}`}
+                  >
+                    <FiExternalLink />
+                  </Link>
+                  <Link
+                    href={project.github}
+                    target="_blank"
+                    rel="noreferrer"
+                    className={styles.iconLink}
+                    aria-label={`${project.title} source on GitHub`}
+                  >
+                    <FaGithub />
+                  </Link>
+                </div>
+              </div>
+              {project.description && (
                 <div className={styles.description}>{project.description}</div>
-              </Link>
-            ))}
-          </div>
+              )}
+              {project.longDescription && (
+                <div className={styles.longDescription}>{project.longDescription}</div>
+              )}
+            </div>
+          ))}
         </div>
-      </>
+      </div>
     </>
   )
 }

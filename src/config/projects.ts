@@ -5,6 +5,7 @@ export const projects: project[] = [
   {
     title: "Text Prediction",
     description: "Generative Pretrained Transformer using BigramLanguage model on a frontend. ",
+    longDescription: "Generative Pretrained Transformer using BigramLanguage model on a frontend. ",
     github: "https://github.com/goofynugtz/gpt-text-prediction",
     deployment: "https://predictions.ranjanrahul.me/",
     thumbnail: {
@@ -17,6 +18,7 @@ export const projects: project[] = [
   {
     title: "IndiaAtStats",
     description: "",
+    longDescription: "",
     github: "https://github.com/goofynugtz/indiaAtStats",
     deployment: "https://indistats.ranjanrahul.me/",
     thumbnail: {
@@ -29,6 +31,7 @@ export const projects: project[] = [
   {
     title: "Search Engine",
     description: "",
+    longDescription: "",
     github: "https://github.com/goofynugtz/search-engine",
     deployment: "https://search.ranjanrahul.me",
     thumbnail: {
@@ -40,22 +43,24 @@ export const projects: project[] = [
   {
     title: "Open Positions Alert",
     description: "",
+    longDescription: "",
     github: "https://github.com/goofynugtz/hirealert",
     deployment: "https://search.ranjanrahul.me",
     thumbnail: {
-      dark: "/projects/hire-alert_light.png",
-      light: "/projects/hire-alert_dark.png",
+      dark: "/projects/hire-alert_dark.png",
+      light: "/projects/hire-alert_light.png",
     },
     class: styles.project4,
   },
   {
     title: "Zero Player Pac-man",
     description: "",
+    longDescription: "",
     github: "https://github.com/goofynugtz/hirealert",
     deployment: "https://search.ranjanrahul.me",
     thumbnail: {
-      dark: "/projects/pacman_light.png",
-      light: "/projects/pacman_dark.png",
+      dark: "/projects/pacman_dark.png",
+      light: "/projects/pacman_light.png",
     },
     class: styles.project5,
   }
